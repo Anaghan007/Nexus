@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     
     <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#050507">
+    <meta name="theme-color" content="#030305">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="Logo.png">
     
-    <title>Nexus Institute & Marketing | Digital Marketing</title>
+    <title>Nexus Institute & Marketing | Advanced Masterclass</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Logo.png">
@@ -35,7 +35,6 @@
                     },
                     animation: {
                         'float': 'floating 3s ease-in-out infinite',
-                        'glow': 'glowing 2s infinite',
                     }
                 }
             }
@@ -45,16 +44,16 @@
     <style>
         /* --- Core & Reset --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: #050507; color: #ffffff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        body { background-color: #030305; color: #ffffff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #050507; }
+        ::-webkit-scrollbar-track { background: #030305; }
         ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
 
         section { scroll-margin-top: 100px; }
 
-        /* --- Loader --- */
+        /* --- Loader (UNTOUCHED) --- */
         #page-loader {
             position: fixed; inset: 0; background: #050507; z-index: 99999;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -69,40 +68,53 @@
             transition: width 0.1s ease;
         }
 
-        /* --- Glassmorphism & 3D UI --- */
-        .glass {
-            background: rgba(255, 255, 255, 0.04);
+        /* --- Elegant Stardust Canvas Background --- */
+        #interactive-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* --- Clean Glassmorphism & 3D Cards --- */
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1.5rem;
             box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
         }
+
+        /* Interactive Hover Spotlight */
+        .glass-card::before {
+            content: ""; position: absolute; inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.05), transparent 40%);
+            z-index: 0; pointer-events: none; opacity: 0; transition: opacity 0.3s;
+        }
+        .glass-card:hover::before { opacity: 1; }
+        .glass-card > * { position: relative; z-index: 1; }
+
         .glass-card:hover {
-            transform: translateY(-12px) scale(1.04) perspective(1000px) rotateX(2deg) rotateY(-2deg);
-            border-color: rgba(59, 130, 246, 0.8);
-            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.4), inset 0 0 20px rgba(255,255,255,0.05);
-            z-index: 10;
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.2);
         }
 
         /* --- Floating Header --- */
         .floating-header {
-            background: rgba(10, 10, 15, 0.75);
+            background: rgba(5, 5, 7, 0.65);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
         }
 
-        /* Nav Links */
         .nav-link {
             position: relative; color: #d1d5db; font-weight: 600; font-size: 0.95rem; transition: color 0.3s;
         }
@@ -114,62 +126,44 @@
         }
         .nav-link:hover::after { width: 100%; }
 
+        /* --- Typography Equality (Standardized sizes) --- */
+        p, .text-standard {
+            font-size: 1rem !important; /* Forces 16px */
+            line-height: 1.6 !important;
+            color: #d1d5db !important; /* Tailwind gray-300 for high visibility */
+        }
+        .text-sub {
+            font-size: 0.875rem !important; /* 14px for secondary text */
+            color: #9ca3af !important; /* gray-400 */
+        }
+
         /* --- Text Gradients --- */
         .gradient-text {
             background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        /* --- Animations --- */
         @keyframes floating {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(1deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-
-        @keyframes glowing {
-            0% { box-shadow: 0 0 5px #3b82f6; }
-            50% { box-shadow: 0 0 20px #3b82f6; }
-            100% { box-shadow: 0 0 5px #3b82f6; }
-        }
-
-        .offer-pulse {
-            animation: soft-pulse 2s infinite alternate;
-        }
-        @keyframes soft-pulse {
-            0% { box-shadow: 0 0 10px rgba(139, 92, 246, 0.2); }
-            100% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.5); }
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
         }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        
-        .premium-badge {
-            background: linear-gradient(45deg, #f59e0b, #ef4444);
-            animation: glowing 1.5s infinite;
+
+        /* Icon Wrapper to prevent flipping/squishing */
+        .icon-box {
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17862847736">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17862847736');
-</script>
 </head>
 <body class="flex flex-col min-h-[100dvh]">
 
-    <!-- Fixed Glow Backgrounds -->
-    <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
-        <div class="absolute bg-brand-primary w-[300px] h-[300px] md:w-[600px] md:h-[600px] top-[-100px] left-[-150px] rounded-full blur-[120px] opacity-15"></div>
-        <div class="absolute bg-brand-secondary w-[250px] h-[250px] md:w-[500px] md:h-[500px] top-[40%] right-[-100px] rounded-full blur-[120px] opacity-15"></div>
-        <div class="absolute bg-brand-accent w-[300px] h-[300px] md:w-[500px] md:h-[500px] bottom-[-50px] left-[10%] rounded-full blur-[120px] opacity-15"></div>
-    </div>
+    <!-- Elegant Cursor & Stardust Canvas -->
+    <canvas id="interactive-canvas"></canvas>
 
-    <!-- Loader -->
+    <!-- Loader (UNTOUCHED) -->
     <div id="page-loader">
         <img src="Logo.png" alt="Nexus Logo" class="h-16 object-contain drop-shadow-2xl">
         <div class="loader-bar-container">
@@ -181,21 +175,21 @@
     <div class="fixed top-4 left-0 w-full z-50 px-4 pointer-events-none">
         <header class="floating-header pointer-events-auto mx-auto w-full max-w-6xl rounded-full transition-all duration-300">
             <div class="px-5 md:px-8 py-3 flex justify-between items-center">
-                <a href="#home" class="flex-shrink-0 flex items-center">
+                <a href="#home" class="flex-shrink-0 flex items-center magnetic-btn">
                     <img src="Logo.png" alt="Nexus Logo" class="h-10 object-contain">
                 </a>
                 
                 <nav class="hidden md:flex gap-8 items-center absolute left-1/2 transform -translate-x-1/2">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About Us</a>
-                    <a href="#courses" class="nav-link">Courses</a>
-                    <a href="#special-offers" class="nav-link text-orange-400">Offers 🔥</a>
-                    <a href="#contact" class="nav-link">Contact Us</a>
+                    <a href="#home" class="nav-link"><i class="fas fa-home text-sm mr-1"></i> Home</a>
+                    <a href="#about" class="nav-link"><i class="fas fa-building text-sm mr-1"></i> About</a>
+                    <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap text-sm mr-1"></i> Courses</a>
+                    <a href="#special-offers" class="nav-link text-orange-400"><i class="fas fa-fire text-sm mr-1"></i> Offers</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-headset text-sm mr-1"></i> Contact</a>
                 </nav>
 
                 <div class="flex items-center gap-4">
-                    <a href="https://wa.me/918866722633" target="_blank" class="hidden lg:flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-5 py-2 rounded-full font-bold hover:shadow-lg hover:shadow-green-500/30 transition transform hover:-translate-y-0.5 text-sm">
-                        <i class="fab fa-whatsapp text-lg"></i> Chat Now
+                    <a href="https://wa.me/918866722633" target="_blank" class="hidden lg:flex magnetic-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg transition text-base">
+                        <i class="fab fa-whatsapp text-xl"></i> Chat Now
                     </a>
                     <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
@@ -207,14 +201,14 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden pointer-events-auto mt-2 mx-auto w-full max-w-sm floating-header rounded-3xl overflow-hidden shadow-2xl origin-top transition-all duration-300">
             <div class="flex flex-col p-2">
-                <a href="#home" class="text-center py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl font-medium text-sm">Home</a>
-                <a href="#about" class="text-center py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl font-medium text-sm">About Us</a>
-                <a href="#courses" class="text-center py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl font-medium text-sm">Courses</a>
-                <a href="#special-offers" class="text-center py-3 text-orange-400 hover:bg-white/5 rounded-xl font-medium text-sm">Special Offers 🔥</a>
-                <a href="#contact" class="text-center py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl font-medium text-sm">Contact Us</a>
+                <a href="#home" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-home mr-2"></i> Home</a>
+                <a href="#about" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-building mr-2"></i> About Us</a>
+                <a href="#courses" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-graduation-cap mr-2"></i> Courses</a>
+                <a href="#special-offers" class="text-center py-3 text-orange-400 hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-fire mr-2"></i> Special Offers</a>
+                <a href="#contact" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-headset mr-2"></i> Contact Us</a>
                 <div class="p-3 mt-1 border-t border-white/10">
-                    <a href="https://wa.me/918866722633" target="_blank" class="flex justify-center items-center gap-2 w-full bg-green-500 text-white py-2.5 rounded-xl font-bold text-sm">
-                        <i class="fab fa-whatsapp text-lg"></i> WhatsApp Us
+                    <a href="https://wa.me/918866722633" target="_blank" class="flex justify-center items-center gap-2 w-full bg-green-500 text-white py-3 rounded-xl font-bold text-base">
+                        <i class="fab fa-whatsapp text-xl"></i> WhatsApp Us
                     </a>
                 </div>
             </div>
@@ -225,60 +219,60 @@
     <main class="flex-grow flex flex-col w-full">
 
         <!-- Hero Section -->
-        <section id="home" class="flex-grow flex items-center justify-center pt-28 pb-10 relative w-full min-h-[100dvh] lg:h-[100dvh]">
+        <section id="home" class="flex-grow flex items-center justify-center pt-28 pb-10 relative w-full min-h-[100dvh]">
             <div class="container mx-auto px-5 lg:px-8 z-10 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 w-full h-full">
                 
                 <!-- Left Text Content -->
                 <div class="w-full lg:w-1/2 text-center lg:text-left reveal flex flex-col items-center lg:items-start">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-bold mb-4 backdrop-blur-sm animate-bounce">
-                        <i class="fas fa-fire"></i> Limited Time Mega Offer!
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 font-bold mb-4 backdrop-blur-sm animate-bounce text-sm">
+                        <i class="fas fa-bolt"></i> Limited Time Mega Offer!
                     </div>
                     
                     <h1 class="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold mb-4 leading-tight tracking-tight text-white w-full">
                         Join For 3 Months & <span class="gradient-text block mt-1">Get 1 Month FREE!</span>
                     </h1>
                     
-                    <p class="text-gray-300 text-base md:text-lg mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    <p class="mb-6 max-w-xl mx-auto lg:mx-0">
                         Become a Marketing Expert with our <strong class="text-white">3+1 Month Practical Masterclass</strong>. Learn Agency-level skills and 10x your career growth.
                     </p>
 
-                    <!-- New Main Highlight Badges -->
+                    <!-- Main Highlight Badges -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-full max-w-lg">
-                        <div class="glass p-4 rounded-2xl border-l-4 border-brand-primary flex items-center gap-3 animate-float">
-                            <div class="text-3xl text-brand-primary"><i class="fas fa-gift"></i></div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">FREE AI COURSE</h4>
-                                <p class="text-[11px] text-gray-400">Worth ₹15,000/- Absolutely Free</p>
+                        <div class="glass-card p-4 rounded-2xl border-l-4 border-l-brand-primary flex items-center gap-4 animate-float">
+                            <div class="text-3xl text-brand-primary icon-box w-10 h-10"><i class="fas fa-gift"></i></div>
+                            <div class="text-left">
+                                <h4 class="font-bold text-white text-base">FREE AI COURSE</h4>
+                                <span class="text-sub">Worth ₹15,000/- Free</span>
                             </div>
                         </div>
-                        <div class="glass p-4 rounded-2xl border-l-4 border-green-500 flex items-center gap-3 animate-float" style="animation-delay: 0.5s;">
-                            <div class="text-3xl text-green-500"><i class="fas fa-user-check"></i></div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">100% JOB GUARANTEE</h4>
-                                <p class="text-[11px] text-gray-400">In-Writing Placement Support</p>
+                        <div class="glass-card p-4 rounded-2xl border-l-4 border-l-green-500 flex items-center gap-4 animate-float" style="animation-delay: 0.5s;">
+                            <div class="text-3xl text-green-500 icon-box w-10 h-10"><i class="fas fa-user-check"></i></div>
+                            <div class="text-left">
+                                <h4 class="font-bold text-white text-base">JOB GUARANTEE</h4>
+                                <span class="text-sub">In-Writing Placement</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-                        <a href="https://wa.me/918866722633?text=I%20want%20to%20claim%20the%203%2B1%20Month%20Offer!" target="_blank" class="bg-gradient-to-r from-brand-primary to-brand-secondary px-8 py-4 rounded-full font-bold text-white shadow-lg hover:shadow-brand-primary/40 transition-all transform hover:-translate-y-1 text-center text-base">
-                            Claim 3+1 Offer Now
+                        <a href="https://wa.me/918866722633" target="_blank" class="magnetic-btn bg-gradient-to-r from-brand-primary to-brand-secondary px-8 py-4 rounded-full font-bold text-white shadow-lg transition-transform text-center text-lg flex items-center justify-center gap-2">
+                            <i class="fas fa-rocket"></i> Claim 3+1 Offer Now
                         </a>
                     </div>
                 </div>
 
                 <!-- Right Price Box -->
                 <div class="w-full lg:w-[45%] max-w-md mx-auto reveal relative">
-                    <div class="absolute -top-4 right-2 bg-red-600 text-white text-xs font-extrabold px-4 py-2 rounded-full z-20 shadow-xl animate-pulse">
-                        Limited Seats Left!
+                    <div class="absolute -top-4 right-2 bg-red-600 text-white text-sm font-extrabold px-5 py-2 rounded-full z-20 shadow-xl animate-pulse">
+                        <i class="fas fa-clock mr-1"></i> Limited Seats Left!
                     </div>
                     
-                    <div class="glass-card p-6 md:p-8 relative overflow-hidden flex flex-col border-2 border-brand-primary/20">
-                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-primary/30 rounded-full filter blur-[40px]"></div>
+                    <div class="glass-card p-6 md:p-8 flex flex-col border border-brand-primary/30">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-primary/20 rounded-full filter blur-[50px] pointer-events-none"></div>
                         
                         <h3 class="text-2xl font-bold mb-1 text-white">Full Digital Marketing</h3>
-                        <div class="flex items-center gap-2 text-orange-400 font-bold mb-4 text-sm">
-                            <i class="fas fa-clock"></i> 3 Months Pay + 1 Month FREE!
+                        <div class="flex items-center gap-2 text-orange-400 font-bold mb-4 text-base">
+                            <i class="fas fa-star"></i> 3 Months Pay + 1 Month FREE!
                         </div>
                         
                         <div class="mb-5 pb-5 border-b border-white/10">
@@ -286,88 +280,115 @@
                                 <span class="text-4xl font-extrabold text-white">₹40,000</span>
                                 <span class="text-xl text-gray-500 line-through">₹45,000</span>
                             </div>
-                            <p class="text-emerald-400 text-sm font-semibold italic">Includes Free AI Mastery Course worth ₹15K</p>
+                            <span class="text-emerald-400 font-semibold italic text-base">Includes Free AI Mastery Course worth ₹15K</span>
                         </div>
 
                         <div class="space-y-4 mb-6">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+                            <div class="flex items-center gap-4">
+                                <div class="icon-box w-10 h-10 rounded-full bg-green-500/20 text-green-500 text-lg">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span class="text-gray-200 text-sm font-medium">100% Job Placement Guarantee</span>
+                                <span class="text-white font-medium text-base">100% Job Placement Guarantee</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500">
+                            <div class="flex items-center gap-4">
+                                <div class="icon-box w-10 h-10 rounded-full bg-blue-500/20 text-blue-500 text-lg">
                                     <i class="fas fa-robot"></i>
                                 </div>
-                                <span class="text-gray-200 text-sm font-medium">ChatGPT, Gemini & Other's AI Tools</span>
+                                <span class="text-white font-medium text-base">ChatGPT, Gemini & AI Tools</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-500">
+                            <div class="flex items-center gap-4">
+                                <div class="icon-box w-10 h-10 rounded-full bg-purple-500/20 text-purple-500 text-lg">
                                     <i class="fas fa-video"></i>
                                 </div>
-                                <span class="text-gray-200 text-sm font-medium">Advanced CapCut Video Editing</span>
+                                <span class="text-white font-medium text-base">Advanced CapCut Video Editing</span>
                             </div>
                         </div>
 
-                        <a href="https://wa.me/918866722633" target="_blank" class="w-full bg-white text-black py-4 rounded-xl font-black text-center hover:bg-brand-primary hover:text-white transition-all shadow-2xl flex justify-center items-center gap-2">
-                            BOOK YOUR SEAT <i class="fab fa-whatsapp text-xl"></i>
+                        <a href="https://wa.me/918866722633" target="_blank" class="w-full bg-white text-black py-4 rounded-xl font-black text-center hover:bg-brand-primary hover:text-white transition-all shadow-xl flex justify-center items-center gap-2 magnetic-btn text-lg">
+                            BOOK YOUR SEAT <i class="fab fa-whatsapp text-2xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- New Dedicated Offer Section -->
-        <section id="special-offers" class="py-16 md:py-24 bg-[#08080a] border-t border-white/5">
+        <!-- NEW ASYMMETRICAL OFFERS SECTION -->
+        <section id="special-offers" class="py-16 md:py-24 border-t border-white/5 relative z-10 bg-[#030305]/50">
             <div class="container mx-auto px-5 lg:px-8">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-5xl font-black text-white mb-4 italic uppercase">Exclusive <span class="gradient-text">2026 Batch</span> Offers</h2>
-                    <p class="text-gray-400">તમારા ભવિષ્ય માટે શ્રેષ્ઠ તક - આજે જ જોડાવ!</p>
+                <div class="text-center mb-16 reveal">
+                    <span class="text-orange-400 font-bold tracking-widest text-sm uppercase mb-2 flex items-center justify-center gap-2">
+                        <i class="fas fa-gift"></i> Premium Benefits
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-4 uppercase">Exclusive <span class="gradient-text">2026 Batch</span> Offers</h2>
+                    <p class="max-w-2xl mx-auto">તમારા ભવિષ્ય માટે શ્રેષ્ઠ તક - આજે જ જોડાવ! (The best opportunity for your future - Join Today!)</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Offer 1 -->
-                    <div class="glass-card relative p-6 border-t-4 border-orange-500">
-                        <h4 class="text-orange-500 font-black text-xl mb-2">3+1 MONTH</h4>
-                        <p class="text-gray-400 text-sm">Pay for 3 months and get the 4th month of advanced internship absolutely FREE.</p>
+                <!-- Premium Bento Grid Structure -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    
+                    <!-- Large Hero Offer (Spans 2 columns on tablet/desktop) -->
+                    <div class="glass-card p-8 md:col-span-2 border-l-4 border-l-orange-500 reveal flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 text-orange-500/10 text-9xl pointer-events-none"><i class="fas fa-user-friends"></i></div>
+                        <div class="icon-box w-14 h-14 bg-orange-500/20 text-orange-500 rounded-2xl text-2xl mb-5">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h4 class="text-white font-black text-3xl mb-3">BRING A FRIEND OFFER</h4>
+                        <p class="mb-4">Enroll together with a friend and instantly drop the ₹45,000 premium course fee down to <strong class="text-white text-xl">₹40,000</strong> per student!</p>
+                        <div class="inline-block bg-red-500/20 text-red-400 px-4 py-2 rounded-lg font-bold border border-red-500/30 w-max text-sm animate-pulse">
+                            🔥 Valid only for the first 10 students!
+                        </div>
                     </div>
-                    <!-- Offer 2 -->
-                    <div class="glass-card relative p-6 border-t-4 border-blue-500">
-                        <h4 class="text-blue-500 font-black text-xl mb-2">FREE AI COURSE</h4>
-                        <p class="text-gray-400 text-sm">Master AI tools like Claude, Gemini & Other's AI Tools worth ₹15,000 for FREE with this batch.</p>
+
+                    <!-- Standard Offer -->
+                    <div class="glass-card p-8 border-t-4 border-t-blue-500 reveal flex flex-col justify-center">
+                        <div class="icon-box w-12 h-12 bg-blue-500/20 text-blue-500 rounded-xl text-xl mb-4">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4 class="text-white font-black text-xl mb-2">FREE AI COURSE</h4>
+                        <p>Master top AI tools like Claude & Gemini. A complete ₹15,000 module included entirely for free.</p>
                     </div>
-                    <!-- Offer 3 -->
-                    <div class="glass-card relative p-6 border-t-4 border-green-500">
-                        <h4 class="text-green-500 font-black text-xl mb-2">JOB GUARANTY</h4>
-                        <p class="text-gray-400 text-sm">We provide 100% written job guarantee and interview preparation for all our students.</p>
+
+                    <!-- Standard Offer -->
+                    <div class="glass-card p-8 border-t-4 border-t-purple-500 reveal flex flex-col justify-center">
+                        <div class="icon-box w-12 h-12 bg-purple-500/20 text-purple-500 rounded-xl text-xl mb-4">
+                            <i class="fas fa-calendar-plus"></i>
+                        </div>
+                        <h4 class="text-white font-black text-xl mb-2">3+1 MONTH FORMAT</h4>
+                        <p>Pay for 3 months of core training and get a 4th month of advanced agency internship absolutely FREE.</p>
                     </div>
-                    <!-- Offer 4 -->
-                    <div class="glass-card relative p-6 border-t-4 border-purple-500">
-                        <h4 class="text-purple-500 font-black text-xl mb-2">BRING A FRIEND</h4>
-                        <p class="text-gray-400 text-sm">Enroll together and get the ₹45,000 course for <strong class="text-white text-lg">₹40,000</strong> only! <br><span class="text-red-400 font-bold text-xs mt-2 block">🔥 Valid only for the first 10 students!</span></p>
+
+                    <!-- Standard Offer (Spans 2 cols to balance the grid) -->
+                    <div class="glass-card p-8 md:col-span-2 border-t-4 border-t-green-500 reveal flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="icon-box w-16 h-16 bg-green-500/20 text-green-500 rounded-2xl text-3xl shrink-0">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <h4 class="text-white font-black text-2xl mb-2">100% JOB GUARANTY</h4>
+                            <p>We don't just teach, we place. We provide a 100% written job guarantee and intensive interview preparation for all our students.</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-16 md:py-24 relative w-full border-t border-white/5 bg-[#050507]">
+        <section id="about" class="py-16 md:py-24 relative w-full border-t border-white/5">
             <div class="container mx-auto px-5 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                     <div class="w-full lg:w-1/2 reveal">
-                        <div class="relative rounded-3xl overflow-hidden glass p-2 border-brand-secondary/20 shadow-2xl mx-auto max-w-lg lg:max-w-none">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Nexus Institute" class="w-full h-auto rounded-2xl object-cover hover:scale-105 transition duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-[#050507]/20 to-transparent opacity-90 pointer-events-none"></div>
+                        <div class="relative rounded-3xl overflow-hidden glass p-2 shadow-2xl mx-auto max-w-lg lg:max-w-none hover:scale-[1.02] transition-transform duration-500">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Nexus Institute" class="w-full h-auto rounded-2xl object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#030305] via-transparent to-transparent opacity-90 pointer-events-none"></div>
                             
-                            <div class="absolute bottom-4 left-4 right-4 lg:right-auto glass px-5 py-3 rounded-2xl border border-white/10 backdrop-blur-md">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center text-white text-lg shadow-lg shadow-brand-primary/50 shrink-0">
+                            <div class="absolute bottom-5 left-5 right-5 lg:right-auto glass px-6 py-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                                <div class="flex items-center gap-4">
+                                    <div class="icon-box w-12 h-12 rounded-full bg-brand-primary text-white text-xl shadow-[0_0_15px_rgba(59,130,246,0.6)]">
                                         <i class="fas fa-trophy"></i>
                                     </div>
                                     <div>
-                                        <p class="text-white font-bold text-sm md:text-base">100% Practical</p>
-                                        <p class="text-gray-400 text-xs">Agency-level Training</p>
+                                        <p class="text-white font-bold text-base">100% Practical</p>
+                                        <span class="text-sub">Agency-level Training</span>
                                     </div>
                                 </div>
                             </div>
@@ -375,29 +396,29 @@
                     </div>
 
                     <div class="w-full lg:w-1/2 reveal text-center lg:text-left">
-                        <span class="text-brand-secondary font-bold tracking-widest text-xs uppercase mb-2 block flex items-center justify-center lg:justify-start gap-2">
-                            <span class="w-6 h-0.5 bg-brand-secondary"></span> About Us
+                        <span class="text-brand-secondary font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fas fa-building text-brand-secondary"></i> About Us
                         </span>
                         <h2 class="text-3xl md:text-4xl font-bold mb-5 text-white leading-tight">
                             Transforming Beginners into <span class="gradient-text block md:inline">Marketing Experts</span>
                         </h2>
-                        <p class="text-gray-400 text-sm md:text-base mb-4 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        <p class="mb-5 max-w-2xl mx-auto lg:mx-0">
                             Welcome to <strong class="text-white">Nexus Institute & Marketing</strong>. We are more than just an institute; we are a working digital marketing agency. This means you don't just learn theories—you learn what actually works in the market today.
                         </p>
-                        <p class="text-gray-400 text-sm md:text-base mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        <p class="mb-8 max-w-2xl mx-auto lg:mx-0">
                             Our goal is to equip you with deep, practical knowledge of Social Media Growth, AI tools, and Performance Marketing so you can confidently handle client projects, start your own agency, or secure high-paying jobs.
                         </p>
                         
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto lg:mx-0">
-                            <div class="glass p-4 rounded-xl text-left border border-white/5 hover:border-brand-primary/30 transition-colors">
-                                <i class="fas fa-rocket text-2xl text-brand-primary mb-3"></i>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto lg:mx-0">
+                            <div class="glass p-5 rounded-xl text-left border border-white/5">
+                                <div class="icon-box w-10 h-10 text-xl text-brand-primary mb-3 bg-brand-primary/10 rounded-lg"><i class="fas fa-rocket"></i></div>
                                 <h4 class="font-bold text-white text-base">Growth Focused</h4>
-                                <p class="text-xs text-gray-400 mt-1">Learn organic & paid strategies that drive real business growth.</p>
+                                <span class="text-sub mt-1 block">Learn organic & paid strategies.</span>
                             </div>
-                            <div class="glass p-4 rounded-xl text-left border border-white/5 hover:border-brand-accent/30 transition-colors">
-                                <i class="fas fa-robot text-2xl text-brand-accent mb-3"></i>
+                            <div class="glass p-5 rounded-xl text-left border border-white/5">
+                                <div class="icon-box w-10 h-10 text-xl text-brand-accent mb-3 bg-brand-accent/10 rounded-lg"><i class="fas fa-robot"></i></div>
                                 <h4 class="font-bold text-white text-base">AI Integrated</h4>
-                                <p class="text-xs text-gray-400 mt-1">Master ChatGPT, Claude & other tools to 10x your productivity.</p>
+                                <span class="text-sub mt-1 block">Master tools to 10x productivity.</span>
                             </div>
                         </div>
                     </div>
@@ -406,111 +427,113 @@
         </section>
 
         <!-- Courses Section -->
-        <section id="courses" class="py-16 md:py-24 bg-[#050507] border-t border-white/5 relative w-full">
+        <section id="courses" class="py-16 md:py-24 border-t border-white/5 relative w-full bg-[#030305]/50">
             <div class="container mx-auto px-5 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-                    <span class="text-brand-primary font-bold tracking-widest text-xs uppercase mb-2 block">Complete Curriculum</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white leading-tight">What You Will <span class="gradient-text">Learn</span></h2>
-                    <p class="text-gray-400 text-sm md:text-base">Dive deep into the most comprehensive Social Media & Performance Marketing syllabus designed for 2026.</p>
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <span class="text-brand-primary font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
+                        <i class="fas fa-graduation-cap"></i> Complete Curriculum
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">What You Will <span class="gradient-text">Learn</span></h2>
+                    <p>Dive deep into the most comprehensive Social Media & Performance Marketing syllabus designed for 2026.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto items-stretch">
                     
                     <!-- Box 1 -->
-                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center text-xl text-white mb-5 shadow-lg shadow-pink-500/20">
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full">
+                        <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-orange-400 text-2xl text-white mb-6 shadow-lg">
                             <i class="fas fa-magic"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-3">Design & Editing</h3>
-                        <p class="text-gray-400 text-sm mb-5 flex-grow">Create scroll-stopping visuals and viral reels without prior design experience.</p>
-                        <ul class="space-y-3 text-gray-300 text-sm mt-auto">
-                            <li class="flex items-start gap-2.5">
-                                <i class="fas fa-check-circle text-brand-accent mt-0.5"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Design & Editing</h3>
+                        <p class="mb-6 flex-grow">Create scroll-stopping visuals and viral reels without prior design experience.</p>
+                        <ul class="space-y-4 mt-auto">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-accent mt-1 text-lg"></i>
                                 <div><strong class="text-white">Canva:</strong> Professional Post, Story & Ad Design Mastery</div>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fas fa-check-circle text-brand-accent mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-accent mt-1 text-lg"></i>
                                 <div><strong class="text-white">CapCut:</strong> Advanced Video Editing, Effects & Viral Hooks</div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Box 2 -->
-                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-xl text-white mb-5 shadow-lg shadow-blue-500/20">
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full">
+                        <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-2xl text-white mb-6 shadow-lg">
                             <i class="fas fa-microchip"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-3">Advanced AI Mastery</h3>
-                        <p class="text-gray-400 text-sm mb-5 flex-grow">Automate your content creation, copywriting, and strategy generation. Learn the secret prompts used by top agencies.</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Advanced AI Mastery</h3>
+                        <p class="mb-6 flex-grow">Automate your content creation, copywriting, and strategy generation. Learn the secret prompts.</p>
                         
-                        <div class="grid grid-cols-2 gap-2 mt-auto">
-                            <div class="glass p-2.5 rounded-lg flex items-center gap-2 text-xs font-medium text-gray-200"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" class="w-4 h-4 opacity-90" alt="ChatGPT"> ChatGPT</div>
-                            <div class="glass p-2.5 rounded-lg flex items-center gap-2 text-xs font-medium text-gray-200"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-4 h-4 opacity-90" alt="Gemini"> Gemini</div>
-                            <div class="glass p-2.5 rounded-lg flex items-center gap-2 text-xs font-medium text-gray-200"><i class="fa-solid fa-x text-white w-4 text-center"></i> Grok</div>
-                            <div class="glass p-2.5 rounded-lg flex items-center gap-2 text-xs font-medium text-gray-200"><i class="fa-brands fa-microsoft text-base w-4 text-center text-blue-400"></i> Copilot</div>
-                            <div class="glass p-2.5 rounded-lg flex items-center gap-2 text-xs font-medium text-gray-200"><i class="fas fa-comment-dots text-base w-4 text-center text-orange-400"></i> Claude</div>
-                            <div class="glass p-2.5 rounded-lg flex items-center gap-2 text-xs font-medium text-gray-200"><i class="fa-brands fa-meta text-base w-4 text-center text-blue-600"></i> Meta AI</div>
+                        <div class="grid grid-cols-2 gap-3 mt-auto">
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" class="w-5 h-5 opacity-90" alt="ChatGPT"> ChatGPT</div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-5 h-5 opacity-90" alt="Gemini"> Gemini</div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fa-solid fa-x w-5 text-center"></i> Grok</div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fa-brands fa-microsoft w-5 text-center text-blue-400"></i> Copilot</div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fas fa-comment-dots w-5 text-center text-orange-400"></i> Claude</div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fa-brands fa-meta w-5 text-center text-blue-500"></i> Meta AI</div>
                         </div>
                     </div>
 
                     <!-- Box 3 -->
-                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-xl text-white mb-5 shadow-lg shadow-purple-500/20">
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full">
+                        <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 text-2xl text-white mb-6 shadow-lg">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-3">Channel Handling</h3>
-                        <p class="text-gray-400 text-sm mb-5 flex-grow">Master the algorithms of top platforms to grow organically.</p>
-                        <ul class="space-y-3 text-gray-300 text-sm mt-auto">
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-brands fa-youtube text-red-500 text-lg mt-0.5 w-5 text-center"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Channel Handling</h3>
+                        <p class="mb-6 flex-grow">Master the algorithms of top platforms to grow organically.</p>
+                        <ul class="space-y-5 mt-auto">
+                            <li class="flex items-start gap-4">
+                                <div class="icon-box w-8 h-8 rounded-lg bg-red-500/10 text-red-500 text-xl"><i class="fa-brands fa-youtube"></i></div>
                                 <div><strong class="text-white block">YouTube:</strong> Channel Handling, SEO & Growth</div>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-brands fa-instagram text-pink-500 text-lg mt-0.5 w-5 text-center"></i>
+                            <li class="flex items-start gap-4">
+                                <div class="icon-box w-8 h-8 rounded-lg bg-pink-500/10 text-pink-500 text-xl"><i class="fa-brands fa-instagram"></i></div>
                                 <div><strong class="text-white block">Instagram:</strong> Profile Optimization & Viral Reach</div>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-brands fa-facebook text-blue-500 text-lg mt-0.5 w-5 text-center"></i>
+                            <li class="flex items-start gap-4">
+                                <div class="icon-box w-8 h-8 rounded-lg bg-blue-500/10 text-blue-500 text-xl"><i class="fa-brands fa-facebook"></i></div>
                                 <div><strong class="text-white block">Facebook:</strong> Page Handling & Community Building</div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Box 4 -->
-                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-xl text-white mb-5 shadow-lg shadow-green-500/20">
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full">
+                        <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-2xl text-white mb-6 shadow-lg">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-3">Performance Marketing</h3>
-                        <p class="text-gray-400 text-sm mb-5 flex-grow">Generate high-quality leads and drive sales using paid advertising budgets efficiently.</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Performance Marketing</h3>
+                        <p class="mb-6 flex-grow">Generate high-quality leads and drive sales using paid advertising budgets efficiently.</p>
                         
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4 mt-auto">
-                            <div class="flex items-start gap-2.5">
-                                <div class="bg-blue-600/20 p-2 rounded-lg shrink-0"><i class="fa-brands fa-meta text-blue-500 text-sm w-3 text-center"></i></div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5 mt-auto">
+                            <div class="flex items-start gap-3">
+                                <div class="icon-box w-10 h-10 bg-blue-600/20 rounded-xl"><i class="fa-brands fa-meta text-blue-500 text-lg"></i></div>
                                 <div>
-                                    <h4 class="font-bold text-white text-xs">Meta Ads</h4>
-                                    <p class="text-[11px] text-gray-400 mt-0.5">Campaign structure, Targeting & Lead Gen setups.</p>
+                                    <h4 class="font-bold text-white text-base">Meta Ads</h4>
+                                    <span class="text-sub mt-0.5 block">Campaigns & Leads.</span>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-2.5">
-                                <div class="bg-red-500/20 p-2 rounded-lg shrink-0"><i class="fa-brands fa-google text-red-500 text-sm w-3 text-center"></i></div>
+                            <div class="flex items-start gap-3">
+                                <div class="icon-box w-10 h-10 bg-red-500/20 rounded-xl"><i class="fa-brands fa-google text-red-500 text-lg"></i></div>
                                 <div>
-                                    <h4 class="font-bold text-white text-xs">Google Ads</h4>
-                                    <p class="text-[11px] text-gray-400 mt-0.5">Search Ads, YouTube Video Ads & Bidding.</p>
+                                    <h4 class="font-bold text-white text-base">Google Ads</h4>
+                                    <span class="text-sub mt-0.5 block">Search & YT Video.</span>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-2.5">
-                                <div class="bg-brand-accent/20 p-2 rounded-lg shrink-0"><i class="fas fa-search text-brand-accent text-sm w-3 text-center"></i></div>
+                            <div class="flex items-start gap-3">
+                                <div class="icon-box w-10 h-10 bg-brand-accent/20 rounded-xl"><i class="fas fa-search text-brand-accent text-lg"></i></div>
                                 <div>
-                                    <h4 class="font-bold text-white text-xs">Keyword Research</h4>
-                                    <p class="text-[11px] text-gray-400 mt-0.5">Finding high-intent keywords for max ROI.</p>
+                                    <h4 class="font-bold text-white text-base">Keyword Research</h4>
+                                    <span class="text-sub mt-0.5 block">High-intent targeting.</span>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-2.5">
-                                <div class="bg-green-500/20 p-2 rounded-lg shrink-0"><i class="fas fa-table text-green-500 text-sm w-3 text-center"></i></div>
+                            <div class="flex items-start gap-3">
+                                <div class="icon-box w-10 h-10 bg-green-500/20 rounded-xl"><i class="fas fa-table text-green-500 text-lg"></i></div>
                                 <div>
-                                    <h4 class="font-bold text-white text-xs">Excel & Reporting</h4>
-                                    <p class="text-[11px] text-gray-400 mt-0.5">Creating professional reports & tracking data.</p>
+                                    <h4 class="font-bold text-white text-base">Reporting</h4>
+                                    <span class="text-sub mt-0.5 block">Tracking ROI & Data.</span>
                                 </div>
                             </div>
                         </div>
@@ -523,112 +546,120 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="mt-auto relative z-10 pt-16 pb-6 border-t border-white/10 bg-[#030305] w-full">
+    <footer id="contact" class="mt-auto relative z-10 pt-16 pb-6 border-t border-white/10 bg-[#020203] w-full">
         <div class="container mx-auto px-5 lg:px-8 mb-10">
+            
+            <div class="text-center mb-10">
+                <span class="text-brand-secondary font-bold tracking-widest text-sm uppercase flex items-center justify-center gap-2">
+                    <i class="fas fa-headset text-brand-secondary"></i> Contact Us
+                </span>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
                 
                 <div class="lg:col-span-4 text-center md:text-left">
-                    <a href="#home" class="block mb-5">
+                    <a href="#home" class="block mb-6 magnetic-btn">
                         <img src="Logo.png" alt="Nexus Logo" class="h-12 mx-auto md:mx-0 object-contain">
                     </a>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-5 pe-0 md:pe-4">
+                    <p class="mb-6 pe-0 md:pe-4">
                         Nexus Institute & Marketing provides elite practical training in Digital Marketing. Join us to learn industry-level Social Media and Performance Marketing.
                     </p>
                     
-                    <div class="flex gap-3 justify-center md:justify-start">
-                        <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-xl glass flex items-center justify-center hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white hover:border-transparent transition-all duration-300">
-                            <i class="fa-brands fa-instagram text-base"></i>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="https://instagram.com" target="_blank" class="icon-box w-12 h-12 rounded-xl glass hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 magnetic-btn">
+                            <i class="fa-brands fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-xl glass flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-transparent transition-all duration-300">
-                            <i class="fa-brands fa-facebook-f text-base"></i>
+                        <a href="https://facebook.com" target="_blank" class="icon-box w-12 h-12 rounded-xl glass hover:bg-blue-600 hover:text-white transition-all duration-300 magnetic-btn">
+                            <i class="fa-brands fa-facebook-f text-xl"></i>
                         </a>
-                        <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-xl glass flex items-center justify-center hover:bg-red-600 hover:text-white hover:border-transparent transition-all duration-300">
-                            <i class="fa-brands fa-youtube text-base"></i>
+                        <a href="https://youtube.com" target="_blank" class="icon-box w-12 h-12 rounded-xl glass hover:bg-red-600 hover:text-white transition-all duration-300 magnetic-btn">
+                            <i class="fa-brands fa-youtube text-xl"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="lg:col-span-3 lg:pl-8 text-center md:text-left">
-                    <h4 class="text-white font-bold text-base mb-5 relative inline-block">
+                    <h4 class="text-white font-bold text-xl mb-6 relative inline-block">
                         Quick Links
-                        <span class="absolute -bottom-1.5 left-0 md:left-0 right-0 mx-auto md:mx-0 w-1/2 h-0.5 bg-gradient-to-r from-brand-primary to-transparent rounded"></span>
+                        <span class="absolute -bottom-2 left-0 md:left-0 right-0 mx-auto md:mx-0 w-1/2 h-0.5 bg-gradient-to-r from-brand-primary to-transparent rounded"></span>
                     </h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition flex items-center justify-center md:justify-start gap-2"><i class="fas fa-chevron-right text-brand-primary text-xs"></i> Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition flex items-center justify-center md:justify-start gap-2"><i class="fas fa-chevron-right text-brand-primary text-xs"></i> About Us</a></li>
-                        <li><a href="#courses" class="text-gray-400 hover:text-white transition flex items-center justify-center md:justify-start gap-2"><i class="fas fa-chevron-right text-brand-primary text-xs"></i> Full Course Details</a></li>
-                        <li><a href="#special-offers" class="text-orange-400 hover:text-white transition flex items-center justify-center md:justify-start gap-2"><i class="fas fa-chevron-right text-orange-400 text-xs"></i> Special Offers</a></li>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> About Us</a></li>
+                        <li><a href="#courses" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Full Course Details</a></li>
+                        <li><a href="#special-offers" class="text-orange-400 font-medium hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-orange-400 text-sm"></i> Special Offers</a></li>
                     </ul>
                 </div>
 
                 <div class="lg:col-span-5 text-center md:text-left">
-                    <h4 class="text-white font-bold text-base mb-5 relative inline-block w-full md:w-auto">
-                        Contact & Visit Us
-                        <span class="absolute -bottom-1.5 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-1/2 h-0.5 bg-gradient-to-r from-brand-secondary to-transparent rounded"></span>
+                    <h4 class="text-white font-bold text-xl mb-6 relative inline-block w-full md:w-auto">
+                        Get In Touch
+                        <span class="absolute -bottom-2 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-1/2 h-0.5 bg-gradient-to-r from-brand-secondary to-transparent rounded"></span>
                     </h4>
                     
-                    <div class="space-y-3">
-                        <a href="tel:+918866722633" class="flex items-start gap-3 p-2.5 rounded-xl glass hover:bg-white/5 transition group max-w-xs mx-auto md:mx-0">
-                            <div class="bg-blue-500/20 p-2 rounded-lg text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition">
-                                <i class="fas fa-phone-alt text-base"></i>
+                    <div class="space-y-5">
+                        <!-- FIX: Use fas fa-phone and ensure flex alignment prevents squishing -->
+                        <a href="tel:+918866722633" class="flex items-center gap-4 p-3 rounded-2xl glass hover:bg-white/5 transition group max-w-sm mx-auto md:mx-0">
+                            <div class="icon-box w-12 h-12 bg-blue-500/20 rounded-xl text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition">
+                                <i class="fas fa-phone text-xl"></i>
                             </div>
-                            <div class="text-left pt-0.5">
-                                <p class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-0.5">Call Us</p>
-                                <p class="text-white font-bold text-sm md:text-base">+91 88667 22633</p>
-                            </div>
-                        </a>
-
-                        <a href="https://wa.me/918866722633" target="_blank" class="flex items-start gap-3 p-2.5 rounded-xl glass hover:bg-green-500/10 hover:border-green-500/30 transition group max-w-xs mx-auto md:mx-0">
-                            <div class="bg-green-500/20 p-2 rounded-lg text-green-400 group-hover:bg-green-500 group-hover:text-white transition">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                            </div>
-                            <div class="text-left pt-0.5">
-                                <p class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-0.5">WhatsApp Chat</p>
-                                <p class="text-white font-bold text-sm md:text-base">+91 88667 22633</p>
+                            <div class="text-left">
+                                <span class="text-sub uppercase tracking-wider block mb-1">Call Us Directly</span>
+                                <p class="text-white font-bold text-lg">+91 88667 22633</p>
                             </div>
                         </a>
 
-                        <div class="flex items-start gap-3 p-2.5 rounded-xl glass max-w-xs mx-auto md:mx-0">
-                            <div class="bg-brand-accent/20 p-2 rounded-lg text-brand-accent">
-                                <i class="fas fa-map-marker-alt text-base"></i>
+                        <a href="https://wa.me/918866722633" target="_blank" class="flex items-center gap-4 p-3 rounded-2xl glass hover:bg-green-500/10 hover:border-green-500/30 transition group max-w-sm mx-auto md:mx-0">
+                            <div class="icon-box w-12 h-12 bg-green-500/20 rounded-xl text-green-400 group-hover:bg-green-500 group-hover:text-white transition">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
                             </div>
-                            <div class="text-left pt-0.5">
-                                <p class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Our Institute</p>
-                                <p class="text-gray-300 text-xs leading-relaxed">
+                            <div class="text-left">
+                                <span class="text-sub uppercase tracking-wider block mb-1">WhatsApp Chat</span>
+                                <p class="text-white font-bold text-lg">+91 88667 22633</p>
+                            </div>
+                        </a>
+
+                        <!-- Google Map Fix -->
+                        <a href="https://maps.google.com/?q=319+Millennium+Business+Hub,+Opposite+Dipkamal+Mall,+Sarthana+Jakatnaka,+Surat,+Gujarat+395013" target="_blank" class="flex items-start gap-4 p-3 rounded-2xl glass hover:border-brand-accent/50 transition-colors group max-w-sm mx-auto md:mx-0">
+                            <div class="icon-box w-12 h-12 bg-brand-accent/20 rounded-xl text-brand-accent">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div class="text-left mt-1">
+                                <p class="text-white font-bold mb-2 group-hover:text-brand-accent transition-colors text-base">Visit Our Institute</p>
+                                <p class="text-sub leading-relaxed">
                                     319, Millennium Business Hub,<br>
                                     Opposite Dipkamal Mall,<br>
                                     Sarthana Jakatnaka,<br>
                                     Surat, Gujarat 395013
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <div class="border-t border-white/10 pt-5 px-5 text-center">
-            <p class="text-gray-500 text-xs flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2">
+        <div class="border-t border-white/10 pt-6 px-5 text-center pb-4">
+            <p class="text-sub flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2">
                 <span>&copy; <span id="year"></span> Nexus Institute & Marketing.</span>
-                <span class="hidden sm:inline">|</span>
+                <span class="hidden sm:inline text-white/20">|</span>
                 <span>All Rights Reserved.</span>
             </p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/918866722633" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-[0_4px_20px_rgba(34,197,94,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918866722633" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- SCRIPTS -->
     <script>
         // PWA Service Worker Registration
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('Service Worker registered', reg))
-                    .catch(err => console.error('Service Worker registration failed', err));
+                navigator.serviceWorker.register('sw.js').catch(err => console.error('Service Worker registration failed', err));
             });
         }
 
@@ -659,8 +690,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50; 
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementTop < windowHeight - 50) {
                     reveals[i].classList.add("active");
                 }
             }
@@ -674,11 +704,12 @@
                 header.style.background = 'rgba(5, 5, 7, 0.9)';
                 header.style.borderColor = 'rgba(255, 255, 255, 0.15)';
             } else {
-                header.style.background = 'rgba(10, 10, 15, 0.75)';
-                header.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                header.style.background = 'rgba(5, 5, 7, 0.65)';
+                header.style.borderColor = 'rgba(255, 255, 255, 0.08)';
             }
         });
 
+        // UNTOUCHED Loader Logic
         document.addEventListener("DOMContentLoaded", () => {
             const loaderBar = document.getElementById("loader-progress");
             const loaderScreen = document.getElementById("page-loader");
@@ -700,6 +731,103 @@
                 }
             }, 150); 
         });
+
+        // 3D Glass Card Tracking
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        document.querySelectorAll('.magnetic-btn').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+                const rect = btn.getBoundingClientRect();
+                const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
+                const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
+                btn.style.transform = `translate(${x}px, ${y}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0px, 0px)';
+            });
+        });
+
+        // -------------------------------------------------------------
+        // NEW: ELEGANT STARDUST & AURORA CURSOR EFFECT
+        // (Clean, professional, and NEVER obstructs text reading)
+        // -------------------------------------------------------------
+        const canvas = document.getElementById('interactive-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let hue = 220; // Start at Brand Blue
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Spawn subtle tiny stars/particles instead of thick smoke
+            if(Math.random() > 0.4) {
+                particles.push({
+                    x: mouseX,
+                    y: mouseY,
+                    vx: (Math.random() - 0.5) * 1.5,
+                    vy: (Math.random() - 0.5) * 1.5,
+                    size: Math.random() * 2 + 0.5,
+                    color: `hsl(${hue}, 100%, 70%)`,
+                    life: 1
+                });
+            }
+            hue += 0.5; // Slowly change color as you move
+        });
+
+        function animateCanvas() {
+            // Clear canvas cleanly
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw a very soft ambient glowing orb at the mouse position
+            let gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 300);
+            gradient.addColorStop(0, `hsla(${hue}, 80%, 60%, 0.05)`);
+            gradient.addColorStop(1, 'transparent');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw fading particles
+            ctx.globalCompositeOperation = 'screen';
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.life -= 0.01;
+
+                if (p.life <= 0) {
+                    particles.splice(i, 1);
+                    i--;
+                    continue;
+                }
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.globalAlpha = p.life * 0.8;
+                ctx.fill();
+            }
+            ctx.globalAlpha = 1;
+            ctx.globalCompositeOperation = 'source-over';
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
     </script>
 </body>
 </html>
