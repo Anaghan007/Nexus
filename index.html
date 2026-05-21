@@ -3,6 +3,12 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#050507">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="Logo.png">
+    
     <title>Nexus Institute & Marketing | Digital Marketing</title>
     
     <!-- Favicon -->
@@ -63,7 +69,7 @@
             transition: width 0.1s ease;
         }
 
-        /* --- Glassmorphism --- */
+        /* --- Glassmorphism & 3D UI --- */
         .glass {
             background: rgba(255, 255, 255, 0.04);
             backdrop-filter: blur(20px);
@@ -77,12 +83,14 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1.5rem;
             box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
         }
         .glass-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: rgba(59, 130, 246, 0.6);
-            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.3);
+            transform: translateY(-12px) scale(1.04) perspective(1000px) rotateX(2deg) rotateY(-2deg);
+            border-color: rgba(59, 130, 246, 0.8);
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.4), inset 0 0 20px rgba(255,255,255,0.05);
+            z-index: 10;
         }
 
         /* --- Floating Header --- */
@@ -114,9 +122,9 @@
 
         /* --- Animations --- */
         @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
         }
 
         @keyframes glowing {
@@ -227,11 +235,11 @@
                     </div>
                     
                     <h1 class="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold mb-4 leading-tight tracking-tight text-white w-full">
-                        Join For 2 Months & <span class="gradient-text block mt-1">Get 1 Month FREE!</span>
+                        Join For 3 Months & <span class="gradient-text block mt-1">Get 1 Month FREE!</span>
                     </h1>
                     
                     <p class="text-gray-300 text-base md:text-lg mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        Become a Marketing Expert with our <strong class="text-white">2+1 Month Practical Masterclass</strong>. Learn Agency-level skills and 10x your career growth.
+                        Become a Marketing Expert with our <strong class="text-white">3+1 Month Practical Masterclass</strong>. Learn Agency-level skills and 10x your career growth.
                     </p>
 
                     <!-- New Main Highlight Badges -->
@@ -253,8 +261,8 @@
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-                        <a href="https://wa.me/918866722633?text=I%20want%20to%20claim%20the%202%2B1%20Month%20Offer!" target="_blank" class="bg-gradient-to-r from-brand-primary to-brand-secondary px-8 py-4 rounded-full font-bold text-white shadow-lg hover:shadow-brand-primary/40 transition-all transform hover:-translate-y-1 text-center text-base">
-                            Claim 2+1 Offer Now
+                        <a href="https://wa.me/918866722633?text=I%20want%20to%20claim%20the%203%2B1%20Month%20Offer!" target="_blank" class="bg-gradient-to-r from-brand-primary to-brand-secondary px-8 py-4 rounded-full font-bold text-white shadow-lg hover:shadow-brand-primary/40 transition-all transform hover:-translate-y-1 text-center text-base">
+                            Claim 3+1 Offer Now
                         </a>
                     </div>
                 </div>
@@ -270,7 +278,7 @@
                         
                         <h3 class="text-2xl font-bold mb-1 text-white">Full Digital Marketing</h3>
                         <div class="flex items-center gap-2 text-orange-400 font-bold mb-4 text-sm">
-                            <i class="fas fa-clock"></i> 2 Months Pay + 1 Month FREE!
+                            <i class="fas fa-clock"></i> 3 Months Pay + 1 Month FREE!
                         </div>
                         
                         <div class="mb-5 pb-5 border-b border-white/10">
@@ -320,24 +328,24 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Offer 1 -->
-                    <div class="glass-card p-6 border-t-4 border-orange-500">
-                        <h4 class="text-orange-500 font-black text-xl mb-2">2+1 MONTH</h4>
-                        <p class="text-gray-400 text-sm">Pay for 2 months and get the 3rd month of advanced internship absolutely FREE.</p>
+                    <div class="glass-card relative p-6 border-t-4 border-orange-500">
+                        <h4 class="text-orange-500 font-black text-xl mb-2">3+1 MONTH</h4>
+                        <p class="text-gray-400 text-sm">Pay for 3 months and get the 4th month of advanced internship absolutely FREE.</p>
                     </div>
                     <!-- Offer 2 -->
-                    <div class="glass-card p-6 border-t-4 border-blue-500">
+                    <div class="glass-card relative p-6 border-t-4 border-blue-500">
                         <h4 class="text-blue-500 font-black text-xl mb-2">FREE AI COURSE</h4>
                         <p class="text-gray-400 text-sm">Master AI tools like Claude, Gemini & Other's AI Tools worth ₹15,000 for FREE with this batch.</p>
                     </div>
                     <!-- Offer 3 -->
-                    <div class="glass-card p-6 border-t-4 border-green-500">
+                    <div class="glass-card relative p-6 border-t-4 border-green-500">
                         <h4 class="text-green-500 font-black text-xl mb-2">JOB GUARANTY</h4>
                         <p class="text-gray-400 text-sm">We provide 100% written job guarantee and interview preparation for all our students.</p>
                     </div>
                     <!-- Offer 4 -->
-                    <div class="glass-card p-6 border-t-4 border-purple-500">
+                    <div class="glass-card relative p-6 border-t-4 border-purple-500">
                         <h4 class="text-purple-500 font-black text-xl mb-2">BRING A FRIEND</h4>
-                        <p class="text-gray-400 text-sm">Enroll with a friend and both of you get an additional flat discount on the final fee.</p>
+                        <p class="text-gray-400 text-sm">Enroll together and get the ₹45,000 course for <strong class="text-white text-lg">₹40,000</strong> only! <br><span class="text-red-400 font-bold text-xs mt-2 block">🔥 Valid only for the first 10 students!</span></p>
                     </div>
                 </div>
             </div>
@@ -615,6 +623,15 @@
     </a>
 
     <script>
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registered', reg))
+                    .catch(err => console.error('Service Worker registration failed', err));
+            });
+        }
+
         document.getElementById('year').textContent = new Date().getFullYear();
 
         const menuBtn = document.getElementById('mobile-menu-btn');
