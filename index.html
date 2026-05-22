@@ -116,7 +116,14 @@
         }
 
         .nav-link {
-            position: relative; color: #d1d5db; font-weight: 600; font-size: 0.95rem; transition: color 0.3s;
+            position: relative; 
+            color: #d1d5db; 
+            font-weight: 600; 
+            font-size: 0.95rem; 
+            transition: color 0.3s;
+            display: flex; /* Fixes Icon and Text Alignment */
+            align-items: center; 
+            gap: 0.4rem; /* Replaces manual margin */
         }
         .nav-link:hover { color: #ffffff; }
         .nav-link::after {
@@ -180,11 +187,12 @@
                 </a>
                 
                 <nav class="hidden md:flex gap-8 items-center absolute left-1/2 transform -translate-x-1/2">
-                    <a href="#home" class="nav-link"><i class="fas fa-home text-sm mr-1"></i> Home</a>
-                    <a href="#about" class="nav-link"><i class="fas fa-building text-sm mr-1"></i> About</a>
-                    <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap text-sm mr-1"></i> Courses</a>
-                    <a href="#special-offers" class="nav-link text-orange-400"><i class="fas fa-fire text-sm mr-1"></i> Offers</a>
-                    <a href="#contact" class="nav-link"><i class="fas fa-headset text-sm mr-1"></i> Contact</a>
+                    <a href="#home" class="nav-link"><i class="fas fa-home text-sm"></i> Home</a>
+                    <a href="#about" class="nav-link"><i class="fas fa-building text-sm"></i> About</a>
+                    <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap text-sm"></i> Courses</a>
+                    <a href="#services" class="nav-link"><i class="fas fa-briefcase text-sm"></i> Services</a>
+                    <a href="#special-offers" class="nav-link text-orange-400"><i class="fas fa-fire text-sm"></i> Offers</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-headset text-sm"></i> Contact</a>
                 </nav>
 
                 <div class="flex items-center gap-4">
@@ -201,11 +209,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden pointer-events-auto mt-2 mx-auto w-full max-w-sm floating-header rounded-3xl overflow-hidden shadow-2xl origin-top transition-all duration-300">
             <div class="flex flex-col p-2">
-                <a href="#home" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-home mr-2"></i> Home</a>
-                <a href="#about" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-building mr-2"></i> About Us</a>
-                <a href="#courses" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-graduation-cap mr-2"></i> Courses</a>
-                <a href="#special-offers" class="text-center py-3 text-orange-400 hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-fire mr-2"></i> Special Offers</a>
-                <a href="#contact" class="text-center py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-headset mr-2"></i> Contact Us</a>
+                <a href="#home" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-home"></i> Home</a>
+                <a href="#about" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-building"></i> About Us</a>
+                <a href="#courses" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-graduation-cap"></i> Courses</a>
+                <a href="#services" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-briefcase"></i> Services</a>
+                <a href="#special-offers" class="flex justify-center items-center gap-3 py-3 text-orange-400 hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-fire"></i> Special Offers</a>
+                <a href="#contact" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-headset"></i> Contact Us</a>
                 <div class="p-3 mt-1 border-t border-white/10">
                     <a href="https://wa.me/918866722633" target="_blank" class="flex justify-center items-center gap-2 w-full bg-green-500 text-white py-3 rounded-xl font-bold text-base">
                         <i class="fab fa-whatsapp text-xl"></i> WhatsApp Us
@@ -543,6 +552,113 @@
             </div>
         </section>
 
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24 border-t border-white/5 relative w-full bg-[#050507]">
+            <div class="container mx-auto px-5 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <span class="text-brand-secondary font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
+                        <i class="fas fa-briefcase text-brand-secondary"></i> Professional Agency Services
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">Premium Services We <span class="gradient-text">Provide</span></h2>
+                    <p>High-end agency solutions to scale your business, utilizing advanced AI tools and professional design strategies.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto items-stretch">
+                    
+                    <!-- Service 1 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-xl text-white shadow-lg"><i class="fas fa-id-card"></i></div>
+                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-lg text-sm font-bold border border-blue-500/30">Starts at ₹499</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Design Visiting Card</h3>
+                        <p class="text-sub">Create high-impact, professional business cards with custom interactive QR codes for instant digital networking.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-400 text-xl text-white shadow-lg"><i class="fas fa-ring"></i></div>
+                            <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-lg text-sm font-bold border border-pink-500/30">Starts at ₹999</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Digital Marriage Kankotri</h3>
+                        <p class="text-sub">Elegant, multi-page digital invitations featuring AI-enhanced portraits and integrated Google Maps navigation links.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-400 text-xl text-white shadow-lg"><i class="fas fa-birthday-cake"></i></div>
+                            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-lg text-sm font-bold border border-purple-500/30">Starts at ₹399</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Birthday Celebration Card</h3>
+                        <p class="text-sub">Creative, animated birthday invites with personalized photo slideshows and instant WhatsApp RSVP integration.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-xl text-white shadow-lg"><i class="fas fa-ribbon"></i></div>
+                            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg text-sm font-bold border border-green-500/30">Starts at ₹599</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Opening Ceremony Card</h3>
+                        <p class="text-sub">Professional grand opening invites optimized for high attendance, featuring clickable calendar reminders.</p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 text-xl text-white shadow-lg"><i class="fas fa-video"></i></div>
+                            <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-lg text-sm font-bold border border-red-500/30">₹799 / Video</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Viral Video Editing</h3>
+                        <p class="text-sub">High-retention editing for Reels/Shorts using Hormozi-style captions, seamless transitions, and expert sound design.</p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-400 to-blue-500 text-xl text-white shadow-lg"><i class="fas fa-image"></i></div>
+                            <span class="bg-teal-500/20 text-teal-400 px-3 py-1 rounded-lg text-sm font-bold border border-teal-500/30">₹299 / Post</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Social Media Business Post</h3>
+                        <p class="text-sub">Conversion-focused designs with AI-driven copywriting and SEO-optimized hashtags to maximize brand reach.</p>
+                    </div>
+
+                    <!-- Service 7 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-pink-500 text-xl text-white shadow-lg"><i class="fas fa-users-cog"></i></div>
+                            <span class="bg-fuchsia-500/20 text-fuchsia-400 px-3 py-1 rounded-lg text-sm font-bold border border-fuchsia-500/30">₹9,999 / Month</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Insta / YouTube Channel Handle</h3>
+                        <p class="text-sub">Full-service management including content strategy, profile SEO, engagement, and advanced weekly analytics.</p>
+                    </div>
+
+                    <!-- Service 8 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-xl text-white shadow-lg"><i class="fab fa-facebook-f"></i></div>
+                            <span class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-lg text-sm font-bold border border-blue-500/30">₹4,999 / Month</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Facebook & Insta Ads Run</h3>
+                        <p class="text-sub">Advanced lead generation with Meta Pixel tracking, A/B creative testing, and deep retargeting funnels.</p>
+                    </div>
+
+                    <!-- Service 9 -->
+                    <div class="glass-card p-6 reveal flex flex-col h-full w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-yellow-500 text-xl text-white shadow-lg"><i class="fab fa-google"></i></div>
+                            <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-lg text-sm font-bold border border-yellow-500/30">₹5,999 / Month</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Google Ads Run</h3>
+                        <p class="text-sub">Capture high-intent traffic with optimized Search/Display campaigns, keyword mining, and landing page conversion audits.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -587,6 +703,7 @@
                         <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Home</a></li>
                         <li><a href="#about" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> About Us</a></li>
                         <li><a href="#courses" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Full Course Details</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Our Services</a></li>
                         <li><a href="#special-offers" class="text-orange-400 font-medium hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-orange-400 text-sm"></i> Special Offers</a></li>
                     </ul>
                 </div>
@@ -598,7 +715,6 @@
                     </h4>
                     
                     <div class="space-y-5">
-                        <!-- FIX: Use fas fa-phone and ensure flex alignment prevents squishing -->
                         <a href="tel:+918866722633" class="flex items-center gap-4 p-3 rounded-2xl glass hover:bg-white/5 transition group max-w-sm mx-auto md:mx-0">
                             <div class="icon-box w-12 h-12 bg-blue-500/20 rounded-xl text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition">
                                 <i class="fas fa-phone text-xl"></i>
@@ -619,7 +735,6 @@
                             </div>
                         </a>
 
-                        <!-- Google Map Fix -->
                         <a href="https://maps.google.com/?q=319+Millennium+Business+Hub,+Opposite+Dipkamal+Mall,+Sarthana+Jakatnaka,+Surat,+Gujarat+395013" target="_blank" class="flex items-start gap-4 p-3 rounded-2xl glass hover:border-brand-accent/50 transition-colors group max-w-sm mx-auto md:mx-0">
                             <div class="icon-box w-12 h-12 bg-brand-accent/20 rounded-xl text-brand-accent">
                                 <i class="fas fa-map-marker-alt text-xl"></i>
