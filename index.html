@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     
-    <!-- Deep SEO Meta Tags -->
-    <title>Nexus Institute & Marketing | Practical Digital Marketing Training Surat</title>
-    <meta name="description" content="Transform your career with Nexus Institute Surat. Join our elite 3+1 Month Practical Masterclass with written job guarantee. Learn Meta Ads, Google Ads, AI Mastery, CapCut Video Editing, and premium agency-level marketing.">
-    <meta name="keywords" content="digital marketing institute surat, digital marketing course surat, learn meta ads surat, google ads training, video editing capcut, ai mastery course, nexus institute sarthana, social media management agency surat">
-    <meta name="author" content="Nexus Institute & Marketing">
+    <!-- Premium SEO Meta Tags -->
+    <title>Nexus Institute & Marketing | Futuristic Practical Masterclass & Digital Agency</title>
+    <meta name="description" content="Join Nexus Institute Surat for a premium 3+1 Month Practical Masterclass in Social Media & Performance Marketing. Get 100% Written Job Guarantee & FREE AI Mastery Course. We offer elite agency-level services.">
+    <meta name="keywords" content="digital marketing institute Surat, social media marketing course, performance marketing, AI tools course, CapCut video editing, agency services, job guarantee marketing, Nexus Institute Surat">
     <meta name="robots" content="index, follow">
-    
+    <link rel="canonical" href="https://nexusinstitute.in/">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nexusinstitute.in/">
-    <meta property="og:title" content="Nexus Institute & Marketing | Surat's Best Practical Marketing Course">
-    <meta property="og:description" content="Join our 3+1 Month Practical Masterclass and get 1 Month Advanced Agency Internship FREE. 100% Written Job Guarantee. Learn premium agency tactics.">
+    <meta property="og:title" content="Nexus Institute & Marketing | 3+1 Month Practical Masterclass">
+    <meta property="og:description" content="Unlock agency-level marketing expertise with our 3+1 Month Masterclass. Learn Meta Ads, Google Ads, AI integration, and get a 100% written job placement guarantee.">
     <meta property="og:image" content="Logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nexusinstitute.in/">
-    <meta property="twitter:title" content="Nexus Institute & Marketing | 3+1 Month Practical Masterclass">
-    <meta property="twitter:description" content="Get 1 Month FREE with our 3-month course. Pay zero upfront and unlock futuristic AI tools, CapCut video editing, and advanced Meta marketing.">
+    <meta property="twitter:title" content="Nexus Institute & Marketing | 3+1 Month Masterclass">
+    <meta property="twitter:description" content="Transform your career with agency-level digital marketing training and integrated AI tools. Includes free internship and written placement guarantee.">
     <meta property="twitter:image" content="Logo.png">
 
     <!-- PWA Meta Tags -->
@@ -33,10 +33,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Logo.png">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind and Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome & Google Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -47,22 +45,44 @@
                     fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
                     colors: {
                         brand: {
-                            bg: '#050507',
+                            bg: '#030305',
                             primary: '#3b82f6', 
                             secondary: '#8b5cf6', 
                             accent: '#06b6d4', 
-                            emerald: '#10b981',
-                            rose: '#f43f5e'
                         }
                     },
                     animation: {
-                        'float': 'floating 3s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'glow': 'glowing 2s ease-in-out infinite alternate',
+                        'float': 'floating 4s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
                     }
                 }
             }
         }
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Nexus Institute & Marketing",
+      "url": "https://nexusinstitute.in/",
+      "logo": "Logo.png",
+      "description": "Premium Digital Marketing Agency and Professional Educational Institute in Surat specializing in Social Media Growth, AI Mastery, and Performance Marketing.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "319, Millennium Business Hub, Sarthana Jakatnaka",
+        "addressLocality": "Surat",
+        "addressRegion": "Gujarat",
+        "postalCode": "395013",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-88667-22633",
+        "contactType": "admissions"
+      }
+    }
     </script>
 
     <style>
@@ -104,12 +124,12 @@
 
         /* --- Clean Glassmorphism & 3D Cards --- */
         .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.005) 100%);
+            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 1.5rem;
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
@@ -118,14 +138,14 @@
         /* Interactive Hover Spotlight */
         .glass-card::before {
             content: ""; position: absolute; inset: 0;
-            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.04), transparent 40%);
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06), transparent 40%);
             z-index: 0; pointer-events: none; opacity: 0; transition: opacity 0.3s;
         }
         .glass-card:hover::before { opacity: 1; }
         .glass-card > * { position: relative; z-index: 1; }
 
         .glass-card:hover {
-            transform: translateY(-8px) scale(1.015);
+            transform: translateY(-8px) scale(1.02);
             border-color: rgba(59, 130, 246, 0.35);
             box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.15);
         }
@@ -173,11 +193,6 @@
             background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-        
-        .gradient-text-orange {
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
 
         @keyframes floating {
             0% { transform: translateY(0px); }
@@ -185,9 +200,9 @@
             100% { transform: translateY(0px); }
         }
 
-        @keyframes glowing {
-            0% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.4), 0 0 10px rgba(59, 130, 246, 0.2); }
-            100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.4); }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
         }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
@@ -197,73 +212,7 @@
         .icon-box {
             display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
-
-        /* Cyberpunk Neon Glow Accents */
-        .neon-glow-primary {
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
-        }
-        .neon-glow-secondary {
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
-        }
-        
-        /* High-Converting Glowing Button styles */
-        .glowing-btn {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-        .glowing-btn::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-            transition: all 0.6s ease;
-        }
-        .glowing-btn:hover::before {
-            left: 100%;
-        }
     </style>
-
-    <!-- Structured Data for Local SEO & Course Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "Nexus Institute & Marketing",
-      "url": "https://nexusinstitute.in/",
-      "logo": "https://nexusinstitute.in/Logo.png",
-      "description": "Premium Digital Marketing & Performance Marketing practical institute based in Surat, offering agency-level training and a 100% written job guarantee.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "319 Millennium Business Hub, Opposite Dipkamal Mall, Sarthana Jakatnaka",
-        "addressLocality": "Surat",
-        "addressRegion": "Gujarat",
-        "postalCode": "395013",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-88667-22633",
-        "contactType": "admissions"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Courses & Services Catalog",
-        "itemListElement": [
-          {
-            "@type": "Course",
-            "name": "Social Media & Performance Marketing Practical Masterclass",
-            "description": "Comprehensive 3-Month practical course with 1 Month FREE Advanced Agency Internship.",
-            "provider": {
-              "@type": "EducationalOrganization",
-              "name": "Nexus Institute & Marketing"
-            }
-          }
-        ]
-      }
-    }
-    </script>
 </head>
 <body class="flex flex-col min-h-[100dvh]">
 
@@ -288,18 +237,17 @@
                 
                 <nav class="hidden md:flex gap-8 items-center absolute left-1/2 transform -translate-x-1/2">
                     <a href="#home" class="nav-link"><i class="fas fa-home text-sm"></i> Home</a>
-                    <a href="#about" class="nav-link"><i class="fas fa-building text-sm"></i> About</a>
+                    <a href="#special-offers" class="nav-link text-orange-400"><i class="fas fa-fire text-sm"></i> Offers</a>
                     <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap text-sm"></i> Courses</a>
                     <a href="#services" class="nav-link"><i class="fas fa-briefcase text-sm"></i> Services</a>
-                    <a href="#special-offers" class="nav-link text-orange-400"><i class="fas fa-fire text-sm"></i> Offers</a>
                     <a href="#contact" class="nav-link"><i class="fas fa-headset text-sm"></i> Contact</a>
                 </nav>
 
                 <div class="flex items-center gap-4">
-                    <a href="https://wa.me/918866722633?text=Hi%20Nexus%20Institute!%20%F0%9F%9A%80%20I%27m%20very%20interested%20in%20your%203%2B1%20Month%20Practical%20Masterclass%20and%20the%20Free%20AI%20Course%20offer.%20Please%20share%20batch%20timings%20and%20scholarship%20details!" target="_blank" class="hidden lg:flex magnetic-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:shadow-green-500/20 transition text-base glowing-btn">
+                    <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20want%20to%20learn%20more%20about%20your%20%2A3%2B1%20Month%20Practical%20Masterclass%2A%20and%20claim%20the%20%2AFREE%20AI%20Course%2A%20offer%21" target="_blank" class="hidden lg:flex magnetic-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg transition text-base">
                         <i class="fab fa-whatsapp text-xl"></i> Chat Now
                     </a>
-                    <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Toggle Mobile Menu">
+                    <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -310,13 +258,12 @@
         <div id="mobile-menu" class="hidden pointer-events-auto mt-2 mx-auto w-full max-w-sm floating-header rounded-3xl overflow-hidden shadow-2xl origin-top transition-all duration-300">
             <div class="flex flex-col p-2">
                 <a href="#home" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-home"></i> Home</a>
-                <a href="#about" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-building"></i> About Us</a>
-                <a href="#courses" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-graduation-cap"></i> Courses</a>
-                <a href="#services" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-briefcase"></i> Services</a>
                 <a href="#special-offers" class="flex justify-center items-center gap-3 py-3 text-orange-400 hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-fire"></i> Special Offers</a>
+                <a href="#courses" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-graduation-cap"></i> Courses</a>
+                <a href="#services" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-briefcase"></i> All Services</a>
                 <a href="#contact" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-headset"></i> Contact Us</a>
                 <div class="p-3 mt-1 border-t border-white/10">
-                    <a href="https://wa.me/918866722633?text=Hi%20Nexus%20Institute!%20%F0%9F%9A%80%20I%27m%20very%20interested%20in%20your%203%2B1%20Month%20Practical%20Masterclass%20and%20the%20Free%20AI%20Course%20offer.%20Please%20share%20batch%20timings%20and%20scholarship%20details!" target="_blank" class="flex justify-center items-center gap-2 w-full bg-green-500 text-white py-3 rounded-xl font-bold text-base">
+                    <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20just%20visited%20your%20futuristic%20website%20and%20I%20want%20to%20enroll%20in%20the%20%2A3%2B1%20Month%20Practical%20Masterclass%2A%21%20Please%20guide%20me%20on%20admissions." target="_blank" class="flex justify-center items-center gap-2 w-full bg-green-500 text-white py-3 rounded-xl font-bold text-base">
                         <i class="fab fa-whatsapp text-xl"></i> WhatsApp Us
                     </a>
                 </div>
@@ -327,22 +274,26 @@
     <!-- MAIN CONTENT -->
     <main class="flex-grow flex flex-col w-full">
 
-        <!-- Hero Section -->
-        <section id="home" class="flex-grow flex items-center justify-center pt-28 pb-10 relative w-full min-h-[100dvh]">
-            <div class="container mx-auto px-5 lg:px-8 z-10 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 w-full h-full">
+        <!-- Hero Section (Deep Space Cosmic Look) -->
+        <section id="home" class="flex-grow flex items-center justify-center pt-28 pb-10 relative w-full min-h-[100dvh] overflow-hidden">
+            <!-- Background Radial Glows -->
+            <div class="absolute -top-40 left-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-5 lg:px-8 z-10 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 w-full h-full">
                 
                 <!-- Left Text Content -->
-                <div class="w-full lg:w-1/2 text-center lg:text-left reveal flex flex-col items-center lg:items-start">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 font-bold mb-4 backdrop-blur-sm animate-bounce text-sm">
-                        <i class="fas fa-bolt"></i> Mega Offer: Join 3 Months & Get 1 Month FREE!
+                <div class="w-full lg:w-[55%] text-center lg:text-left reveal flex flex-col items-center lg:items-start">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 font-bold mb-6 backdrop-blur-sm animate-bounce text-sm">
+                        <i class="fas fa-bolt"></i> Limited Time Mega Offer!
                     </div>
                     
-                    <h1 class="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold mb-4 leading-tight tracking-tight text-white w-full">
-                        Secure Your Digital Future with <span class="gradient-text block mt-1">Our 3+1 Month FREE!</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold mb-6 leading-tight tracking-tight text-white w-full">
+                        Join For <span class="text-blue-400">3 Months</span> & <span class="gradient-text block mt-1">Get 1 Month FREE!</span>
                     </h1>
                     
-                    <p class="mb-6 max-w-xl mx-auto lg:mx-0">
-                        Become a high-caliber marketing master with our elite <strong class="text-white">3+1 Month Practical Masterclass</strong>. Learn real agency workflows, skip the dry textbook theories, and build concrete skills that guarantee career success.
+                    <p class="mb-8 max-w-xl mx-auto lg:mx-0 text-gray-300">
+                        Become an industry-ready Marketing Expert with our elite <strong class="text-white">3+1 Month Practical Masterclass</strong>. Transition from theory to running live campaigns with our advanced agency-level curriculum.
                     </p>
 
                     <!-- Main Highlight Badges -->
@@ -351,131 +302,138 @@
                             <div class="text-3xl text-brand-primary icon-box w-10 h-10"><i class="fas fa-gift"></i></div>
                             <div class="text-left">
                                 <h4 class="font-bold text-white text-base">FREE AI COURSE</h4>
-                                <span class="text-sub">Worth ₹15,000/- For FREE</span>
+                                <span class="text-sub">Worth ₹15,000/- Free</span>
                             </div>
                         </div>
                         <div class="glass-card p-4 rounded-2xl border-l-4 border-l-green-500 flex items-center gap-4 animate-float" style="animation-delay: 0.5s;">
                             <div class="text-3xl text-green-500 icon-box w-10 h-10"><i class="fas fa-user-check"></i></div>
                             <div class="text-left">
-                                <h4 class="font-bold text-white text-base">100% JOB ASSURANCE</h4>
-                                <span class="text-sub">In-Writing Placement Guarantee</span>
+                                <h4 class="font-bold text-white text-base">JOB GUARANTEE</h4>
+                                <span class="text-sub">In-Writing Placement</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%20Institute!%20%F0%9F%9A%80%20I%20want%20to%20enroll%20in%20your%203%2B1%20Month%20Practical%20Masterclass.%20Please%20reserve%20a%20seat%20for%20me%20and%20apply%20my%20Free%20AI%20Course%20bonus!" target="_blank" class="magnetic-btn bg-gradient-to-r from-brand-primary to-brand-secondary px-8 py-4 rounded-full font-bold text-white shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform text-center text-lg flex items-center justify-center gap-2 glowing-btn">
-                            <i class="fas fa-rocket animate-pulse"></i> Claim 3+1 Offer Now
+                        <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20am%20ready%20to%20accelerate%20my%20career.%20Please%20let%20me%20know%20how%20to%20claim%20the%20%2A3%2B1%20Month%20Masterclass%2A%20offer%21" target="_blank" class="magnetic-btn bg-gradient-to-r from-brand-primary to-brand-secondary px-8 py-4 rounded-full font-bold text-white shadow-lg transition-transform text-center text-lg flex items-center justify-center gap-2">
+                            <i class="fas fa-rocket"></i> Claim 3+1 Offer Now
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Visual Dynamic Board (Instead of showing dry flat pricing, show a highly interactive, value-packed offer bundle card) -->
+                <!-- Right Visual Capsule (Intense Tech / Tech-Aesthetic Visual) -->
                 <div class="w-full lg:w-[45%] max-w-md mx-auto reveal relative">
                     <div class="absolute -top-4 right-2 bg-red-600 text-white text-sm font-extrabold px-5 py-2 rounded-full z-20 shadow-xl animate-pulse">
-                        <i class="fas fa-clock mr-1"></i> Special Batch Limited Seats!
+                        <i class="fas fa-clock mr-1"></i> 2026 Batch Filling Fast!
                     </div>
                     
                     <div class="glass-card p-6 md:p-8 flex flex-col border border-brand-primary/30 relative">
                         <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-primary/20 rounded-full filter blur-[50px] pointer-events-none"></div>
                         
-                        <h3 class="text-2xl font-bold mb-1 text-white">Advanced Masterclass Bundle</h3>
+                        <h3 class="text-2xl font-black mb-1 text-white">Social Media & Performance Marketing</h3>
                         <div class="flex items-center gap-2 text-orange-400 font-bold mb-4 text-base">
-                            <i class="fas fa-star text-yellow-400"></i> Elite Performance Marketing Syllabus
+                            <i class="fas fa-star"></i> 3 Months Training + 1 Month FREE Internship
                         </div>
                         
                         <div class="mb-5 pb-5 border-b border-white/10">
-                            <div class="text-sub text-gray-400 mb-1">Scholarship & Package Deal</div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-xl text-green-400 font-extrabold">Instant Enrollment Discounts Available</span>
-                                <span class="text-emerald-400 font-semibold italic text-base flex items-center gap-2">
-                                    <i class="fas fa-check-double"></i> Includes ₹15,000 AI Course for FREE
-                                </span>
-                            </div>
+                            <span class="text-emerald-400 font-extrabold italic text-lg block mb-1">🎉 SPECIAL PROMO PASS</span>
+                            <span class="text-sub">Apply to access exclusive Group Reductions and Early-bird Scholarships today!</span>
                         </div>
 
                         <div class="space-y-4 mb-6">
                             <div class="flex items-center gap-4">
                                 <div class="icon-box w-10 h-10 rounded-full bg-green-500/20 text-green-500 text-lg">
-                                    <i class="fas fa-file-signature"></i>
+                                    <i class="fas fa-check"></i>
                                 </div>
-                                <span class="text-white font-medium text-base">In-Writing Job Placement Guarantee</span>
+                                <span class="text-white font-medium text-base">100% Written Placement Guarantee</span>
                             </div>
                             <div class="flex items-center gap-4">
                                 <div class="icon-box w-10 h-10 rounded-full bg-blue-500/20 text-blue-500 text-lg">
                                     <i class="fas fa-robot"></i>
                                 </div>
-                                <span class="text-white font-medium text-base">Premium AI Productivity Workflow Suite</span>
+                                <span class="text-white font-medium text-base">ChatGPT, Gemini & Claude Mastery</span>
                             </div>
                             <div class="flex items-center gap-4">
                                 <div class="icon-box w-10 h-10 rounded-full bg-purple-500/20 text-purple-500 text-lg">
-                                    <i class="fas fa-film"></i>
+                                    <i class="fas fa-video"></i>
                                 </div>
-                                <span class="text-white font-medium text-base">Advanced CapCut Editing & Visual Hook Mastery</span>
+                                <span class="text-white font-medium text-base">CapCut Cinematic Editing Mastery</span>
                             </div>
                         </div>
 
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%20Institute!%20%F0%9F%8E%93%20I%20want%20to%20apply%20for%20the%20Admissions%20Scholarship%20for%20the%203%2B1%20Month%20Masterclass.%20Please%20guide%20me%20on%20the%20enrollment%20steps." target="_blank" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 rounded-full font-black text-center hover:from-blue-600 hover:to-indigo-700 transition-all shadow-xl flex justify-center items-center gap-2 magnetic-btn text-lg glowing-btn">
-                            UNLOCK EXCLUSIVE SCHOLARSHIP <i class="fab fa-whatsapp text-2xl"></i>
+                        <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%8E%93%20I%20want%20to%20apply%20for%20the%20%2A3%2B1%20Month%20Practical%20Masterclass%2A%20Scholarship.%20What%20are%20the%20details%3F" target="_blank" class="w-full bg-white text-black py-4 rounded-full font-black text-center hover:bg-brand-primary hover:text-white transition-all shadow-xl flex justify-center items-center gap-2 magnetic-btn text-lg">
+                            APPLY FOR ADMISSION <i class="fab fa-whatsapp text-2xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- NEW ASYMMETRICAL OFFERS SECTION -->
-        <section id="special-offers" class="py-16 md:py-24 border-t border-white/5 relative z-10 bg-[#030305]/50">
+        <!-- SPECIAL OFFERS SECTION (Obsidian Cyberpunk Look) -->
+        <section id="special-offers" class="py-16 md:py-24 border-t border-white/5 relative z-10 bg-[#030305]/80 overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[150px] pointer-events-none"></div>
+
             <div class="container mx-auto px-5 lg:px-8">
                 <div class="text-center mb-16 reveal">
                     <span class="text-orange-400 font-bold tracking-widest text-sm uppercase mb-2 flex items-center justify-center gap-2">
-                        <i class="fas fa-gift"></i> Premium Benefits
+                        <i class="fas fa-gift animate-pulse"></i> Premium Benefits
                     </span>
-                    <h2 class="text-4xl md:text-5xl font-black text-white mb-4 uppercase">Irresistible <span class="gradient-text">2026 Season</span> Offers</h2>
-                    <p class="max-w-2xl mx-auto">તમારા ભવિષ્ય માટે શ્રેષ્ઠ તક - આજે જ જોડાવ! (The absolute best career blueprint for your future - Grab it today!)</p>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-4 uppercase">Exclusive <span class="gradient-text">2026 Batch</span> Offers</h2>
+                    <p class="max-w-2xl mx-auto text-gray-400">તમારા ભવિષ્ય માટે શ્રેષ્ઠ તક - આજે જ જોડાવ! (The best opportunity for your future - Join Today!)</p>
                 </div>
 
-                <!-- Premium Bento Grid Structure -->
+                <!-- Bento Grid Structure -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     
-                    <!-- Large Hero Offer (Spans 2 columns) -->
+                    <!-- Bring a Friend Card (Spans 2 cols) -->
                     <div class="glass-card p-8 md:col-span-2 border-l-4 border-l-orange-500 reveal flex flex-col justify-center relative overflow-hidden">
                         <div class="absolute -right-10 -bottom-10 text-orange-500/10 text-9xl pointer-events-none"><i class="fas fa-user-friends"></i></div>
                         <div class="icon-box w-14 h-14 bg-orange-500/20 text-orange-500 rounded-2xl text-2xl mb-5">
                             <i class="fas fa-user-friends"></i>
                         </div>
-                        <h4 class="text-white font-black text-3xl mb-3">BRING A COMPANION OFFER</h4>
-                        <p class="mb-4">Take the massive educational leap alongside a friend! Enroll together and instantly unlock deep, massive premium course package price reductions for both students!</p>
-                        <div class="inline-block bg-red-500/20 text-red-400 px-4 py-2 rounded-lg font-bold border border-red-500/30 w-max text-sm animate-pulse">
-                            🔥 Valid only for the first 10 pair enrollments!
+                        <h4 class="text-white font-black text-3xl mb-3">BRING A FRIEND SCHOLARSHIP</h4>
+                        <p class="mb-5 text-gray-300">Enroll alongside your friends or classmates to activate premium cluster benefits and unlock major fee write-offs on your course seat immediately.</p>
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <div class="inline-block bg-red-500/20 text-red-400 px-4 py-2 rounded-lg font-bold border border-red-500/30 text-sm animate-pulse">
+                                🔥 Limited to the first 10 group enrollments!
+                            </div>
+                            <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%91%AC%20I%20and%20my%20friend%20want%20to%20enroll%20together%20in%20your%20Masterclass.%20Please%20activate%20our%20%2ABring%20A%20Friend%20Offer%2A%21" target="_blank" class="text-orange-400 font-bold hover:underline flex items-center gap-1">Inquire Offer <i class="fas fa-arrow-right text-xs"></i></a>
                         </div>
                     </div>
 
-                    <!-- Free AI Module -->
-                    <div class="glass-card p-8 border-t-4 border-t-blue-500 reveal flex flex-col justify-center">
-                        <div class="icon-box w-12 h-12 bg-blue-500/20 text-blue-500 rounded-xl text-xl mb-4">
-                            <i class="fas fa-microchip"></i>
+                    <!-- AI Tool Box Card -->
+                    <div class="glass-card p-8 border-t-4 border-t-blue-500 reveal flex flex-col justify-between">
+                        <div>
+                            <div class="icon-box w-12 h-12 bg-blue-500/20 text-blue-500 rounded-xl text-xl mb-4">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h4 class="text-white font-black text-xl mb-2">FREE AI COURSE</h4>
+                            <p class="text-gray-400">Gain access to custom AI workflows, prompt library structures, and generate production marketing assets instantly.</p>
                         </div>
-                        <h4 class="text-white font-black text-xl mb-2">FREE ADVANCED AI MASTERY</h4>
-                        <p>Learn deep, practical prompt engineering for Claude, ChatGPT, Gemini & Midjourney. Get ₹15,000 worth of premium tools curriculum completely integrated for free.</p>
+                        <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%27m%20super%20excited%20about%20the%20%2AFREE%20AI%20Course%2A%20module%20worth%20%E2%82%B915k.%20Can%20I%20get%20more%20details%20on%20this%3F" target="_blank" class="text-blue-400 font-bold hover:underline mt-4 flex items-center gap-1">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
                     </div>
 
-                    <!-- 3+1 format -->
-                    <div class="glass-card p-8 border-t-4 border-t-purple-500 reveal flex flex-col justify-center">
-                        <div class="icon-box w-12 h-12 bg-purple-500/20 text-purple-500 rounded-xl text-xl mb-4">
-                            <i class="fas fa-calendar-plus"></i>
+                    <!-- Format Card -->
+                    <div class="glass-card p-8 border-t-4 border-t-purple-500 reveal flex flex-col justify-between">
+                        <div>
+                            <div class="icon-box w-12 h-12 bg-purple-500/20 text-purple-500 rounded-xl text-xl mb-4">
+                                <i class="fas fa-calendar-plus"></i>
+                            </div>
+                            <h4 class="text-white font-black text-xl mb-2">3+1 MONTH FORMAT</h4>
+                            <p class="text-gray-400">Get 3 full months of hands-on agency projects combined with a 4th month of premium digital marketing internships.</p>
                         </div>
-                        <h4 class="text-white font-black text-xl mb-2">3+1 MONTH FORMAT</h4>
-                        <p>Enroll for 3 Months of elite, comprehensive practical training, and get a 4th Month of advanced digital marketing agency internship absolutely FREE!</p>
+                        <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%93%85%20Please%20tell%20me%20how%20the%20%2A3%2B1%20Month%20Format%2A%20works.%20What%20kind%20of%20internships%20will%20I%20be%20doing%3F" target="_blank" class="text-purple-400 font-bold hover:underline mt-4 flex items-center gap-1">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
                     </div>
 
-                    <!-- Written job guarantee -->
+                    <!-- Job Guarantee Pass (Spans 2 cols) -->
                     <div class="glass-card p-8 md:col-span-2 border-t-4 border-t-green-500 reveal flex flex-col sm:flex-row items-center sm:items-start gap-6">
                         <div class="icon-box w-16 h-16 bg-green-500/20 text-green-500 rounded-2xl text-3xl shrink-0">
                             <i class="fas fa-file-signature"></i>
                         </div>
-                        <div class="text-center sm:text-left">
-                            <h4 class="text-white font-black text-2xl mb-2">100% WRITTEN PLACEMENT CONTRACT</h4>
-                            <p>We do not make weak promises. All deserving Nexus Masterclass students receive an official, legally backable written placement contract along with direct corporate introductions.</p>
+                        <div class="text-center sm:text-left flex-grow">
+                            <h4 class="text-white font-black text-2xl mb-2">100% JOB GUARANTEE</h4>
+                            <p class="text-gray-300 mb-4">We back our teaching standard with an absolute, written employment guarantee. Prepare with mock-panels, build real-world client case-studies, and step confidently into top placement rounds.</p>
+                            <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%92%BC%20I%20want%20to%20understand%20your%20written%20%2A100%25%20Job%20Placement%20Guarantee%2A.%20Please%20share%20the%20terms%20and%20partner%20companies%21" target="_blank" class="text-green-400 font-bold hover:underline flex items-center gap-1 justify-center sm:justify-start">Request Job Agreement Terms <i class="fas fa-arrow-right text-xs"></i></a>
                         </div>
                     </div>
 
@@ -483,166 +441,140 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-16 md:py-24 relative w-full border-t border-white/5">
+        <!-- COURSES SYLLABUS SECTION (Neon-Blueprint Style) -->
+        <section id="courses" class="py-16 md:py-24 border-t border-white/5 relative w-full bg-[#030305]/95">
             <div class="container mx-auto px-5 lg:px-8">
-                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-                    <div class="w-full lg:w-1/2 reveal">
-                        <div class="relative rounded-3xl overflow-hidden glass p-2 shadow-2xl mx-auto max-w-lg lg:max-w-none hover:scale-[1.02] transition-transform duration-500">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Nexus Institute Creative Office Space" class="w-full h-auto rounded-2xl object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#030305] via-transparent to-transparent opacity-90 pointer-events-none"></div>
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <span class="text-brand-primary font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
+                        <i class="fas fa-graduation-cap"></i> Complete Curriculum
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">What You Will <span class="gradient-text">Learn</span></h2>
+                    <p class="text-gray-300">Equip yourself with the high-performance skillset demanded by real agencies and clients in 2026.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto items-stretch">
+                    
+                    <!-- Course Box 1 -->
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between">
+                        <div>
+                            <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-orange-400 text-2xl text-white mb-6 shadow-lg">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Design & Video Editing</h3>
+                            <p class="mb-6 text-gray-300">Create scroll-stopping visuals, viral transitions, and high-retention cinematic clips without needing complex software platforms.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-brand-accent mt-1 text-lg"></i>
+                                    <div><strong class="text-white">Canva Mastery:</strong> Advanced posts, branding rules, ad layout setups, and quick mockup creation.</div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-brand-accent mt-1 text-lg"></i>
+                                    <div><strong class="text-white">CapCut Editing:</strong> Retaining viewer attention, typography, visual hooks, sound-design triggers, and rhythm editing.</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-white/5">
+                            <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%8E%A8%20I%20am%20interested%20in%20learning%20%2ACanva%20Design%20%26%20CapCut%20Video%20Editing%2A.%20Please%20send%20me%20the%20detailed%20syllabus%20for%20this%20module%21" target="_blank" class="w-full bg-brand-primary/10 hover:bg-brand-primary text-brand-primary hover:text-white py-3 rounded-xl font-bold block text-center transition">Get Design Syllabus</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 2 -->
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between">
+                        <div>
+                            <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-2xl text-white mb-6 shadow-lg">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Advanced AI Mastery</h3>
+                            <p class="mb-6 text-gray-300">Incorporate advanced workflows to write compelling ad-copy, script high-converting reels, and design marketing roadmaps.</p>
                             
-                            <div class="absolute bottom-5 left-5 right-5 lg:right-auto glass px-6 py-4 rounded-2xl border border-white/10 backdrop-blur-md">
-                                <div class="flex items-center gap-4">
-                                    <div class="icon-box w-12 h-12 rounded-full bg-brand-primary text-white text-xl shadow-[0_0_15px_rgba(59,130,246,0.6)] animate-pulse">
-                                        <i class="fas fa-trophy"></i>
-                                    </div>
+                            <div class="grid grid-cols-2 gap-3 mb-6">
+                                <div class="glass-card p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" class="w-5 h-5 opacity-90" alt="ChatGPT"> ChatGPT</div>
+                                <div class="glass-card p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-5 h-5 opacity-90" alt="Gemini"> Gemini</div>
+                                <div class="glass-card p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fa-solid fa-x w-5 text-center"></i> Grok</div>
+                                <div class="glass-card p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fa-brands fa-microsoft w-5 text-center text-blue-400"></i> Copilot</div>
+                                <div class="glass-card p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fas fa-comment-dots w-5 text-center text-orange-400"></i> Claude</div>
+                                <div class="glass-card p-3 rounded-xl flex items-center gap-3 text-base font-medium text-white"><i class="fa-brands fa-meta w-5 text-center text-blue-500"></i> Meta AI</div>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%20want%20to%20master%20AI%20tools%20like%20%2AClaude%2C%20Gemini%2C%20and%20ChatGPT%2A.%20What%20kind%20of%20real%20projects%20will%20we%20do%20using%20these%3F" target="_blank" class="w-full bg-brand-primary/10 hover:bg-brand-primary text-brand-primary hover:text-white py-3 rounded-xl font-bold block text-center transition">Get AI Module Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 3 -->
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between">
+                        <div>
+                            <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 text-2xl text-white mb-6 shadow-lg">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Channel Handling & Optimization</h3>
+                            <p class="mb-6 text-gray-300">Decode platform algorithms, optimize brand feeds, and grow organically from scratch.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-4">
+                                    <div class="icon-box w-8 h-8 rounded-lg bg-red-500/10 text-red-500 text-xl"><i class="fa-brands fa-youtube"></i></div>
+                                    <div><strong class="text-white block">YouTube Growth:</strong> Optimizing titles, tag parameters, algorithm triggers, and retention metrics.</div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="icon-box w-8 h-8 rounded-lg bg-pink-500/10 text-pink-500 text-xl"><i class="fa-brands fa-instagram"></i></div>
+                                    <div><strong class="text-white block">Instagram Reach:</strong> Grid structures, viral audios, bio funnels, and organic lead capture loops.</div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="icon-box w-8 h-8 rounded-lg bg-blue-500/10 text-blue-500 text-xl"><i class="fa-brands fa-facebook"></i></div>
+                                    <div><strong class="text-white block">Facebook Pages:</strong> Meta business configurations, page layouts, and group nurturing structures.</div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="icon-box w-8 h-8 rounded-lg bg-red-600/10 text-red-600 text-xl"><i class="fa-brands fa-pinterest-p"></i></div>
+                                    <div><strong class="text-white block">Pinterest Blueprint:</strong> Rich pin optimizations, moodboard traffic funnels, and global organic reach.</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-white/5">
+                            <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%93%88%20I%27m%20very%20interested%20in%20your%20%2AOrganic%20Channel%20Handling%20Syllabus%2A%20for%20YouTube%2C%20Insta%2C%20FB%2C%20and%20Pinterest.%20Please%20share%20details%21" target="_blank" class="w-full bg-brand-primary/10 hover:bg-brand-primary text-brand-primary hover:text-white py-3 rounded-xl font-bold block text-center transition">Get Channel Blueprint</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 4 -->
+                    <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between">
+                        <div>
+                            <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-2xl text-white mb-6 shadow-lg">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Performance Marketing</h3>
+                            <p class="mb-6 text-gray-300">Set up high-impact ad campaigns, track metrics, manage pixel conversions, and drive cost-effective business leads.</p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex items-start gap-3">
+                                    <div class="icon-box w-10 h-10 bg-blue-600/20 rounded-xl"><i class="fa-brands fa-meta text-blue-500 text-lg"></i></div>
                                     <div>
-                                        <p class="text-white font-bold text-base">100% Agency-Style</p>
-                                        <span class="text-sub">Unmatched Practice Standards</span>
+                                        <h4 class="font-bold text-white text-base">Meta Ads Run</h4>
+                                        <span class="text-sub mt-0.5 block">Highly profitable retargeting loops.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="icon-box w-10 h-10 bg-red-500/20 rounded-xl"><i class="fa-brands fa-google text-red-500 text-lg"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Google Ads</h4>
+                                        <span class="text-sub mt-0.5 block">Search, Display, and Video ads.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="icon-box w-10 h-10 bg-brand-accent/20 rounded-xl"><i class="fas fa-search text-brand-accent text-lg"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Keyword Strategy</h4>
+                                        <span class="text-sub mt-0.5 block">Capturing high-intent search loops.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="icon-box w-10 h-10 bg-green-500/20 rounded-xl"><i class="fas fa-table text-green-500 text-lg"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Analytics Reporting</h4>
+                                        <span class="text-sub mt-0.5 block">Scaling business ROAS.</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="w-full lg:w-1/2 reveal text-center lg:text-left">
-                        <span class="text-brand-secondary font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center lg:justify-start gap-2">
-                            <i class="fas fa-building text-brand-secondary"></i> WHO WE ARE
-                        </span>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-5 text-white leading-tight">
-                            The Bridge Between Academic Dream and <span class="gradient-text block md:inline">Commercial Authority</span>
-                        </h2>
-                        <p class="mb-5 max-w-2xl mx-auto lg:mx-0">
-                            Welcome to <strong class="text-white">Nexus Institute & Marketing</strong>. We operate simultaneously as a highly active digital marketing agency and an advanced career accelerator. Here, we completely ban dull lectures and outdated slide-decks.
-                        </p>
-                        <p class="mb-8 max-w-2xl mx-auto lg:mx-0">
-                            Our ultimate mission is to build highly competent, hyper-productive performance marketers, graphic editors, and AI operations experts who are ready to crush real-world campaigns from day one.
-                        </p>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto lg:mx-0">
-                            <div class="glass p-5 rounded-xl text-left border border-white/5 hover:border-brand-primary/30 transition-all duration-300">
-                                <div class="icon-box w-10 h-10 text-xl text-brand-primary mb-3 bg-brand-primary/10 rounded-lg"><i class="fas fa-rocket"></i></div>
-                                <h4 class="font-bold text-white text-base">Growth Driven</h4>
-                                <span class="text-sub mt-1 block">Master organic scaling laws & sophisticated targeting models.</span>
-                            </div>
-                            <div class="glass p-5 rounded-xl text-left border border-white/5 hover:border-brand-accent/30 transition-all duration-300">
-                                <div class="icon-box w-10 h-10 text-xl text-brand-accent mb-3 bg-brand-accent/10 rounded-lg"><i class="fas fa-robot"></i></div>
-                                <h4 class="font-bold text-white text-base">Next-Gen AI Stacks</h4>
-                                <span class="text-sub mt-1 block">Leverage automated generative workflows to produce 10x results.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Courses / Syllabus Section (Enhanced with unique styles and deep content layout, incorporating Pinterest integration) -->
-        <section id="courses" class="py-16 md:py-24 border-t border-white/5 relative w-full bg-[#030305]/50">
-            <div class="container mx-auto px-5 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                    <span class="text-brand-primary font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
-                        <i class="fas fa-graduation-cap"></i> Industry Certified Syllabus
-                    </span>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">Masterclass <span class="gradient-text">Curriculum</span></h2>
-                    <p>Unlock complete access to advanced modules built to keep you miles ahead of the competition in 2026.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto items-stretch">
-                    
-                    <!-- Card 1: Visual Design & Creative Editing (Pink/Orange) -->
-                    <div class="glass-card p-8 reveal flex flex-col h-full w-full border-b-4 border-b-pink-500">
-                        <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-orange-400 text-2xl text-white mb-6 shadow-lg">
-                            <i class="fas fa-magic"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Design & Creative Direction</h3>
-                        <p class="mb-6 flex-grow text-gray-400">Master layout architectures, visual branding rules, and high-retention post structures without requiring complex coding or traditional design skills.</p>
-                        <ul class="space-y-4 mt-auto">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-pink-500 mt-1 text-lg"></i>
-                                <div><strong class="text-white">Canva Elite Pro:</strong> Social templates, dynamic carousels, ad asset layout, and modern brand design rules.</div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-pink-500 mt-1 text-lg"></i>
-                                <div><strong class="text-white">Advanced CapCut Editing:</strong> Viral kinetic typography, professional sound designs, and Hormozi-style short cuts.</div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 2: AI Stacks Integration (Cyan/Blue) -->
-                    <div class="glass-card p-8 reveal flex flex-col h-full w-full border-b-4 border-b-cyan-400">
-                        <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-2xl text-white mb-6 shadow-lg">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Advanced AI Tools Integration</h3>
-                        <p class="mb-6 flex-grow text-gray-400">Scale your creative output to infinity. Learn how to write industrial prompt matrices to automate structural copywriting, strategy, and layout generation.</p>
-                        
-                        <div class="grid grid-cols-2 gap-3 mt-auto">
-                            <div class="glass p-2.5 rounded-xl flex items-center gap-2 text-sm font-medium text-white"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" class="w-4 h-4 opacity-90" alt="ChatGPT Integration"> ChatGPT</div>
-                            <div class="glass p-2.5 rounded-xl flex items-center gap-2 text-sm font-medium text-white"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-4 h-4 opacity-90" alt="Google Gemini Integration"> Gemini</div>
-                            <div class="glass p-2.5 rounded-xl flex items-center gap-2 text-sm font-medium text-white"><i class="fa-solid fa-x text-center text-white text-xs"></i> Grok Pro</div>
-                            <div class="glass p-2.5 rounded-xl flex items-center gap-2 text-sm font-medium text-white"><i class="fa-brands fa-microsoft text-center text-blue-400 text-xs"></i> Copilot</div>
-                            <div class="glass p-2.5 rounded-xl flex items-center gap-2 text-sm font-medium text-white"><i class="fas fa-brain text-center text-orange-400 text-xs"></i> Claude 3.5</div>
-                            <div class="glass p-2.5 rounded-xl flex items-center gap-2 text-sm font-medium text-white"><i class="fa-brands fa-meta text-center text-blue-500 text-xs"></i> Meta Llama</div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Traffic and Organic Channel Handling with Pinterest Added (Purple) -->
-                    <div class="glass-card p-8 reveal flex flex-col h-full w-full border-b-4 border-b-purple-500">
-                        <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 text-2xl text-white mb-6 shadow-lg">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Organic Channel Optimization</h3>
-                        <p class="mb-6 flex-grow text-gray-400">Master organic algorithms, learn viral post timings, manage multi-channel structures, and scale followers from absolute zero.</p>
-                        <ul class="space-y-3 mt-auto">
-                            <li class="flex items-center gap-3">
-                                <div class="icon-box w-7 h-7 rounded-lg bg-red-500/10 text-red-500 text-base"><i class="fa-brands fa-youtube"></i></div>
-                                <div><strong class="text-white text-sm">YouTube:</strong> Advanced VSEO & Thumbnails</div>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="icon-box w-7 h-7 rounded-lg bg-pink-500/10 text-pink-500 text-base"><i class="fa-brands fa-instagram"></i></div>
-                                <div><strong class="text-white text-sm">Instagram:</strong> Reels Timing & Bio Growth</div>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="icon-box w-7 h-7 rounded-lg bg-red-600/10 text-red-600 text-base"><i class="fa-brands fa-pinterest"></i></div>
-                                <div><strong class="text-white text-sm">Pinterest:</strong> Viral Visual Boards & Pin SEO</div>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="icon-box w-7 h-7 rounded-lg bg-blue-500/10 text-blue-500 text-base"><i class="fa-brands fa-facebook"></i></div>
-                                <div><strong class="text-white text-sm">Facebook:</strong> Page Engagement Funnels</div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 4: Performance Ads Engine (Spans 3 cols on Large desktop to bring high impact design variance) -->
-                    <div class="glass-card p-8 lg:col-span-3 reveal border-t-4 border-t-emerald-500 flex flex-col lg:flex-row gap-8 items-center justify-between">
-                        <div class="lg:w-1/2">
-                            <div class="icon-box w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-2xl text-white mb-6 shadow-lg">
-                                <i class="fas fa-bullseye"></i>
-                            </div>
-                            <h3 class="text-2xl font-extrabold text-white mb-3">Advanced Performance Marketing Engine</h3>
-                            <p class="text-gray-400 mb-4">Learn paid traffic structures inside out. Skip the surface configurations and deep-dive into audience clustering, algorithmic A/B experiments, Pixel setups, conversion tracking metrics, and budget management.</p>
-                            <span class="inline-block bg-emerald-500/15 border border-emerald-500/20 px-3 py-1.5 rounded-full text-emerald-400 font-bold text-xs">
-                                <i class="fas fa-certificate"></i> Certification Included
-                            </span>
-                        </div>
-                        <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                            <div class="glass p-4 rounded-xl">
-                                <h4 class="font-bold text-white mb-1"><i class="fa-brands fa-meta text-blue-500 mr-2"></i>Meta Ads (FB/IG)</h4>
-                                <span class="text-sub">CBO, ABO strategies, custom tracking integrations.</span>
-                            </div>
-                            <div class="glass p-4 rounded-xl">
-                                <h4 class="font-bold text-white mb-1"><i class="fa-brands fa-google text-red-500 mr-2"></i>Google Search & Video</h4>
-                                <span class="text-sub">AdWords configuration, PPC bid setups, YouTube Ad placements.</span>
-                            </div>
-                            <div class="glass p-4 rounded-xl">
-                                <h4 class="font-bold text-white mb-1"><i class="fas fa-search text-cyan-400 mr-2"></i>Keyword Strategy</h4>
-                                <span class="text-sub">High CPC commercial and informational transactional keywords.</span>
-                            </div>
-                            <div class="glass p-4 rounded-xl">
-                                <h4 class="font-bold text-white mb-1"><i class="fas fa-chart-pie text-purple-400 mr-2"></i>ROI Analytics Reporting</h4>
-                                <span class="text-sub">Cohort performance metrics, UTM link builds, data dashboard.</span>
-                            </div>
+                        <div class="mt-8 pt-4 border-t border-white/5">
+                            <a href="https://wa.me/918866722633?text=Hey%20Nexus%21%20%F0%9F%8E%AF%20I%20am%20ready%20to%20learn%20how%20to%20run%20profitable%20%2AMeta%20%26%20Google%20Ads%2A.%20Could%20I%20receive%20the%20ad%20strategy%20curriculum%3F" target="_blank" class="w-full bg-brand-primary/10 hover:bg-brand-primary text-brand-primary hover:text-white py-3 rounded-xl font-bold block text-center transition">Get Performance Blueprint</a>
                         </div>
                     </div>
 
@@ -650,166 +582,166 @@
             </div>
         </section>
 
-        <!-- Services Section (10 Detailed Services - Each and every card designed beautifully with specific pricing starting points and pre-filled custom WhatsApp action triggers) -->
+        <!-- SERVICES SECTION (Modern Grid Design) -->
         <section id="services" class="py-16 md:py-24 border-t border-white/5 relative w-full bg-[#050507]">
             <div class="container mx-auto px-5 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                     <span class="text-brand-secondary font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2">
-                        <i class="fas fa-briefcase text-brand-secondary"></i> High-End Digital Solutions
+                        <i class="fas fa-briefcase text-brand-secondary"></i> Professional Agency Services
                     </span>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">Professional Services We <span class="gradient-text">Deliver</span></h2>
-                    <p>Unlock state-of-the-art growth solutions for your startup, personal brand, or company, fully powered by AI workflows and professional design protocols.</p>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">Premium Solutions We <span class="gradient-text">Provide</span></h2>
+                    <p class="text-gray-300">Scale your personal brand or enterprise with elite, conversion-focused agency offerings.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto items-stretch">
                     
-                    <!-- Service 1: Design Visiting Card -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-blue-500/40">
+                    <!-- Service 1 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-xl text-white shadow-lg"><i class="fas fa-id-card"></i></div>
                                 <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-lg text-sm font-bold border border-blue-500/30">Starts at ₹299</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Visiting Card Design</h3>
-                            <p class="text-sub mb-6">Leave an unforgettable physical and digital impression. High-end modern layouts customized with modern interactive QR codes for immediate digital contact saving.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Design Visiting Card</h3>
+                            <p class="text-sub">Get high-impact business card designs. Option to integrate custom interactive QR codes for immediate digital contact saving.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%93%B3%20I%20want%20to%20get%20a%20professional%20Visiting%20Card%20designed.%20Please%20share%20samples%20and%20details." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Get This Design <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%93%B3%20I%27d%20like%20to%20order%20a%20%2AProfessional%20Visiting%20Card%2A%20starting%20at%20%E2%82%B9299.%20Please%20share%20some%20premium%20templates%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 2: Digital Marriage Kankotri -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-pink-500/40">
+                    <!-- Service 2 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-400 text-xl text-white shadow-lg"><i class="fas fa-ring"></i></div>
                                 <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-lg text-sm font-bold border border-pink-500/30">Starts at ₹599</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Digital Marriage Kankotri</h3>
-                            <p class="text-sub mb-6">Premium multi-screen digital wedding invitations incorporating custom background music, animated entry sequences, RSVP triggers, and direct Google Maps destination links.</p>
+                            <p class="text-sub">Sleek multi-page digital wedding invitations featuring custom imagery alignments, aesthetic color themes, and map link directions.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%92%8D%20I%20am%20interested%20in%20your%20Digital%20Marriage%20Kankotri%20designs.%20Please%20show%20me%20some%20templates." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Get This Invitation <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%92%8D%20I%20am%20interested%20in%20creating%20an%20elegant%20%2ADigital%20Marriage%20Kankotri%2A%20starting%20at%20%E2%82%B9599.%20Please%20send%20sample%20designs%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 3: Birthday Celebration Card -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-purple-500/40">
+                    <!-- Service 3 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-400 text-xl text-white shadow-lg"><i class="fas fa-birthday-cake"></i></div>
                                 <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-lg text-sm font-bold border border-purple-500/30">Starts at ₹199</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Birthday Celebration Card</h3>
-                            <p class="text-sub mb-6">Creative, vibrant, animated invitation designs optimized for seamless sharing on WhatsApp, Facebook, and Instagram stories with high visual clarity.</p>
+                            <p class="text-sub">Fun, personalized invites optimized for fast social sharing, custom guest welcomes, and photo layouts.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%8E%82%20I%20want%20to%20create%20an%20animated%20Birthday%20Celebration%20Card.%20Please%20provide%20rates%20and%20options." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Customize Card <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%8E%82%20I%20want%20to%20order%20a%20creative%20%2ABirthday%20Celebration%20Invitation%20Card%2A%20starting%20at%20%E2%82%B9199.%20Please%20share%20options%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 4: Opening Ceremony Card -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-emerald-500/40">
+                    <!-- Service 4 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-xl text-white shadow-lg"><i class="fas fa-ribbon"></i></div>
                                 <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg text-sm font-bold border border-green-500/30">Starts at ₹199</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Opening Ceremony Card</h3>
-                            <p class="text-sub mb-6">Bold, eye-catching, elite dynamic flyers crafted to announce your brand's physical or digital commercial launch and drive instant footfalls.</p>
+                            <p class="text-sub">Sleek, attention-grabbing templates tailored to drive attendance, feature brand logos, and announce grand opening specials.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%8E%80%20I%20need%20a%20creative%20Opening%20Ceremony%20Card%20for%20my%20new%20business.%20Let%27s%20discuss." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Design Invitation <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%8E%80%20I%20need%20a%20professional%20%2AOpening%20Ceremony%20Card%2A%20design%20starting%20at%20%E2%82%B9199.%20Please%20share%20the%20onboarding%20steps%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 5: Viral Video Editing -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-red-500/40">
+                    <!-- Service 5 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 text-xl text-white shadow-lg"><i class="fas fa-video"></i></div>
                                 <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-lg text-sm font-bold border border-red-500/30">₹999 / Video</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Viral Video Editing</h3>
-                            <p class="text-sub mb-6">Get maximum retention for your YouTube shorts and Instagram Reels. Includes sound effects, fast-paced cinematic cuts, background scoring, and modern viral hooks.</p>
+                            <p class="text-sub">Retaining viewers with fast transitions, cinematic typography styles, matching background tracks, and viral video pacing.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%8E%AC%20I%20am%20looking%20for%20Professional%20Video%20Editing%20services%20for%20my%20reels/shorts.%20Please%20send%20pricing." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Submit Raw Footage <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%8E%AC%20I%20am%20looking%20for%20premium%20%2AViral%20Video%20Editing%2A%20for%20my%20Reels%2FShorts.%20Please%20share%20your%20portfolio%20and%20packages%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 6: Social Media Business Post -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-teal-500/40">
+                    <!-- Service 6 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-400 to-blue-500 text-xl text-white shadow-lg"><i class="fas fa-image"></i></div>
                                 <span class="bg-teal-500/20 text-teal-400 px-3 py-1 rounded-lg text-sm font-bold border border-teal-500/30">₹499 / Post</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Social Business Post Design</h3>
-                            <p class="text-sub mb-6">Stunning, high-converting graphic visuals explicitly crafted to convert viewers. Includes custom optimized captions, custom-researched SEO hashtags, and copy.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Social Media Business Post</h3>
+                            <p class="text-sub">Eye-catching layouts engineered to convert, complete with custom copy suggestions and matching hashtags.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%93%B1%20I%20need%20creative%20Social%20Media%20Business%20Posts.%20Please%20let%20me%20know%20how%20to%20get%20started." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Place Post Order <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%93%8A%20I%20want%20to%20order%20premium%20%2ASocial%20Media%20Business%20Posts%2A%20for%20my%20page.%20Please%20share%20some%20recent%20designs%20you%20did%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 7: Insta / YouTube Channel Handle -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-fuchsia-500/40">
+                    <!-- Service 7 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-pink-500 text-xl text-white shadow-lg"><i class="fas fa-users-cog"></i></div>
-                                <span class="bg-fuchsia-500/20 text-fuchsia-400 px-3 py-1 rounded-lg text-sm font-bold border border-fuchsia-500/30">₹9,999 / Month</span>
+                                <span class="bg-fuchsia-500/20 text-fuchsia-400 px-3 py-1 rounded-lg text-sm font-bold border border-fuchsia-500/30">Premium Management</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Channel Management</h3>
-                            <p class="text-sub mb-6">Full suite profile control. Includes weekly optimized calendar mapping, community engagement, content scheduling, aesthetic coordination, and performance reporting.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Insta / YT Channel Handle</h3>
+                            <p class="text-sub">Scale your community. End-to-end management, content calendars, keyword targeting, and routine performance analytics.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%93%88%20I%27m%20interested%20in%20your%20Channel%20Management%20services%20(Instagram/YouTube).%20Let%27s%20discuss%20organic%20growth." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Grow My Channels <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%93%A3%20I%27m%20interested%20in%20your%20%2AInstagram%20and%20YouTube%20Channel%20Management%2A%20service%20to%20grow%20my%20brand%20organically.%20Let%27s%20talk%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 8: Facebook & Insta Ads Run -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-blue-600/40">
+                    <!-- Service 8 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-xl text-white shadow-lg"><i class="fab fa-facebook-f"></i></div>
-                                <span class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-lg text-sm font-bold border border-blue-500/30">₹4,999 / Month</span>
+                                <span class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-lg text-sm font-bold border border-blue-500/30">Targeted Campaigns</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Meta Paid Campaigns</h3>
-                            <p class="text-sub mb-6">Drive active visual leads, website hits, and dynamic organic scaling. Configured with Pixel dynamic hooks, retargeting setups, and A/B audience structures.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Facebook & Insta Ads Run</h3>
+                            <p class="text-sub">Highly-optimized paid ad campaign structures. Reach potential buyers, generate leads, and boost overall brand sales.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%93%A3%20I%20want%20to%20run%20Meta%20(Facebook%20%26%20Instagram)%20Lead%20Generation%20Ads.%20Please%20provide%20pricing%20plans." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Launch Meta Ads <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%8E%AF%20I%20am%20looking%20to%20boost%20my%20sales%20via%20targeted%20%2AFacebook%20%26%20Instagram%20Ads%2A.%20Please%20share%20case%20studies%20or%20details%21" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 9: Google Ads Run -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-yellow-500/40">
+                    <!-- Service 9 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-yellow-500 text-xl text-white shadow-lg"><i class="fab fa-google"></i></div>
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-lg text-sm font-bold border border-yellow-500/30">₹5,999 / Month</span>
+                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-lg text-sm font-bold border border-yellow-500/30">Intent Driving</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Google & YouTube Campaigns</h3>
-                            <p class="text-sub mb-6">Command high-intent traffic directly at the exact second they run searches. Setup includes commercial keywords mining, display targeting, and click configurations.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Google Ads Setup & Run</h3>
+                            <p class="text-sub">Capture customer intent via optimized Google Search, Display, and Video ads. Includes landing page structural suggestions.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%94%8D%20I%20need%20high-intent%20Google%20Ads%20setup%20for%20my%20business.%20Let%27s%20connect." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Launch Google Ads <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%94%8D%20I%20am%20interested%20in%20setting%20up%20%2AGoogle%20Ads%20Campaigns%2A%20for%20lead%20generation.%20What%20is%20your%20approach%3F" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
-                    <!-- Service 10: Static Website Build -->
-                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full hover:border-orange-500/40">
+                    <!-- Service 10 -->
+                    <div class="glass-card p-6 reveal flex flex-col justify-between h-full w-full md:col-span-2 lg:col-span-1">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <div class="icon-box w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-xl text-white shadow-lg"><i class="fas fa-globe"></i></div>
-                                <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-lg text-sm font-bold border border-orange-500/30">Starts at ₹9,999</span>
+                                <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-lg text-sm font-bold border border-orange-500/30">High Performance</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Premium Static Website</h3>
-                            <p class="text-sub mb-6">Blazing fast, fully responsive, and modern visual landing pages customized for maximum conversion. Designed using state-of-the-art layout architectures.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Static Website Build</h3>
+                            <p class="text-sub">Professional Business, Personal, or Portfolio Static Websites built for speed, responsiveness, and conversion.</p>
                         </div>
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus!%20%F0%9F%8C%90%20I%20am%20looking%20to%20build%20a%20Premium%20Static%20Website%20for%20my%20brand.%20Share%20your%20portfolio%20and%20process." target="_blank" class="w-full py-3 bg-white/5 hover:bg-white/15 border border-white/10 text-white rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 mt-auto">
-                            Build My Website <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%8C%90%20I%20need%20a%20modern%20%2AStatic%20Website%2A%20built%20for%20my%20business.%20Could%20we%20discuss%20design%20options%3F" target="_blank" class="mt-6 w-full text-center bg-white/5 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
@@ -825,7 +757,7 @@
             
             <div class="text-center mb-10">
                 <span class="text-brand-secondary font-bold tracking-widest text-sm uppercase flex items-center justify-center gap-2">
-                    <i class="fas fa-headset text-brand-secondary"></i> Direct Access Desk
+                    <i class="fas fa-headset text-brand-secondary"></i> Contact Us
                 </span>
             </div>
 
@@ -836,17 +768,17 @@
                         <img src="Logo.png" alt="Nexus Logo" class="h-12 mx-auto md:mx-0 object-contain">
                     </a>
                     <p class="mb-6 pe-0 md:pe-4 text-gray-400">
-                        Nexus Institute & Marketing represents premium visual branding design and expert performance marketing. Empowering ambitious students with written career placement contracts in Surat.
+                        Nexus Institute & Marketing provides elite practical training in Digital Marketing. Join us to learn industry-level Social Media and Performance Marketing.
                     </p>
                     
                     <div class="flex gap-4 justify-center md:justify-start">
-                        <a href="https://www.instagram.com/nexusmarketing160?igsh=MWR0NzRyYWMxOXlnZg%3D%3D" target="_blank" class="icon-box w-12 h-12 rounded-xl glass hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 magnetic-btn" aria-label="Find us on Instagram">
+                        <a href="https://www.instagram.com/nexusmarketing160?igsh=MWR0NzRyYWMxOXlnZg%3D%3D" target="_blank" aria-label="Follow us on Instagram" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 magnetic-btn">
                             <i class="fa-brands fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61581190064119" target="_blank" class="icon-box w-12 h-12 rounded-xl glass hover:bg-blue-600 hover:text-white transition-all duration-300 magnetic-btn" aria-label="Find us on Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61581190064119" target="_blank" aria-label="Follow us on Facebook" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-blue-600 hover:text-white transition-all duration-300 magnetic-btn">
                             <i class="fa-brands fa-facebook-f text-xl"></i>
                         </a>
-                        <a href="https://www.youtube.com/channel/UC6QtBPzai3OT5DFt_49C3Ng" target="_blank" class="icon-box w-12 h-12 rounded-xl glass hover:bg-red-600 hover:text-white transition-all duration-300 magnetic-btn" aria-label="Find us on YouTube">
+                        <a href="https://www.youtube.com/channel/UC6QtBPzai3OT5DFt_49C3Ng" target="_blank" aria-label="Follow us on YouTube" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-red-600 hover:text-white transition-all duration-300 magnetic-btn">
                             <i class="fa-brands fa-youtube text-xl"></i>
                         </a>
                     </div>
@@ -854,51 +786,50 @@
 
                 <div class="lg:col-span-3 lg:pl-8 text-center md:text-left">
                     <h4 class="text-white font-bold text-xl mb-6 relative inline-block">
-                        Quick Links
+                        Quick Navigation
                         <span class="absolute -bottom-2 left-0 md:left-0 right-0 mx-auto md:mx-0 w-1/2 h-0.5 bg-gradient-to-r from-brand-primary to-transparent rounded"></span>
                     </h4>
                     <ul class="space-y-4">
-                        <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Home Base</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Who We Are</a></li>
-                        <li><a href="#courses" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Syllabus Portal</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Premium Services</a></li>
-                        <li><a href="#special-offers" class="text-orange-400 font-medium hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-orange-400 text-sm"></i> Active Offers</a></li>
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Home</a></li>
+                        <li><a href="#special-offers" class="text-orange-400 font-medium hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-orange-400 text-sm"></i> Special Offers</a></li>
+                        <li><a href="#courses" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Syllabus Outline</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition flex items-center justify-center md:justify-start gap-2 text-base"><i class="fas fa-chevron-right text-brand-primary text-sm"></i> Agency Services</a></li>
                     </ul>
                 </div>
 
                 <div class="lg:col-span-5 text-center md:text-left">
                     <h4 class="text-white font-bold text-xl mb-6 relative inline-block w-full md:w-auto">
-                        Get In Touch
+                        Connect with Us
                         <span class="absolute -bottom-2 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-1/2 h-0.5 bg-gradient-to-r from-brand-secondary to-transparent rounded"></span>
                     </h4>
                     
                     <div class="space-y-5">
-                        <a href="tel:+918866722633" class="flex items-center gap-4 p-3 rounded-2xl glass hover:bg-white/5 transition group max-w-sm mx-auto md:mx-0">
+                        <a href="tel:+918866722633" class="flex items-center gap-4 p-3 rounded-2xl glass-card hover:bg-white/5 transition group max-w-sm mx-auto md:mx-0">
                             <div class="icon-box w-12 h-12 bg-blue-500/20 rounded-xl text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition">
                                 <i class="fas fa-phone text-xl"></i>
                             </div>
                             <div class="text-left">
-                                <span class="text-sub uppercase tracking-wider block mb-1">CALL ADMISSIONS DIRECTLY</span>
+                                <span class="text-sub uppercase tracking-wider block mb-1">Call Directly</span>
                                 <p class="text-white font-bold text-lg">+91 88667 22633</p>
                             </div>
                         </a>
 
-                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%20Institute!%20%F0%9F%9A%80%20I%20have%20some%20queries%20about%20your%20practical%20courses.%20Let%27s%20chat!" target="_blank" class="flex items-center gap-4 p-3 rounded-2xl glass hover:bg-green-500/10 hover:border-green-500/30 transition group max-w-sm mx-auto md:mx-0">
+                        <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%90%B1%20I%20found%20your%20details%20on%20your%20website%20and%20I%20have%20some%20questions%20regarding%20courses%20%26%20services.%20Let%27s%20chat%21" target="_blank" class="flex items-center gap-4 p-3 rounded-2xl glass-card hover:bg-green-500/10 hover:border-green-500/30 transition group max-w-sm mx-auto md:mx-0">
                             <div class="icon-box w-12 h-12 bg-green-500/20 rounded-xl text-green-400 group-hover:bg-green-500 group-hover:text-white transition">
                                 <i class="fa-brands fa-whatsapp text-2xl"></i>
                             </div>
                             <div class="text-left">
-                                <span class="text-sub uppercase tracking-wider block mb-1">WHATSAPP CHAT DESK</span>
+                                <span class="text-sub uppercase tracking-wider block mb-1">WhatsApp Instant Support</span>
                                 <p class="text-white font-bold text-lg">+91 88667 22633</p>
                             </div>
                         </a>
 
-                        <a href="https://maps.google.com/?q=319+Millennium+Business+Hub,+Opposite+Dipkamal+Mall,+Sarthana+Jakatnaka,+Surat,+Gujarat+395013" target="_blank" class="flex items-start gap-4 p-3 rounded-2xl glass hover:border-brand-accent/50 transition-colors group max-w-sm mx-auto md:mx-0">
+                        <a href="https://maps.google.com/?q=319+Millennium+Business+Hub,+Opposite+Dipkamal+Mall,+Sarthana+Jakatnaka,+Surat,+Gujarat+395013" target="_blank" class="flex items-start gap-4 p-3 rounded-2xl glass-card hover:border-brand-accent/50 transition-colors group max-w-sm mx-auto md:mx-0">
                             <div class="icon-box w-12 h-12 bg-brand-accent/20 rounded-xl text-brand-accent">
                                 <i class="fas fa-map-marker-alt text-xl"></i>
                             </div>
                             <div class="text-left mt-1">
-                                <p class="text-white font-bold mb-2 group-hover:text-brand-accent transition-colors text-base">Visit Our Institute</p>
+                                <p class="text-white font-bold mb-2 group-hover:text-brand-accent transition-colors text-base">Visit Our Institute Campus</p>
                                 <p class="text-sub leading-relaxed">
                                     319, Millennium Business Hub,<br>
                                     Opposite Dipkamal Mall,<br>
@@ -923,7 +854,7 @@
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/918866722633?text=Hi%20Nexus%20Institute!%20%F0%9F%9A%80%20I%27m%20very%20interested%20in%20your%203%2B1%20Month%20Practical%20Masterclass%20and%20the%20Free%20AI%20Course%20offer.%20Please%20share%20batch%20timings%20and%20scholarship%20details!" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918866722633?text=Hi%20Nexus%21%20%F0%9F%A4%A9%20I%20am%20browsing%20your%20website%20and%20want%20to%20know%20how%20to%20enroll%20in%20your%20Masterclass%21" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -1029,7 +960,7 @@
         });
 
         // -------------------------------------------------------------
-        // ELEGANT STARDUST & AURORA CURSOR EFFECT
+        // NEW: ELEGANT STARDUST & AURORA CURSOR EFFECT
         // (Clean, professional, and NEVER obstructs text reading)
         // -------------------------------------------------------------
         const canvas = document.getElementById('interactive-canvas');
@@ -1066,10 +997,9 @@
         });
 
         function animateCanvas() {
-            // Clear canvas cleanly
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Draw a very soft ambient glowing orb at the mouse position
+            // Draw soft ambient glowing orb at mouse position
             let gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 300);
             gradient.addColorStop(0, `hsla(${hue}, 80%, 60%, 0.05)`);
             gradient.addColorStop(1, 'transparent');
