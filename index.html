@@ -87,7 +87,7 @@
 
     <style>
         /* --- Core & Reset --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         body { background-color: #030305; color: #ffffff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         
         /* Custom Scrollbar */
@@ -255,7 +255,7 @@
         </header>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden pointer-events-auto mt-2 mx-auto w-full max-w-sm floating-header rounded-3xl overflow-hidden shadow-2xl origin-top transition-all duration-300">
+        <div id="mobile-menu" class="hidden pointer-events-auto mt-2 mx-auto w-full max-w-sm floating-header rounded-3xl overflow-hidden shadow-2xl">
             <div class="flex flex-col p-2">
                 <a href="#home" class="flex justify-center items-center gap-3 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-home"></i> Home</a>
                 <a href="#special-offers" class="flex justify-center items-center gap-3 py-3 text-orange-400 hover:bg-white/10 rounded-xl font-medium text-base"><i class="fas fa-fire"></i> Special Offers</a>
@@ -764,7 +764,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
                 
                 <div class="lg:col-span-4 text-center md:text-left">
-                    <a href="#home" class="block mb-6 magnetic-btn">
+                    <a href="#home" class="block mb-6">
                         <img src="Logo.png" alt="Nexus Logo" class="h-12 mx-auto md:mx-0 object-contain">
                     </a>
                     <p class="mb-6 pe-0 md:pe-4 text-gray-400">
@@ -772,13 +772,13 @@
                     </p>
                     
                     <div class="flex gap-4 justify-center md:justify-start">
-                        <a href="https://www.instagram.com/nexusmarketing160?igsh=MWR0NzRyYWMxOXlnZg%3D%3D" target="_blank" aria-label="Follow us on Instagram" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 magnetic-btn">
+                        <a href="https://www.instagram.com/nexusmarketing160?igsh=MWR0NzRyYWMxOXlnZg%3D%3D" target="_blank" aria-label="Follow us on Instagram" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300">
                             <i class="fa-brands fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61581190064119" target="_blank" aria-label="Follow us on Facebook" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-blue-600 hover:text-white transition-all duration-300 magnetic-btn">
+                        <a href="https://www.facebook.com/profile.php?id=61581190064119" target="_blank" aria-label="Follow us on Facebook" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-blue-600 hover:text-white transition-all duration-300">
                             <i class="fa-brands fa-facebook-f text-xl"></i>
                         </a>
-                        <a href="https://www.youtube.com/channel/UC6QtBPzai3OT5DFt_49C3Ng" target="_blank" aria-label="Follow us on YouTube" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-red-600 hover:text-white transition-all duration-300 magnetic-btn">
+                        <a href="https://www.youtube.com/channel/UC6QtBPzai3OT5DFt_49C3Ng" target="_blank" aria-label="Follow us on YouTube" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-red-600 hover:text-white transition-all duration-300">
                             <i class="fa-brands fa-youtube text-xl"></i>
                         </a>
                     </div>
@@ -854,7 +854,7 @@
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%A4%A9%20I%20am%20browsing%20your%20website%20and%20want%20to%20know%20how%20to%20enroll%20in%20your%20Masterclass%21" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%A4%A9%20I%20am%20browsing%20your%20website%20and%20want%20to%20know%20how%20to%20enroll%20in%20your%20Masterclass%21" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.5)]" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -944,18 +944,6 @@
                 const y = e.clientY - rect.top;
                 card.style.setProperty('--mouse-x', `${x}px`);
                 card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
-
-        document.querySelectorAll('.magnetic-btn').forEach(btn => {
-            btn.addEventListener('mousemove', e => {
-                const rect = btn.getBoundingClientRect();
-                const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
-                const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
-                btn.style.transform = `translate(${x}px, ${y}px)`;
-            });
-            btn.addEventListener('mouseleave', () => {
-                btn.style.transform = 'translate(0px, 0px)';
             });
         });
 
