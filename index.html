@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     
-    <!-- Ultra-Optimized Local SEO Meta Tags -->
     <title>Nexus Institute | 4 Month Digital Marketing Master Class</title>
     <meta name="description" content="Looking for the top digital marketing classes near me in Surat? Join Nexus Institute's 4 Month Master Class with a 100% FREE Internship and Job Guarantee.">
     <meta name="keywords" content="Top Digital Marketing Classes Near me, Best Digital Marketing Institute Near me, Digital Marketing Course Surat, 4 Month Master Class, Free Internship Digital Marketing, SEO Training Surat, Performance Marketing Classes, Social Media Marketing Institute, AI Marketing Course, Digital Marketing Institute in Surat, Nexus Institute Sarthana Jakatnaka, Digital Marketing 100% Job Guarantee">
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <link rel="canonical" href="https://nexusinstitute.in/">
 
-    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nexusinstitute.in/">
     <meta property="og:title" content="Top Digital Marketing Classes & Institute in Surat | Nexus">
@@ -27,18 +25,12 @@
     <meta name="theme-color" content="#0b0f19">
     <link rel="manifest" href="manifest.json">
     
-    <!-- Favicon & App Icons -->
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
-    <!-- ========================================== -->
-    <!-- Google Ads Conversion Tracking Tags START  -->
-    <!-- ========================================== -->
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17862847736"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -47,7 +39,6 @@
       gtag('config', 'AW-17862847736');
     </script>
 
-    <!-- Event snippet for Contact conversion page -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
@@ -62,10 +53,6 @@
         return false;
       }
     </script>
-    <!-- ========================================== -->
-    <!-- Google Ads Conversion Tracking Tags END    -->
-    <!-- ========================================== -->
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -88,7 +75,6 @@
         }
     </script>
 
-    <!-- Base Organizational Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -114,7 +100,6 @@
     }
     </script>
 
-    <!-- AEO/GEO FAQ Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -204,37 +189,38 @@
         .animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
         .animate-float-delayed { animation: float-delayed 6s ease-in-out infinite; animation-delay: 2s; }
 
-        /* --- Clean Glassmorphism & 3D Cards --- */
+        /* --- UNIVERSAL GLASSMORPHISM (Same on all devices) --- */
         .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1.5rem;
+            background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
             box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative; overflow: hidden;
         }
         .glass-card::before {
             content: ""; position: absolute; inset: 0;
-            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.1), transparent 40%);
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.08), transparent 40%);
             z-index: 0; pointer-events: none; opacity: 0; transition: opacity 0.3s;
         }
         .glass-card:hover::before { opacity: 1; }
         .glass-card > * { position: relative; z-index: 1; }
         .glass-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: rgba(59, 130, 246, 0.4);
-            box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.25);
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.2);
         }
 
-        /* --- Floating Header --- */
+        /* --- UNIVERSAL FLOATING HEADER (Same transparent rounded pill on ALL devices) --- */
         .floating-header {
-            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: blur(25px) saturate(150%);
+            -webkit-backdrop-filter: blur(25px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.4);
             transition: all 0.3s ease;
+            border-radius: 9999px; /* FULL PILL SHAPE on all devices */
         }
         .nav-link {
             position: relative; color: #d1d5db; font-weight: 600; 
@@ -248,6 +234,29 @@
             transition: width 0.3s ease; border-radius: 2px;
         }
         .nav-link:hover::after { width: 100%; }
+
+        /* --- UNIVERSAL PILL BUTTONS --- */
+        .pill-btn {
+            border-radius: 9999px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        .pill-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s;
+        }
+        .pill-btn:hover::before { left: 100%; }
+        .pill-btn:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+        .pill-btn:active {
+            transform: scale(0.97);
+        }
 
         /* --- Typography --- */
         p, .text-standard {
@@ -265,14 +274,319 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .icon-box { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+        /* ========================================= */
+        /* --- MOBILE APP-LIKE UI (Transparent Glass) --- */
+        /* ========================================= */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 110px;
+                background: #05070d;
+            }
+            
+            /* ===== FLOATING PILL HEADER (TRUE TRANSPARENT GLASS & TALLER) ===== */
+            .floating-header {
+                position: fixed !important;
+                top: 12px !important;
+                left: 12px !important;
+                right: 12px !important;
+                width: auto !important;
+                max-width: calc(100% - 24px) !important;
+                border-radius: 9999px !important; 
+                padding: 0 20px !important;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.06) !important;
+                background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%) !important;
+                backdrop-filter: blur(25px) saturate(150%) !important;
+                -webkit-backdrop-filter: blur(25px) saturate(150%) !important;
+                border: 1px solid rgba(255,255,255,0.08) !important;
+                z-index: 9999 !important;
+            }
+            /* INCREASE HEADER HEIGHT ON MOBILE */
+            .floating-header > div {
+                padding-top: 18px !important;
+                padding-bottom: 18px !important;
+            }
+            .floating-header .px-5 { padding-left: 0 !important; padding-right: 0 !important; }
+            .floating-header img { height: 32px !important; }
+            
+            /* Hide Desktop Nav, Mobile Menu Button, and Chat Button in Header */
+            .desktop-nav, .header-chat-btn, #mobile-menu-btn, #mobile-menu { display: none !important; }
+            
+            /* ===== FLOATING PILL BOTTOM NAV (TRUE TRANSPARENT GLASS) ===== */
+            .mobile-bottom-nav {
+                display: flex !important;
+                position: fixed;
+                bottom: 12px;
+                left: 12px;
+                right: 12px;
+                width: auto;
+                background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+                backdrop-filter: blur(25px) saturate(150%);
+                -webkit-backdrop-filter: blur(25px) saturate(150%);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 9999px; 
+                z-index: 1000;
+                padding: 8px 4px;
+                justify-content: space-around;
+                align-items: center;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            }
+            .nav-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: rgba(255,255,255,0.5);
+                font-size: 8.5px; /* Slightly smaller to fit 6 items */
+                font-weight: 700;
+                gap: 1px;
+                padding: 10px 6px;
+                border-radius: 9999px; 
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                flex: 1;
+                position: relative;
+                letter-spacing: 0.02em;
+            }
+            .nav-item i { 
+                font-size: 17px; 
+                transition: all 0.3s;
+                margin-bottom: 0px;
+            }
+            /* REMOVED INNER GLASS BACKGROUND ON ACTIVE STATE */
+            .nav-item.active {
+                color: #ffffff;
+                /* No background, box-shadow, or border here anymore */
+            }
+            .nav-item.active i {
+                color: #60a5fa;
+                transform: scale(1.15);
+            }
+            .nav-item:active {
+                transform: scale(0.9);
+            }
+
+            /* ===== HERO SECTION ===== */
+            #home {
+                padding-top: 100px !important;
+                min-height: 100svh !important;
+            }
+            #home h1 {
+                font-size: 10vw !important;
+                line-height: 1.15 !important;
+                letter-spacing: -0.02em;
+            }
+            #home p { font-size: 0.9rem !important; padding: 0 12px; }
+            #home .pill-btn {
+                width: 88% !important;
+                padding: 16px 24px !important;
+                font-size: 0.95rem !important;
+                margin-top: 20px !important;
+                border-radius: 9999px !important;
+            }
+            #home .inline-block {
+                font-size: 0.72rem !important;
+                padding: 6px 10px !important;
+                margin-top: 8px !important;
+                border-radius: 9999px !important; 
+            }
+
+            /* ===== ALL CARDS = ROUNDED 24px ===== */
+            .glass-card {
+                border-radius: 24px !important;
+                border: 1px solid rgba(255,255,255,0.06) !important;
+            }
+            
+            section { 
+                padding-left: 14px !important; 
+                padding-right: 14px !important; 
+            }
+            section .container { 
+                padding-left: 0 !important; 
+                padding-right: 0 !important; 
+            }
+            
+            section h2 {
+                font-size: 1.7rem !important;
+                line-height: 1.2 !important;
+            }
+            section h3 {
+                font-size: 1.15rem !important;
+            }
+            section h4 {
+                font-size: 1rem !important;
+            }
+
+            /* ===== FORMS ===== */
+            input, select, textarea {
+                font-size: 16px !important;
+                padding: 14px 18px !important;
+                border-radius: 16px !important;
+                background: rgba(255,255,255,0.04) !important;
+                border: 1px solid rgba(255,255,255,0.08) !important;
+            }
+            input:focus, select:focus, textarea:focus {
+                background: rgba(255,255,255,0.06) !important;
+                border-color: rgba(59,130,246,0.5) !important;
+            }
+            select {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e") !important;
+                background-position: right 14px center !important;
+                background-repeat: no-repeat !important;
+                background-size: 20px !important;
+            }
+            label {
+                font-size: 0.78rem !important;
+                margin-bottom: 6px !important;
+            }
+            
+            #wa-contact-form button[type="submit"] {
+                border-radius: 9999px !important;
+            }
+
+            /* ===== WHATSAPP FAB ===== */
+            .whatsapp-fab {
+                bottom: 100px !important;
+                right: 16px !important;
+                width: 52px !important;
+                height: 52px !important;
+                border-radius: 9999px !important;
+                box-shadow: 0 6px 20px rgba(37,211,102,0.5) !important;
+            }
+
+            /* ===== FOOTER ===== */
+            footer { 
+                padding-bottom: 120px !important; 
+                padding-top: 50px !important;
+            }
+            footer .glass-card {
+                border-radius: 24px !important;
+            }
+            footer h2 { font-size: 1.5rem !important; }
+            
+            #faq .glass-card {
+                border-radius: 20px !important;
+            }
+            .faq-btn span {
+                font-size: 0.92rem !important;
+                line-height: 1.4 !important;
+            }
+            .faq-content div {
+                font-size: 0.88rem !important;
+            }
+            .faq-btn {
+                padding: 16px 20px !important;
+            }
+
+            #services .glass-card {
+                padding: 24px 20px !important;
+                border-radius: 24px !important;
+            }
+            
+            #courses .glass-card {
+                padding: 24px 20px !important;
+            }
+            
+            #admission .absolute.-top-5 {
+                font-size: 0.68rem !important;
+                padding: 6px 14px !important;
+                right: 12px !important;
+                top: -10px !important;
+                border-radius: 9999px !important;
+            }
+            
+            #special-offers .inline-block {
+                border-radius: 9999px !important;
+            }
+            
+            .glass-card a, .glass-card button {
+                border-radius: 9999px !important;
+            }
+            
+            #admission .glass-card > a {
+                border-radius: 9999px !important;
+            }
+            
+            .glass-card .absolute.top-0.right-0 {
+                border-radius: 0 24px 0 16px !important;
+            }
+            
+            footer a[href^="tel"], footer a[href*="wa.me"], footer a[href*="maps"] {
+                border-radius: 20px !important;
+            }
+            
+            footer .icon-box.w-12 {
+                border-radius: 16px !important;
+            }
+        }
+
+        /* ========================================= */
+        /* --- DESKTOP ENHANCEMENTS --- */
+        /* ========================================= */
+        @media (min-width: 769px) {
+            .mobile-bottom-nav { display: none !important; }
+            
+            .glass-card:hover {
+                transform: translateY(-12px) scale(1.02);
+                box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.25);
+            }
+            
+            h1, h2, h3 {
+                letter-spacing: -0.03em;
+            }
+        }
+
+        /* ========================================= */
+        /* --- OTHER SERVICES PRICE TAG STYLE --- */
+        /* ========================================= */
+        .service-price-tag {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 12px 16px;
+            margin: 14px 0 18px 0;
+            width: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .service-price-tag:hover {
+            border-color: rgba(59, 130, 246, 0.2);
+            background: linear-gradient(135deg, rgba(59,130,246,0.06) 0%, rgba(139,92,246,0.04) 100%);
+        }
+        .service-price-tag .price-amount {
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        .service-price-tag .price-label {
+            font-size: 0.6rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .service-price-tag {
+                padding: 10px 14px;
+                margin: 12px 0 16px 0;
+                border-radius: 14px;
+            }
+            .service-price-tag .price-amount {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-[100dvh]">
 
-    <!-- Global Particle Canvas -->
     <canvas id="interactive-canvas"></canvas>
 
-    <!-- Loading Screen -->
     <div id="page-loader">
         <img src="Logo.png" alt="Nexus Logo" class="h-16 object-contain drop-shadow-2xl">
         <div class="loader-bar-container">
@@ -280,7 +594,7 @@
         </div>
     </div>
 
-    <!-- Navigation Header -->
+    <!-- UNIVERSAL FLOATING PILL HEADER -->
     <div class="fixed top-4 left-0 w-full z-50 px-4 pointer-events-none">
         <header class="floating-header pointer-events-auto mx-auto w-full max-w-6xl rounded-full">
             <div class="px-5 md:px-8 py-3 flex justify-between items-center">
@@ -288,7 +602,7 @@
                     <img src="Logo.png" alt="Nexus Logo" class="h-10 object-contain">
                 </a>
                 
-                <nav class="hidden md:flex gap-6 lg:gap-8 items-center w-max">
+                <nav class="hidden md:flex gap-6 lg:gap-8 items-center w-max desktop-nav">
                     <a href="#home" class="nav-link"><i class="fas fa-home text-sm"></i> Home</a>
                     <a href="#admission" class="nav-link"><i class="fas fa-clipboard-list text-sm"></i> Apply</a>
                     <a href="#special-offers" class="nav-link text-orange-400"><i class="fas fa-fire text-sm"></i> Offers</a>
@@ -299,7 +613,7 @@
                 </nav>
                 
                 <div class="flex items-center gap-4">
-                    <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20want%20to%20learn%20more%20about%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%20and%20claim%20the%20offer%21" target="_blank" class="hidden lg:flex magnetic-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg transition text-base">
+                    <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20want%20to%20learn%20more%20about%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%20and%20claim%20the%20offer%21" target="_blank" class="hidden lg:flex pill-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg transition text-base header-chat-btn">
                         <i class="fab fa-whatsapp text-xl"></i> Chat Now
                     </a>
                     <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none">
@@ -309,7 +623,6 @@
             </div>
         </header>
 
-        <!-- MOBILE MENU WITH FIXED ALIGNMENT -->
         <div id="mobile-menu" class="hidden pointer-events-auto mt-2 mx-auto w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl" style="background: rgba(10,15,25,0.95); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1);">
             <div class="flex flex-col p-3 gap-1">
                 <a href="#home" class="flex justify-start items-center gap-4 px-5 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base transition">
@@ -344,17 +657,9 @@
 
     <main class="flex-grow flex flex-col w-full">
 
-        <!-- ========================================= -->
-        <!-- 1. HERO SECTION (PARALLAX BACKGROUND) -->
-        <!-- ========================================= -->
-        <!-- Changed to an IT classroom / presentation setting background -->
         <section id="home" class="relative flex-grow flex items-center justify-center pt-32 pb-16 w-full min-h-[100dvh] bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop');">
-            <!-- 65% Premium Overlay -->
             <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-
-            <!-- Optional Gradient blends -->
             <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19]/60 via-transparent to-[#0b0f19]/80 z-0 pointer-events-none"></div>
-
             <div class="absolute -top-40 left-10 w-[400px] h-[400px] bg-blue-500/30 rounded-full blur-[120px] pointer-events-none z-0"></div>
             <div class="absolute bottom-10 right-10 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
@@ -362,7 +667,7 @@
                 <div class="reveal flex flex-col items-center w-full">
                     
                     <h1 class="text-[7vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 leading-[1.2] tracking-tight text-white w-full drop-shadow-lg flex flex-col items-center gap-2">
-                        <span class="whitespace-nowrap">Flat &nbsp;<span class="gradient-text">&nbsp;₹4,999/- </span>&nbsp;OFF</span>&<span class="text-white">100%&nbsp;<span class="gradient-text whitespace-nowrap">&nbsp;FREE &nbsp;Internship</span></span>
+                        <span class="whitespace-nowrap">Flat&nbsp;<span class="gradient-text"> ₹4,999/- </span> OFF</span>&<span class="text-white whitespace-nowrap">FREE &nbsp;<span class="gradient-text whitespace-nowrap">Internship</span></span>
                     </h1>
                     
                     <p class="mb-10 max-w-3xl mx-auto text-gray-200 text-lg sm:text-xl font-medium leading-relaxed text-balance" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
@@ -371,26 +676,20 @@
                         <span class="inline-block mt-4 text-white bg-green-500/30 border border-green-400/40 px-3 py-1.5 rounded-lg text-sm md:text-base shadow-sm whitespace-nowrap"><i class="fas fa-file-signature text-green-300"></i> In-Writing 100% Job Guarantee</span>
                     </p>
 
-                    <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20am%20ready%20to%20accelerate%20my%20career.%20Please%20let%20me%20know%20how%20to%20claim%20the%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%20offer%21" target="_blank" class="magnetic-btn w-fit mx-auto bg-gradient-to-r from-blue-500 to-purple-600 px-10 py-5 rounded-full font-bold text-white shadow-[0_10px_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_15px_50px_-10px_rgba(139,92,246,0.8)] transition-all transform hover:scale-105 text-center text-xl flex items-center justify-center gap-3">
+                    <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20am%20ready%20to%20accelerate%20my%20career.%20Please%20let%20me%20know%20how%20to%20claim%20the%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%20offer%21" target="_blank" class="pill-btn w-fit mx-auto bg-gradient-to-r from-blue-500 to-purple-600 px-10 py-5 rounded-full font-bold text-white shadow-[0_10px_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_15px_50px_-10px_rgba(139,92,246,0.8)] transition-all transform hover:scale-105 text-center text-xl flex items-center justify-center gap-3">
                         <i class="fas fa-rocket text-2xl"></i> Claim FREE Internship
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================= -->
-        <!-- 2. ADMISSION SECTION (PARALLAX BACKGROUND) -->
-        <!-- ========================================= -->
-        <section id="admission" class="relative py-16 md:py-24 overflow-hidden border-t border-white/10 w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop');">
-            <!-- 65% Premium Overlay -->
+        <section id="admission" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-            
             <div class="absolute inset-0 bg-grid-pattern opacity-40 z-0 pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
 
             <i class="fas fa-clipboard-list absolute top-[15%] left-[10%] text-emerald-400/20 text-8xl md:text-9xl animate-float-slow z-0 pointer-events-none"></i>
             <i class="fas fa-user-graduate absolute bottom-[10%] right-[12%] text-teal-400/20 text-7xl md:text-[10rem] animate-float-delayed z-0 pointer-events-none"></i>
-
             <div class="absolute -left-20 top-20 w-[300px] h-[300px] bg-emerald-500/30 rounded-full blur-[100px] pointer-events-none z-0"></div>
             
             <div class="container relative z-10 mx-auto px-5 lg:px-8 max-w-5xl">
@@ -441,7 +740,7 @@
                             </div>
                         </div>
 
-                        <a href="https://addform.vercel.app" target="_self" class="w-full bg-white text-emerald-900 py-4 md:py-5 rounded-full font-black text-center hover:bg-emerald-400 hover:text-white transition-all shadow-xl flex justify-center items-center gap-3 magnetic-btn text-lg md:text-xl">
+                        <a href="https://addform.vercel.app" target="_self" class="pill-btn w-full bg-white text-emerald-900 py-4 md:py-5 rounded-full font-black text-center hover:bg-emerald-400 hover:text-white transition-all shadow-xl flex justify-center items-center gap-3 text-lg md:text-xl">
                             APPLY FOR ADMISSION <i class="fas fa-clipboard-list text-2xl"></i>
                         </a>
                     </div>
@@ -449,19 +748,13 @@
             </div>
         </section>
 
-        <!-- ========================================= -->
-        <!-- 3. OFFERS SECTION (PARALLAX BACKGROUND) -->
-        <!-- ========================================= -->
-        <section id="special-offers" class="relative py-16 md:py-24 border-t border-white/10 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop');">
-            <!-- 65% Premium Overlay -->
+        <section id="special-offers" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-
             <div class="absolute inset-0 bg-dot-pattern opacity-40 z-0 pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
 
             <i class="fas fa-gift absolute top-[20%] right-[10%] text-pink-400/20 text-8xl md:text-[9rem] animate-float-slow z-0 pointer-events-none"></i>
             <i class="fas fa-percentage absolute bottom-[15%] left-[8%] text-purple-400/20 text-7xl md:text-8xl animate-float-delayed z-0 pointer-events-none"></i>
-
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="container relative z-10 mx-auto px-5 lg:px-8">
@@ -483,10 +776,10 @@
                         <h4 class="text-white font-black text-3xl mb-3">BRING A FRIEND SCHOLARSHIP</h4>
                         <p class="mb-5 text-gray-200">Enroll alongside your friends or classmates to activate premium cluster benefits and unlock major fee write-offs on your course seat immediately.</p>
                         <div class="flex flex-col items-center gap-4 mt-auto">
-                            <div class="inline-block bg-red-500/30 text-white px-4 py-2 rounded-lg font-bold border border-red-400/50 text-sm animate-pulse">
+                            <div class="inline-block bg-red-500/30 text-white px-4 py-2 rounded-full font-bold border border-red-400/50 text-sm animate-pulse">
                                 🔥 Limited to the first 10 group enrollments!
                             </div>
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%91%AC%20I%20and%20my%20friend%20want%20to%20enroll%20together%20in%20your%20Masterclass.%20Please%20activate%20our%20%2ABring%20A%20Friend%20Offer%2A%21" target="_blank" class="text-pink-300 font-bold hover:text-white transition flex items-center justify-center gap-1">Inquire Offer <i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%91%AC%20I%20and%20my%20friend%20want%20to%20enroll%20together%20in%20your%20Masterclass.%20Please%20activate%20our%20%2ABring%20A%20Friend%20Offer%2A%21" target="_blank" class="pill-btn text-pink-300 font-bold hover:text-white transition flex items-center justify-center gap-1 bg-pink-500/10 px-5 py-2.5">Inquire Offer <i class="fas fa-arrow-right text-xs"></i></a>
                         </div>
                     </div>
 
@@ -498,7 +791,7 @@
                             <h4 class="text-white font-black text-xl mb-2">FREE AI COURSE</h4>
                             <p class="text-gray-300">Gain access to custom AI workflows, prompt library structures, and generate production marketing assets instantly.</p>
                         </div>
-                        <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%27m%20super%20excited%20about%20the%20%2AFREE%20AI%20Course%2A%20module%20worth%20%E2%82%B915k.%20Can%20I%20get%20more%20details%20on%20this%3F" target="_blank" class="text-blue-300 font-bold hover:text-white transition mt-6 flex items-center justify-center gap-1 w-full">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                        <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%27m%20super%20excited%20about%20the%20%2AFREE%20AI%20Course%2A%20module%20worth%20%E2%82%B915k.%20Can%20I%20get%20more%20details%20on%20this%3F" target="_blank" class="pill-btn text-blue-300 font-bold hover:text-white transition mt-6 flex items-center justify-center gap-1 w-full bg-blue-500/10 px-5 py-2.5">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
                     </div>
 
                     <div class="glass-card p-8 border-t-4 border-purple-400 reveal flex flex-col items-center justify-between bg-black/50 backdrop-blur-md">
@@ -509,7 +802,7 @@
                             <h4 class="text-white font-black text-xl mb-2">4 MONTH MASTER CLASS FORMAT</h4>
                             <p class="text-gray-300">Get hands-on agency projects combined with an elite premium digital marketing internship.</p>
                         </div>
-                        <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%93%85%20Please%20tell%20me%20how%20the%20%2A4%20Month%20Master%20Class%20Format%2A%20works.%20What%20kind%20of%20internships%20will%20I%20be%20doing%3F" target="_blank" class="text-purple-300 font-bold hover:text-white transition mt-6 flex items-center justify-center gap-1 w-full">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
+                        <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%93%85%20Please%20tell%20me%20how%20the%20%2A4%20Month%20Master%20Class%20Format%2A%20works.%20What%20kind%20of%20internships%20will%20I%20be%20doing%3F" target="_blank" class="pill-btn text-purple-300 font-bold hover:text-white transition mt-6 flex items-center justify-center gap-1 w-full bg-purple-500/10 px-5 py-2.5">Learn More <i class="fas fa-arrow-right text-xs"></i></a>
                     </div>
 
                     <div class="glass-card p-8 md:col-span-2 border-t-4 border-green-400 reveal flex flex-col items-center justify-center bg-black/50 backdrop-blur-md">
@@ -519,7 +812,7 @@
                         <div class="flex-grow flex flex-col items-center">
                             <h4 class="text-white font-black text-2xl mb-2">100% JOB GUARANTEE</h4>
                             <p class="text-gray-200 mb-6 max-w-lg">We back our teaching standard with an absolute, written employment guarantee. Prepare with mock-panels, build real-world client case-studies, and step confidently into top placement rounds.</p>
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%92%BC%20I%20want%20to%20understand%20your%20written%20%2A100%25%20Job%20Placement%20Guarantee%2A.%20Please%20share%20the%20terms%20and%20partner%20companies%21" target="_blank" class="text-green-300 font-bold hover:text-white transition flex items-center justify-center gap-1 w-full mt-auto">Request Job Agreement Terms <i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%92%BC%20I%20want%20to%20understand%20your%20written%20%2A100%25%20Job%20Placement%20Guarantee%2A.%20Please%20share%20the%20terms%20and%20partner%20companies%21" target="_blank" class="pill-btn text-green-300 font-bold hover:text-white transition flex items-center justify-center gap-1 w-full mt-auto bg-green-500/10 px-5 py-2.5">Request Job Agreement Terms <i class="fas fa-arrow-right text-xs"></i></a>
                         </div>
                     </div>
 
@@ -527,19 +820,13 @@
             </div>
         </section>
 
-        <!-- ========================================= -->
-        <!-- 4. COURSES SECTION (PARALLAX BACKGROUND) -->
-        <!-- ========================================= -->
-        <section id="courses" class="relative py-16 md:py-24 border-t border-white/10 w-full overflow-hidden bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');">
-            <!-- 65% Premium Overlay -->
+        <section id="courses" class="relative py-12 md:py-16 w-full overflow-hidden bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-
             <div class="absolute inset-0 bg-grid-pattern opacity-40 z-0 pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
 
             <i class="fas fa-laptop-code absolute top-[15%] left-[5%] text-blue-400/20 text-8xl md:text-[9rem] animate-float-slow z-0 pointer-events-none"></i>
             <i class="fas fa-brain absolute top-[50%] left-[85%] text-indigo-400/20 text-6xl animate-float z-0 pointer-events-none" style="animation-delay: 1.5s;"></i>
-
             <div class="absolute top-0 right-20 w-[300px] h-[300px] bg-blue-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
             <div class="container relative z-10 mx-auto px-5 lg:px-8">
@@ -553,7 +840,6 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto items-stretch text-center">
                     
-                    <!-- Box 1: Design & Video Editing -->
                     <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between items-center bg-black/50 backdrop-blur-xl">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-pink-500 to-orange-400 text-2xl text-white mb-6 shadow-lg">
@@ -573,11 +859,10 @@
                             </ul>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%A8%20I%20am%20interested%20in%20learning%20%2ACanva%20Design%20%26%20CapCut%20Video%20Editing%2A.%20Please%20send%20me%20the%20detailed%20syllabus%20for%20this%20module%21" target="_blank" class="w-full bg-blue-500/20 hover:bg-blue-500 text-blue-300 hover:text-white py-3 rounded-xl font-bold block text-center transition">Get Design Syllabus</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%A8%20I%20am%20interested%20in%20learning%20%2ACanva%20Design%20%26%20CapCut%20Video%20Editing%2A.%20Please%20send%20me%20the%20detailed%20syllabus%20for%20this%20module%21" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get Design Syllabus</a>
                         </div>
                     </div>
 
-                    <!-- Box 2: Social Media Marketing (SMM) -->
                     <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between items-center bg-black/50 backdrop-blur-xl">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 text-2xl text-white mb-6 shadow-lg">
@@ -601,11 +886,10 @@
                             </ul>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%93%88%20I%27m%20very%20interested%20in%20your%20%2ASocial%20Media%20Marketing%20Syllabus%2A.%20Please%20share%20details%21" target="_blank" class="w-full bg-blue-500/20 hover:bg-blue-500 text-blue-300 hover:text-white py-3 rounded-xl font-bold block text-center transition">Get SMM Blueprint</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%93%88%20I%27m%20very%20interested%20in%20your%20%2ASocial%20Media%20Marketing%20Syllabus%2A.%20Please%20share%20details%21" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get SMM Blueprint</a>
                         </div>
                     </div>
 
-                    <!-- Box 3: Performance Marketing (PPC) -->
                     <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between items-center bg-black/50 backdrop-blur-xl">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-2xl text-white mb-6 shadow-lg">
@@ -646,11 +930,10 @@
                             </div>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%AF%20I%20am%20ready%20to%20learn%20how%20to%20run%20profitable%20%2AMeta%20%26%20Google%20Ads%2A.%20Could%20I%20receive%20the%20ad%20strategy%20curriculum%3F" target="_blank" class="w-full bg-blue-500/20 hover:bg-blue-500 text-blue-300 hover:text-white py-3 rounded-xl font-bold block text-center transition">Get Performance Blueprint</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%AF%20I%20am%20ready%20to%20learn%20how%20to%20run%20profitable%20%2AMeta%20%26%20Google%20Ads%2A.%20Could%20I%20receive%20the%20ad%20strategy%20curriculum%3F" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get Performance Blueprint</a>
                         </div>
                     </div>
 
-                    <!-- Box 4: Search Engine Optimization (SEO) -->
                     <div class="glass-card p-8 reveal flex flex-col h-full w-full justify-between items-center bg-black/50 backdrop-blur-xl">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 text-2xl text-white mb-6 shadow-lg">
@@ -674,11 +957,10 @@
                             </ul>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%94%8D%20I%20am%20interested%20in%20learning%20%2AAdvanced%20SEO%20Strategies%2A.%20Please%20send%20me%20the%20detailed%20syllabus%21" target="_blank" class="w-full bg-blue-500/20 hover:bg-blue-500 text-blue-300 hover:text-white py-3 rounded-xl font-bold block text-center transition">Get SEO Blueprint</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%94%8D%20I%20am%20interested%20in%20learning%20%2AAdvanced%20SEO%20Strategies%2A.%20Please%20send%20me%20the%20detailed%20syllabus%21" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get SEO Blueprint</a>
                         </div>
                     </div>
 
-                    <!-- Box 5: Advanced AI Mastery (Full Width Bottom) -->
                     <div class="glass-card p-8 reveal flex flex-col h-full w-full md:col-span-2 max-w-3xl mx-auto justify-between items-center bg-black/50 backdrop-blur-xl">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-2xl text-white mb-6 shadow-lg">
@@ -688,16 +970,16 @@
                             <p class="mb-6 text-gray-200 max-w-lg mx-auto">Incorporate advanced workflows to write compelling ad-copy, script high-converting reels, and design marketing roadmaps.</p>
                             
                             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6 w-full">
-                                <div class="glass-card border-white/5 p-3 rounded-xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" class="w-5 h-5 opacity-90" alt="ChatGPT"> ChatGPT</div>
-                                <div class="glass-card border-white/5 p-3 rounded-xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-5 h-5 opacity-90" alt="Gemini"> Gemini</div>
-                                <div class="glass-card border-white/5 p-3 rounded-xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fa-solid fa-x w-5 text-center"></i> Grok</div>
-                                <div class="glass-card border-white/5 p-3 rounded-xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fa-brands fa-microsoft w-5 text-center text-blue-400"></i> Copilot</div>
-                                <div class="glass-card border-white/5 p-3 rounded-xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fas fa-comment-dots w-5 text-center text-orange-400"></i> Claude</div>
-                                <div class="glass-card border-white/5 p-3 rounded-xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fa-brands fa-meta w-5 text-center text-blue-500"></i> Meta AI</div>
+                                <div class="glass-card border-white/5 p-3 rounded-2xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" class="w-5 h-5 opacity-90" alt="ChatGPT"> ChatGPT</div>
+                                <div class="glass-card border-white/5 p-3 rounded-2xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-5 h-5 opacity-90" alt="Gemini"> Gemini</div>
+                                <div class="glass-card border-white/5 p-3 rounded-2xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fa-solid fa-x w-5 text-center"></i> Grok</div>
+                                <div class="glass-card border-white/5 p-3 rounded-2xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fa-brands fa-microsoft w-5 text-center text-blue-400"></i> Copilot</div>
+                                <div class="glass-card border-white/5 p-3 rounded-2xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fas fa-comment-dots w-5 text-center text-orange-400"></i> Claude</div>
+                                <div class="glass-card border-white/5 p-3 rounded-2xl flex items-center justify-center gap-3 text-base font-medium text-white bg-black/60"><i class="fa-brands fa-meta w-5 text-center text-blue-500"></i> Meta AI</div>
                             </div>
                         </div>
                         <div class="pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%20want%20to%20master%20AI%20tools%20like%20%2AClaude%2C%20Gemini%2C%20and%20ChatGPT%2A.%20What%20kind%20of%20real%20projects%20will%20we%20do%20using%20these%3F" target="_blank" class="w-full bg-blue-500/20 hover:bg-blue-500 text-blue-300 hover:text-white py-3 rounded-xl font-bold block text-center transition">Get AI Module Details</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%20want%20to%20master%20AI%20tools%20like%20%2AClaude%2C%20Gemini%2C%20and%20ChatGPT%2A.%20What%20kind%20of%20real%20projects%20will%20we%20do%20using%20these%3F" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get AI Module Details</a>
                         </div>
                     </div>
 
@@ -705,13 +987,8 @@
             </div>
         </section>
 
-        <!-- ========================================= -->
-        <!-- 5. SERVICES SECTION (PARALLAX BACKGROUND) -->
-        <!-- ========================================= -->
-        <section id="services" class="relative py-16 md:py-24 border-t border-white/10 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop');">
-            <!-- 65% Premium Overlay -->
+        <section id="services" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-
             <div class="absolute inset-0 bg-checker-pattern opacity-40 z-0 pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
 
@@ -724,127 +1001,158 @@
                         <i class="fas fa-briefcase text-yellow-400"></i> Professional Agency Services
                     </span>
                     <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight drop-shadow-2xl">Premium Solutions We <span class="text-orange-400">Provide</span></h2>
-                    <p class="text-gray-200 font-medium" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Scale your personal brand or enterprise with elite, conversion-focused agency offerings.</p>
+                    <p class="text-gray-200 font-medium" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Scale your personal brand or enterprise with elite, conversion-focused agency packages.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto items-stretch text-center">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-20 items-stretch reveal">
                     
+                    <div class="glass-card p-6 md:p-8 flex flex-col relative border-t-4 border-blue-400 bg-black/60 backdrop-blur-md h-full transition hover:-translate-y-2">
+                        <div class="text-center w-full mb-6 border-b border-white/10 pb-6">
+                            <h3 class="text-2xl font-black text-white mb-2">Standard Package</h3>
+                            <div class="text-blue-400 font-bold text-4xl mt-2">10K<span class="text-lg text-gray-400 font-medium">/Month</span></div>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow text-left">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">8 Posts</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">2 Video Edits</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">Meta Ads <strong>Or</strong> Google Ads<br><span class="text-xs text-gray-400 block mt-1">(Ad Campaign Budget Client nu rese)</span></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">Single Landing Page Website <strong class="text-green-400 bg-green-500/20 px-2 py-0.5 rounded-full text-xs ml-1">(Free)</strong></span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%93%88%20I%20am%20interested%20in%20your%20%2AStandard%20Package%2A%20for%2010K%2FMonth.%20Let%27s%20discuss%20further%21" target="_blank" class="pill-btn w-full text-center bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold transition">Inquire Standard</a>
+                    </div>
+
+                    <div class="glass-card p-6 md:p-8 flex flex-col relative border-t-4 border-orange-400 bg-black/60 backdrop-blur-md h-full transform lg:-translate-y-4 shadow-[0_15px_40px_-10px_rgba(246,153,59,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(246,153,59,0.4)] transition">
+                        <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-2xl rounded-tr-3xl">POPULAR</div>
+                        <div class="text-center w-full mb-6 border-b border-white/10 pb-6">
+                            <h3 class="text-2xl font-black text-white mb-2">Growth Package</h3>
+                            <div class="text-orange-400 font-bold text-4xl mt-2">20K<span class="text-lg text-gray-400 font-medium">/Month</span></div>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow text-left">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-orange-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">12 Posts</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-orange-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">3 Video Edits</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-orange-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">Meta Ads <strong>+</strong> Google Ads<br><span class="text-xs text-gray-400 block mt-1">(Ad Campaign Budget Client nu rese)</span></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-orange-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">3-4 Page Standard Website<br><span class="text-xs text-yellow-300 block mt-1">(Agar Jo Website na banavvi hoy to 5K Ocha)</span></span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%9A%80%20I%20am%20interested%20in%20your%20%2AGrowth%20Package%2A%20for%2020K%2FMonth.%20Let%27s%20discuss%20further%21" target="_blank" class="pill-btn w-full text-center bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 font-bold transition shadow-lg">Inquire Growth</a>
+                    </div>
+
+                    <div class="glass-card p-6 md:p-8 flex flex-col relative border-t-4 border-purple-400 bg-black/60 backdrop-blur-md h-full transition hover:-translate-y-2">
+                        <div class="text-center w-full mb-6 border-b border-white/10 pb-6">
+                            <h3 class="text-2xl font-black text-white mb-2">Pro Package</h3>
+                            <div class="text-purple-400 font-bold text-4xl mt-2">30K<span class="text-lg text-gray-400 font-medium">/Month</span></div>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow text-left">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-purple-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">16 Posts</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-purple-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">4 Video Edits</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-purple-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">Meta Ads <strong>+</strong> Google Ads<br><span class="text-xs text-gray-400 block mt-1">(Ad Campaign Budget Client nu rese)</span></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-purple-400 mt-1"></i> 
+                                <span class="text-gray-200 font-medium">5-7 Page Premium Website<br><span class="text-xs text-yellow-300 block mt-1">(Agar Jo Website na banavvi hoy to 5K Ocha)</span></span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%92%8E%20I%20am%20interested%20in%20your%20%2APro%20Package%2A%20for%2030K%2FMonth.%20Let%27s%20discuss%20further%21" target="_blank" class="pill-btn w-full text-center bg-purple-500/10 hover:bg-purple-500 text-purple-300 hover:text-white py-3 font-bold transition">Inquire Pro</a>
+                    </div>
+                </div>
+
+                <div class="text-center mb-10 reveal">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">Other <span class="text-cyan-400">Services</span></h3>
+                    <p class="text-gray-400 mt-2 text-sm">Premium design services at unbeatable prices</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch text-center">
+                    
+                    <!-- Visiting Card -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-id-card"></i></div>
-                            <span class="inline-block bg-blue-500/30 text-blue-300 px-3 py-1 rounded-lg text-sm font-bold border border-blue-400/40 mb-4">Starts at ₹299</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Design Visiting Card</h3>
-                            <p class="text-gray-300 text-sm">Get high-impact business card designs. Option to integrate custom interactive QR codes for immediate digital contact saving.</p>
+                            <h3 class="text-lg font-bold text-white mb-2">Design Visiting Card</h3>
+                            <p class="text-gray-300 text-sm">Get high-impact business card designs. Interactive digital layouts available.</p>
+                            <div class="service-price-tag">
+                                <div class="price-amount">₹199</div>
+                                <div class="price-label">Starting Price</div>
+                            </div>
                         </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%93%B3%20I%27d%20like%20to%20order%20a%20%2AProfessional%20Visiting%20Card%2A%20starting%20at%20%E2%82%B9299.%20Please%20share%20some%20premium%20templates%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%93%B3%20I%27d%20like%20to%20order%20a%20%2AProfessional%20Visiting%20Card%2A.%20Please%20share%20some%20premium%20templates%21" target="_blank" class="pill-btn mt-4 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 font-bold transition text-sm flex items-center justify-center gap-2">
                             Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
+                    <!-- Marriage Kankotri -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-pink-500 to-rose-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-ring"></i></div>
-                            <span class="inline-block bg-pink-500/30 text-pink-300 px-3 py-1 rounded-lg text-sm font-bold border border-pink-400/40 mb-4">Starts at ₹599</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Digital Marriage Kankotri</h3>
-                            <p class="text-gray-300 text-sm">Sleek multi-page digital wedding invitations featuring custom imagery alignments, aesthetic color themes, and map link directions.</p>
+                            <h3 class="text-lg font-bold text-white mb-2">Digital Marriage Kankotri</h3>
+                            <p class="text-gray-300 text-sm">Sleek multi-page digital wedding invitations featuring custom imagery and maps.</p>
+                            <div class="service-price-tag">
+                                <div class="price-amount">₹499</div>
+                                <div class="price-label">Starting Price</div>
+                            </div>
                         </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%92%8D%20I%20am%20interested%20in%20creating%20an%20elegant%20%2ADigital%20Marriage%20Kankotri%2A%20starting%20at%20%E2%82%B9599.%20Please%20send%20sample%20designs%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%92%8D%20I%20am%20interested%20in%20creating%20an%20elegant%20%2ADigital%20Marriage%20Kankotri%2A.%20Please%20send%20sample%20designs%21" target="_blank" class="pill-btn mt-4 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 font-bold transition text-sm flex items-center justify-center gap-2">
                             Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
+                    <!-- Birthday Card -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-birthday-cake"></i></div>
-                            <span class="inline-block bg-purple-500/30 text-purple-300 px-3 py-1 rounded-lg text-sm font-bold border border-purple-400/40 mb-4">Starts at ₹199</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Birthday Celebration Card</h3>
-                            <p class="text-gray-300 text-sm">Fun, personalized invites optimized for fast social sharing, custom guest welcomes, and photo layouts.</p>
+                            <h3 class="text-lg font-bold text-white mb-2">Birthday Celebration Card</h3>
+                            <p class="text-gray-300 text-sm">Fun, personalized invites optimized for fast social sharing and photo layouts.</p>
+                            <div class="service-price-tag">
+                                <div class="price-amount">₹299</div>
+                                <div class="price-label">Starting Price</div>
+                            </div>
                         </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%8E%82%20I%20want%20to%20order%20a%20creative%20%2ABirthday%20Celebration%20Invitation%20Card%2A%20starting%20at%20%E2%82%B9199.%20Please%20share%20options%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%8E%82%20I%20want%20to%20order%20a%20creative%20%2ABirthday%20Celebration%20Invitation%20Card%2A.%20Please%20share%20options%21" target="_blank" class="pill-btn mt-4 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 font-bold transition text-sm flex items-center justify-center gap-2">
                             Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
 
+                    <!-- Opening Ceremony -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-xl text-white shadow-lg mb-4"><i class="fas fa-ribbon"></i></div>
-                            <span class="inline-block bg-green-500/30 text-green-300 px-3 py-1 rounded-lg text-sm font-bold border border-green-400/40 mb-4">Starts at ₹199</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Opening Ceremony Card</h3>
-                            <p class="text-gray-300 text-sm">Sleek, attention-grabbing templates tailored to drive attendance, feature brand logos, and announce grand opening specials.</p>
+                            <h3 class="text-lg font-bold text-white mb-2">Opening Ceremony Card</h3>
+                            <p class="text-gray-300 text-sm">Sleek, attention-grabbing templates tailored to announce grand opening specials.</p>
+                            <div class="service-price-tag">
+                                <div class="price-amount">₹399</div>
+                                <div class="price-label">Starting Price</div>
+                            </div>
                         </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%8E%80%20I%20need%20a%20professional%20%2AOpening%20Ceremony%20Card%2A%20design%20starting%20at%20%E2%82%B9199.%20Please%20share%20the%20onboarding%20steps%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
-                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div>
-
-                    <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
-                        <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 text-xl text-white shadow-lg mb-4"><i class="fas fa-video"></i></div>
-                            <span class="inline-block bg-red-500/30 text-red-300 px-3 py-1 rounded-lg text-sm font-bold border border-red-400/40 mb-4">₹999 / Video</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Viral Video Editing</h3>
-                            <p class="text-gray-300 text-sm">Retaining viewers with fast transitions, cinematic typography styles, matching background tracks, and viral video pacing.</p>
-                        </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%8E%AC%20I%20am%20looking%20for%20premium%20%2AViral%20Video%20Editing%2A%20for%20my%20Reels%2FShorts.%20Please%20share%20your%20portfolio%20and%20packages%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
-                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div>
-
-                    <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
-                        <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-teal-400 to-blue-500 text-xl text-white shadow-lg mb-4"><i class="fas fa-image"></i></div>
-                            <span class="inline-block bg-teal-500/30 text-teal-300 px-3 py-1 rounded-lg text-sm font-bold border border-teal-400/40 mb-4">₹499 / Post</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Social Media Business Post</h3>
-                            <p class="text-gray-300 text-sm">Eye-catching layouts engineered to convert, complete with custom copy suggestions and matching hashtags.</p>
-                        </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%93%8A%20I%20want%20to%20order%20premium%20%2ASocial%20Media%20Business%20Posts%2A%20for%20my%20page.%20Please%20share%20some%20recent%20designs%20you%20did%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
-                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div>
-
-                    <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
-                        <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-fuchsia-500 to-pink-500 text-xl text-white shadow-lg mb-4"><i class="fas fa-users-cog"></i></div>
-                            <span class="inline-block bg-fuchsia-500/30 text-fuchsia-300 px-3 py-1 rounded-lg text-sm font-bold border border-fuchsia-400/40 mb-4">Premium Management</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Insta / YT Channel Handle</h3>
-                            <p class="text-gray-300 text-sm">Scale your community. End-to-end management, content calendars, keyword targeting, and routine performance analytics.</p>
-                        </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%93%A3%20I%27m%20interested%20in%20your%20%2AInstagram%20and%20YouTube%20Channel%20Management%2A%20service%20to%20grow%20my%20brand%20organically.%20Let%27s%20talk%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
-                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div>
-
-                    <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
-                        <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-xl text-white shadow-lg mb-4"><i class="fab fa-facebook-f"></i></div>
-                            <span class="inline-block bg-blue-600/30 text-blue-300 px-3 py-1 rounded-lg text-sm font-bold border border-blue-400/40 mb-4">Targeted Campaigns</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Facebook & Insta Ads Run</h3>
-                            <p class="text-gray-300 text-sm">Highly-optimized paid ad campaign structures. Reach potential buyers, generate leads, and boost overall brand sales.</p>
-                        </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%8E%AF%20I%20am%20looking%20to%20boost%20my%20sales%20via%20targeted%20%2AFacebook%20%26%20Instagram%20Ads%2A.%20Please%20share%20case%20studies%20or%20details%21" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
-                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div>
-
-                    <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
-                        <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-red-500 to-yellow-500 text-xl text-white shadow-lg mb-4"><i class="fab fa-google"></i></div>
-                            <span class="inline-block bg-yellow-500/30 text-yellow-300 px-3 py-1 rounded-lg text-sm font-bold border border-yellow-400/40 mb-4">Intent Driving</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Google Ads Setup & Run</h3>
-                            <p class="text-gray-300 text-sm">Capture customer intent via optimized Google Search, Display, and Video ads. Includes landing page structural suggestions.</p>
-                        </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%94%8D%20I%20am%20interested%20in%20setting%20up%20%2AGoogle%20Ads%20Campaigns%2A%20for%20lead%20generation.%20What%20is%20your%20approach%3F" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
-                            Inquire Now <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div>
-
-                    <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full md:col-span-2 lg:col-span-3 lg:w-1/3 lg:mx-auto bg-black/50 backdrop-blur-md">
-                        <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-xl text-white shadow-lg mb-4"><i class="fas fa-globe"></i></div>
-                            <span class="inline-block bg-orange-500/30 text-orange-300 px-3 py-1 rounded-lg text-sm font-bold border border-orange-400/40 mb-4">High Performance</span>
-                            <h3 class="text-xl font-bold text-white mb-2">Static Website Build</h3>
-                            <p class="text-gray-300 text-sm">Professional Business, Personal, or Portfolio Static Websites built for speed, responsiveness, and conversion.</p>
-                        </div>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%8C%90%20I%20need%20a%20modern%20%2AStatic%20Website%2A%20built%20for%20my%20business.%20Could%20we%20discuss%20design%20options%3F" target="_blank" class="mt-6 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 rounded-xl font-bold transition text-sm flex items-center justify-center gap-2">
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%8E%80%20I%20need%20a%20professional%20%2AOpening%20Ceremony%20Card%2A%20design.%20Please%20share%20the%20onboarding%20steps%21" target="_blank" class="pill-btn mt-4 w-full text-center bg-white/10 hover:bg-white text-white hover:text-black py-2.5 font-bold transition text-sm flex items-center justify-center gap-2">
                             Inquire Now <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
@@ -853,20 +1161,13 @@
             </div>
         </section>
 
-        <!-- ========================================= -->
-        <!-- 6. FAQ SECTION (PARALLAX BACKGROUND) -->
-        <!-- ========================================= -->
-        <!-- Changed to an image of someone thinking/searching on a laptop -->
-        <section id="faq" class="relative py-16 md:py-24 border-t border-white/10 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');">
-            <!-- 65% Premium Overlay -->
+        <section id="faq" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-
             <div class="absolute inset-0 bg-dot-pattern opacity-40 z-0 pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
 
             <i class="fas fa-question absolute top-[20%] right-[15%] text-indigo-400/20 text-8xl md:text-[10rem] animate-float z-0 pointer-events-none"></i>
             <i class="fas fa-comments absolute bottom-[10%] left-[10%] text-purple-400/20 text-7xl md:text-9xl animate-float-slow z-0 pointer-events-none"></i>
-
             <div class="absolute top-0 right-10 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
             
             <div class="container relative z-10 mx-auto px-5 lg:px-8 max-w-4xl">
@@ -879,7 +1180,7 @@
                 </div>
 
                 <div class="space-y-4 reveal">
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">1. What are the top digital marketing classes near me in Surat?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -893,7 +1194,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">2. Are there best affordable digital marketing classes near me with a job guarantee?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -907,7 +1208,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">3. Where can I find the best digital marketing institute in Jakatnaka, Surat?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -921,7 +1222,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">4. Do I need a coding or IT background to learn digital marketing?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -935,7 +1236,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">5. What is the difference between Performance Marketing and SEO?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -949,7 +1250,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">6. Can I start my own digital marketing agency after this course?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -963,7 +1264,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">7. Why should I learn AI tools like ChatGPT along with digital marketing?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -977,7 +1278,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">8. How long does it take to complete the digital marketing course?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -991,7 +1292,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">9. What salary can I expect as a fresher in digital marketing in Surat?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -1005,7 +1306,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
+                    <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 border border-white/10 hover:border-purple-400/50 bg-black/50 backdrop-blur-xl">
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer transition-colors hover:bg-white/5">
                             <span class="text-white font-bold text-lg pr-4">10. Do you provide practical training or just theory?</span>
                             <div class="icon-box w-8 h-8 rounded-full bg-purple-500/30 text-purple-300 shrink-0 transition-transform duration-100 faq-icon">
@@ -1025,22 +1326,53 @@
 
     </main>
 
-    <!-- ========================================= -->
-    <!-- PERFECTLY CENTERED FOOTER -->
-    <!-- ========================================= -->
-    <footer id="contact" class="mt-auto relative z-10 pt-16 pb-8 border-t border-white/10 bg-[#0b0f19] w-full flex flex-col items-center">
-        <div class="container mx-auto px-5 lg:px-8 mb-10 max-w-5xl">
+    <footer id="contact" class="mt-auto relative z-10 pt-16 pb-8 bg-[#0b0f19] w-full flex flex-col items-center">
+        <div class="container mx-auto px-5 lg:px-8 max-w-5xl">
             
-            <div class="text-center mb-12">
+            <div class="text-center mb-10">
                 <span class="text-blue-300 font-bold tracking-widest text-sm uppercase flex items-center justify-center gap-2 drop-shadow-md">
-                    <i class="fas fa-headset text-blue-300"></i> Contact Us
+                    <i class="fas fa-headset text-blue-300"></i> Get In Touch
                 </span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">Contact <span class="text-blue-400">Us</span></h2>
             </div>
 
-            <!-- Balanced 3-Column Centered Grid -->
+            <div class="w-full max-w-3xl mx-auto mb-16">
+                <div class="glass-card p-6 md:p-8 border border-white/10 bg-black/50 shadow-2xl">
+                    <form id="wa-contact-form" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-name">Full Name</label>
+                                <input type="text" id="wa-name" placeholder="John Doe" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-phone">Phone Number</label>
+                                <input type="tel" id="wa-phone" placeholder="+91 XXXXX XXXXX" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-service">Service / Course Interested In</label>
+                            <select id="wa-service" required class="w-full bg-[#151c2c] border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 appearance-none transition">
+                                <option value="" disabled selected>Select an option...</option>
+                                <option value="Digital Marketing Master Class">Digital Marketing Course</option>
+                                <option value="Standard Package (10K)">Standard Package (10K)</option>
+                                <option value="Growth Package (20K)">Growth Package (20K)</option>
+                                <option value="Pro Package (30K)">Pro Package (30K)</option>
+                                <option value="Other Design/Editing Services">Other Design/Editing Services</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-message">Your Message</label>
+                            <textarea id="wa-message" placeholder="How can we help you?" required rows="3" class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition"></textarea>
+                        </div>
+                        <button type="submit" class="pill-btn w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold py-3.5 hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.6)] transition transform hover:-translate-y-1">
+                            Send to WhatsApp <i class="fab fa-whatsapp ml-2 text-lg"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 text-center">
                 
-                <!-- Column 1: Brand Info -->
                 <div class="flex flex-col items-center">
                     <a href="#home" class="block mb-6">
                         <img src="Logo.png" alt="Nexus Logo" class="h-14 object-contain">
@@ -1050,22 +1382,17 @@
                     </p>
                     
                     <div class="flex gap-4 justify-center">
-                        <a href="https://www.instagram.com/nexusmarketing160?igsh=MWR0NzRyYWMxOXlnZg%3D%3D" target="_blank" aria-label="Follow us on Instagram" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 bg-black/40">
+                        <a href="https://www.instagram.com/nexusmarketing160?igsh=MWR0NzRyYWMxOXlnZg%3D%3D" target="_blank" aria-label="Follow us on Instagram" class="icon-box w-12 h-12 rounded-2xl glass-card hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 bg-black/40">
                             <i class="fa-brands fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://www.youtube.com/channel/UC6QtBPzai3OT5DFt_49C3Ng" target="_blank" aria-label="Follow us on YouTube" class="icon-box w-12 h-12 rounded-xl glass-card hover:bg-red-600 hover:text-white transition-all duration-300 bg-black/40">
+                        <a href="https://www.youtube.com/channel/UC6QtBPzai3OT5DFt_49C3Ng" target="_blank" aria-label="Follow us on YouTube" class="icon-box w-12 h-12 rounded-2xl glass-card hover:bg-red-600 hover:text-white transition-all duration-300 bg-black/40">
                             <i class="fa-brands fa-youtube text-xl"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Column 2: Quick Links -->
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center pt-2">
                     <div class="text-left w-max">
-                        <h4 class="text-white font-bold text-xl mb-6 relative inline-block">
-                            Quick Navigation
-                            <span class="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-gradient-to-r from-blue-400 to-transparent rounded"></span>
-                        </h4>
                         <ul class="space-y-4 flex flex-col items-start">
                             <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-blue-400 text-sm"></i> Home</a></li>
                             <li><a href="#admission" class="text-orange-400 font-medium hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-orange-400 text-sm"></i> Apply Now</a></li>
@@ -1076,14 +1403,8 @@
                     </div>
                 </div>
 
-                <!-- Column 3: Contact Info -->
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center pt-2">
                     <div class="text-left w-max max-w-[280px]">
-                        <h4 class="text-white font-bold text-xl mb-6 relative inline-block">
-                            Connect with Us
-                            <span class="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-gradient-to-r from-purple-400 to-transparent rounded"></span>
-                        </h4>
-                        
                         <div class="space-y-5 w-full flex flex-col items-start">
                             <a href="tel:+917434053550" onclick="return gtag_report_conversion('tel:+917434053550');" class="flex items-center gap-4 p-3 w-full rounded-2xl glass-card hover:bg-white/10 transition group justify-start bg-black/40">
                                 <div class="icon-box w-12 h-12 bg-blue-500/30 rounded-xl text-blue-300 group-hover:bg-blue-500 group-hover:text-white transition shrink-0">
@@ -1125,7 +1446,7 @@
             </div>
         </div>
 
-        <div class="border-t border-white/10 pt-6 px-5 text-center pb-4 w-full">
+        <div class="border-t border-white/10 pt-6 px-5 text-center pb-4 w-full mt-10">
             <p class="text-gray-300 flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2">
                 <span>© <span id="year"></span> Nexus Institute & Marketing.</span>
                 <span class="hidden sm:inline text-white/20">|</span>
@@ -1134,11 +1455,38 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%A4%A9%20I%20am%20browsing%20your%20website%20and%20want%20to%20know%20how%20to%20enroll%20in%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%21" onclick="return gtag_report_conversion('https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%A4%A9%20I%20am%20browsing%20your%20website%20and%20want%20to%20know%20how%20to%20enroll%20in%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%21');" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300" aria-label="Chat on WhatsApp">
+    <!-- FLOATING PILL BOTTOM NAVIGATION (WITH SERVICES ADDED) -->
+    <nav class="mobile-bottom-nav">
+        <a href="#home" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#courses" class="nav-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Courses</span>
+        </a>
+        <a href="#services" class="nav-item">
+            <i class="fas fa-briefcase"></i>
+            <span>Services</span>
+        </a>
+        <a href="#special-offers" class="nav-item">
+            <i class="fas fa-fire"></i>
+            <span>Offers</span>
+        </a>
+        <a href="#admission" class="nav-item">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Apply</span>
+        </a>
+        <a href="#contact" class="nav-item">
+            <i class="fas fa-headset"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+    <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%A4%A9%20I%20am%20browsing%20your%20website%20and%20want%20to%20know%20how%20to%20enroll%20in%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%21" onclick="return gtag_report_conversion('https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%A4%A9%20I%20am%20browsing%20your%20website%20and%20want%20to%20know%20how%20to%20enroll%20in%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%21');" target="_blank" class="whatsapp-fab fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Core Scripts -->
     <script>
         // PWA Service Worker Registration
         if ('serviceWorker' in navigator) {
@@ -1149,26 +1497,6 @@
 
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-                menuBtn.innerHTML = '<i class="fas fa-times text-xl"></i>';
-            } else {
-                mobileMenu.classList.add('hidden');
-                menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-            }
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-            });
-        });
-
         // Fast Custom Smooth Scroll Script
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1178,7 +1506,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     e.preventDefault();
-                    const headerOffset = 80;
+                    const headerOffset = 90;
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                     
@@ -1203,6 +1531,33 @@
         window.addEventListener("scroll", reveal);
         reveal();
 
+        // Contact Form WhatsApp Logic (Professional Structure)
+        document.getElementById('wa-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('wa-name').value;
+            const phone = document.getElementById('wa-phone').value;
+            const service = document.getElementById('wa-service').value;
+            const message = document.getElementById('wa-message').value;
+
+            const text = `🚀 *New Inquiry from Nexus Website* 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━
+👤 *Name:* ${name}
+📞 *Phone:* ${phone}
+🎯 *Interested In:* ${service}
+━━━━━━━━━━━━━━━━━━━━━━
+
+💬 *Message:*
+${message}
+
+──────────────────────
+_Sent via Nexus Institute Official Website_`;
+            
+            const encodedText = encodeURIComponent(text);
+            const waUrl = `https://wa.me/917434053550?text=${encodedText}`;
+            window.open(waUrl, '_blank');
+        });
+
         // Loader Logic
         document.addEventListener("DOMContentLoaded", () => {
             const loaderBar = document.getElementById("loader-progress");
@@ -1226,18 +1581,20 @@
             }, 150); 
         });
 
-        // 3D Glass Card Tracking
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
+        // 3D Glass Card Tracking (Desktop only)
+        if (window.innerWidth > 768) {
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
             });
-        });
+        }
 
-        // Faster FAQ Accordion Logic
+        // FAQ Accordion Logic
         const faqBtns = document.querySelectorAll('.faq-btn');
         faqBtns.forEach(btn => {
             btn.addEventListener('click', function() {
@@ -1245,7 +1602,6 @@
                 const icon = this.querySelector('.faq-icon i');
                 const iconContainer = this.querySelector('.faq-icon');
 
-                // Close all other open FAQs
                 document.querySelectorAll('.faq-content').forEach(otherContent => {
                     if (otherContent !== content && otherContent.style.maxHeight) {
                         otherContent.style.maxHeight = null;
@@ -1257,7 +1613,6 @@
                     }
                 });
 
-                // Toggle current FAQ
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                     icon.className = 'fas fa-plus';
@@ -1272,72 +1627,88 @@
             });
         });
 
-        // ELEGANT STARDUST & AURORA CURSOR EFFECT
-        const canvas = document.getElementById('interactive-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        let mouseX = window.innerWidth / 2;
-        let mouseY = window.innerHeight / 2;
-        let hue = 220; 
+        // Bottom Nav Active State on Scroll
+        const navItems = document.querySelectorAll('.mobile-bottom-nav .nav-item');
+        const sections = document.querySelectorAll('main section');
 
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-        window.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            
-            if(Math.random() > 0.4) {
-                particles.push({
-                    x: mouseX,
-                    y: mouseY,
-                    vx: (Math.random() - 0.5) * 1.5,
-                    vy: (Math.random() - 0.5) * 1.5,
-                    size: Math.random() * 2 + 0.5,
-                    color: `hsl(${hue}, 100%, 70%)`,
-                    life: 1
-                });
-            }
-            hue += 0.5; 
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
         });
 
-        function animateCanvas() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // STARDUST CURSOR EFFECT (Desktop only for performance)
+        if (window.innerWidth > 768) {
+            const canvas = document.getElementById('interactive-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+            let hue = 220; 
 
-            let gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 300);
-            gradient.addColorStop(0, `hsla(${hue}, 80%, 60%, 0.05)`);
-            gradient.addColorStop(1, 'transparent');
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.globalCompositeOperation = 'screen';
-            for (let i = 0; i < particles.length; i++) {
-                let p = particles[i];
-                p.x += p.vx;
-                p.y += p.vy;
-                p.life -= 0.01;
-
-                if (p.life <= 0) {
-                    particles.splice(i, 1);
-                    i--;
-                    continue;
-                }
-
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = p.color;
-                ctx.globalAlpha = p.life * 0.8;
-                ctx.fill();
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
             }
-            ctx.globalAlpha = 1;
-            ctx.globalCompositeOperation = 'source-over';
-            requestAnimationFrame(animateCanvas);
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                if(Math.random() > 0.4) {
+                    particles.push({
+                        x: mouseX,
+                        y: mouseY,
+                        vx: (Math.random() - 0.5) * 1.5,
+                        vy: (Math.random() - 0.5) * 1.5,
+                        size: Math.random() * 2 + 0.5,
+                        color: `hsl(${hue}, 100%, 70%)`,
+                        life: 1
+                    });
+                }
+                hue += 0.5; 
+            });
+
+            function animateCanvas() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 300);
+                gradient.addColorStop(0, `hsla(${hue}, 80%, 60%, 0.05)`);
+                gradient.addColorStop(1, 'transparent');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.globalCompositeOperation = 'screen';
+                for (let i = 0; i < particles.length; i++) {
+                    let p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.life -= 0.01;
+                    if (p.life <= 0) { particles.splice(i, 1); i--; continue; }
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.life * 0.8;
+                    ctx.fill();
+                }
+                ctx.globalAlpha = 1;
+                ctx.globalCompositeOperation = 'source-over';
+                requestAnimationFrame(animateCanvas);
+            }
+            animateCanvas();
         }
-        animateCanvas();
     </script>
 </body>
 </html>
