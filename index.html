@@ -172,50 +172,6 @@
             background-position: 0 0, 30px 30px;
         }
 
-        /* --- GLOSSY GRID PATTERN BACKGROUND (Hero) --- */
-        .glossy-grid-bg {
-            background-color: #0b0f19;
-            background-image: 
-                /* Glossy shine overlay */
-                radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
-                /* 3D Grid lines - horizontal */
-                linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px),
-                /* 3D Grid lines - vertical */
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
-                /* Glossy box pattern */
-                linear-gradient(135deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0.04) 75%, transparent 75%, transparent);
-            background-size: 100% 100%, 100% 100%, 100% 100%, 60px 60px, 60px 60px, 120px 120px;
-            background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
-        }
-        .glossy-grid-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                /* Perspective grid fade */
-                linear-gradient(180deg, transparent 0%, rgba(11,15,25,0.3) 50%, #0b0f19 100%),
-                /* Glossy shine streak */
-                linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.02) 45%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.02) 55%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        .glossy-grid-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: 
-                /* Inner glow boxes */
-                linear-gradient(135deg, rgba(59,130,246,0.06) 0%, transparent 40%),
-                linear-gradient(225deg, rgba(139,92,246,0.06) 0%, transparent 40%),
-                /* Grid intersection dots */
-                radial-gradient(circle at 60px 60px, rgba(255,255,255,0.08) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 60px 60px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
         /* --- Animations --- */
         @keyframes floating {
             0%, 100% { transform: translateY(0px); }
@@ -233,7 +189,7 @@
         .animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
         .animate-float-delayed { animation: float-delayed 6s ease-in-out infinite; animation-delay: 2s; }
 
-        /* --- UNIVERSAL GLASSMORPHISM (Same on all devices) --- */
+        /* --- UNIVERSAL GLASSMORPHISM --- */
         .glass-card {
             background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
             backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
@@ -256,7 +212,7 @@
             box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.2);
         }
 
-        /* --- UNIVERSAL FLOATING HEADER (Same transparent rounded pill on ALL devices) --- */
+        /* --- UNIVERSAL FLOATING HEADER --- */
         .floating-header {
             background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
             backdrop-filter: blur(25px) saturate(150%);
@@ -295,12 +251,8 @@
             transition: left 0.6s;
         }
         .pill-btn:hover::before { left: 100%; }
-        .pill-btn:hover {
-            transform: translateY(-2px) scale(1.02);
-        }
-        .pill-btn:active {
-            transform: scale(0.97);
-        }
+        .pill-btn:hover { transform: translateY(-2px) scale(1.02); }
+        .pill-btn:active { transform: scale(0.97); }
 
         /* --- Typography --- */
         p, .text-standard {
@@ -320,53 +272,83 @@
         .icon-box { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
         /* ========================================= */
-        /* --- MOBILE APP-LIKE UI --- */
+        /* --- MOBILE APP-LIKE UI ENHANCEMENTS --- */
         /* ========================================= */
         @media (max-width: 768px) {
             body {
-                padding-bottom: 120px;
+                padding-bottom: 110px;
                 background: #05070d;
-                font-size: 15px !important;
+            }
+            
+            /* ===== HIDE HEADER, SHOW BIG CENTERED LOGO ===== */
+            .floating-header { display: none !important; }
+            .mobile-logo-hero { display: flex !important; }
+            
+            /* ===== HERO SECTION GRID BACKGROUND ===== */
+            #home {
+                background-image: 
+                    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+                background-size: 60px 60px;
+                background-color: #0b0f19;
+                padding-top: 120px !important;
+            }
+            #home::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 40%, transparent 70%);
+                z-index: 0;
+                pointer-events: none;
+            }
+            #home h1 {
+                font-size: 10vw !important;
+                line-height: 1.15 !important;
+            }
+            
+            /* IMPROVED HERO TYPOGRAPHY */
+            #home p { 
+                font-size: 1.05rem !important; 
+                line-height: 1.65 !important;
+                padding: 0 8px; 
+            }
+            #home .inline-block {
+                font-size: 0.9rem !important;
+                padding: 8px 14px !important;
+                margin-top: 10px !important;
+                border-radius: 9999px !important;
+            }
+            
+            /* DECREASED HERO BUTTON WIDTH */
+            #home .pill-btn {
+                width: 75% !important;
+                padding: 16px 24px !important;
+                font-size: 1rem !important;
+                margin-top: 24px !important;
             }
 
-            /* ===== HIDE HEADER ON MOBILE ===== */
-            .floating-header {
-                display: none !important;
+            /* ===== IMPROVED GLOBAL TYPOGRAPHY ===== */
+            p, .text-standard, .glass-card p, .glass-card span, .glass-card li {
+                font-size: 1.02rem !important;
+                line-height: 1.65 !important;
             }
+            .text-sub { font-size: 0.95rem !important; }
+            section h2 { font-size: 1.9rem !important; line-height: 1.2 !important; }
+            section h3 { font-size: 1.35rem !important; line-height: 1.3 !important; }
+            section h4 { font-size: 1.15rem !important; }
+            label { font-size: 0.88rem !important; }
             
-            /* ===== MOBILE CENTERED LOGO (replaces header) ===== */
-            .mobile-logo-bar {
-                display: flex !important;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 60px;
-                padding-top: env(safe-area-inset-top);
-                background: linear-gradient(180deg, rgba(11,15,25,0.95) 0%, rgba(11,15,25,0.8) 70%, transparent 100%);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                z-index: 9999;
-                align-items: center;
-                justify-content: center;
-            }
-            .mobile-logo-bar img {
-                height: 36px;
-                object-fit: contain;
-                filter: drop-shadow(0 2px 8px rgba(59,130,246,0.3));
-            }
-            
-            /* Hide Desktop Nav, Mobile Menu Button, and Chat Button */
-            .desktop-nav, .header-chat-btn, #mobile-menu-btn, #mobile-menu { display: none !important; }
-            
-            /* ===== FLOATING PILL BOTTOM NAV (TALLER + BIGGER ICONS/TEXT) ===== */
+            /* FAQ TYPOGRAPHY */
+            .faq-btn span { font-size: 1.05rem !important; line-height: 1.4 !important; }
+            .faq-content div { font-size: 1rem !important; line-height: 1.6 !important; }
+
+            /* ===== BOTTOM NAV (TALLER, BIGGER ICONS/TEXT) ===== */
             .mobile-bottom-nav {
                 display: flex !important;
                 position: fixed;
-                bottom: 10px;
-                left: 10px;
-                right: 10px;
+                bottom: 12px;
+                left: 12px;
+                right: 12px;
                 width: auto;
                 background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
                 backdrop-filter: blur(25px) saturate(150%);
@@ -374,7 +356,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 border-radius: 9999px; 
                 z-index: 1000;
-                padding: 10px 4px;
+                padding: 12px 4px 14px 4px; /* Increased height */
                 justify-content: space-around;
                 align-items: center;
                 box-shadow: 0 8px 32px rgba(0,0,0,0.3);
@@ -385,134 +367,43 @@
                 align-items: center;
                 justify-content: center;
                 text-decoration: none;
-                color: rgba(255,255,255,0.45);
-                font-size: 9.5px;
+                color: rgba(255,255,255,0.5);
+                font-size: 10.5px; /* Increased text size */
                 font-weight: 700;
-                gap: 3px;
-                padding: 10px 6px;
+                gap: 2px;
+                padding: 12px 6px; /* Increased padding */
                 border-radius: 9999px; 
                 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 flex: 1;
-                position: relative;
-                letter-spacing: 0.02em;
             }
             .nav-item i { 
-                font-size: 20px; 
+                font-size: 22px; /* Increased icon size */
                 transition: all 0.3s;
-                margin-bottom: 1px;
             }
-            .nav-item.active {
-                color: #ffffff;
-            }
+            .nav-item.active { color: #ffffff; }
             .nav-item.active i {
                 color: #60a5fa;
                 transform: scale(1.15);
             }
-            .nav-item:active {
-                transform: scale(0.9);
-            }
+            .nav-item:active { transform: scale(0.9); }
 
-            /* ===== HERO SECTION (Glossy Grid BG) ===== */
-            #home {
-                padding-top: 80px !important;
-                min-height: 100svh !important;
-                background-image: none !important;
-            }
-            #home h1 {
-                font-size: 11vw !important;
-                line-height: 1.15 !important;
-                letter-spacing: -0.02em;
-            }
-            /* IMPROVED: Text below slogan - more readable */
-            #home p { 
-                font-size: 1rem !important; 
-                padding: 0 16px;
-                line-height: 1.7 !important;
-            }
-            /* DECREASED: Claim FREE button width */
-            #home .pill-btn {
-                width: 78% !important;
-                padding: 16px 24px !important;
-                font-size: 1rem !important;
-                margin-top: 20px !important;
+            /* ===== INCREASED WHATSAPP FAB SIZE ===== */
+            .whatsapp-fab {
+                bottom: 110px !important;
+                right: 16px !important;
+                width: 62px !important;
+                height: 62px !important;
                 border-radius: 9999px !important;
-            }
-            #home .inline-block {
-                font-size: 0.8rem !important;
-                padding: 8px 12px !important;
-                margin-top: 10px !important;
-                border-radius: 9999px !important; 
+                box-shadow: 0 6px 20px rgba(37,211,102,0.5) !important;
             }
 
-            /* ===== IMPROVED TYPOGRAPHY EVERYWHERE ===== */
-            section h2 {
-                font-size: 1.85rem !important;
-                line-height: 1.2 !important;
-                margin-bottom: 1rem !important;
-            }
-            section h3 {
-                font-size: 1.3rem !important;
-                line-height: 1.3 !important;
-            }
-            section h4 {
-                font-size: 1.15rem !important;
-                line-height: 1.3 !important;
-            }
-            section p, section .text-gray-200, section .text-gray-300 {
-                font-size: 0.95rem !important;
-                line-height: 1.6 !important;
-            }
-            section .text-sm {
-                font-size: 0.88rem !important;
-            }
-            section .text-xs {
-                font-size: 0.8rem !important;
-            }
-            section span.text-sm, section span.text-base {
-                font-size: 0.9rem !important;
-            }
-            /* Section subtitle */
-            section .text-standard {
-                font-size: 0.95rem !important;
-            }
-            /* Uppercase section labels */
-            section .tracking-widest {
-                font-size: 0.75rem !important;
-            }
-
-            /* ===== COURSE NAMES - BIGGER ===== */
-            #courses h3 {
-                font-size: 1.35rem !important;
-                font-weight: 800 !important;
-            }
-            #courses li div strong {
-                font-size: 1rem !important;
-            }
-            #courses li div {
-                font-size: 0.92rem !important;
-            }
-            #courses .glass-card p {
-                font-size: 0.95rem !important;
-            }
-            /* AI tool labels */
-            #courses .glass-card .glass-card {
-                font-size: 0.9rem !important;
-            }
-
-            /* ===== ALL CARDS = ROUNDED 24px ===== */
+            /* ===== CARDS & SECTIONS ===== */
             .glass-card {
                 border-radius: 24px !important;
                 border: 1px solid rgba(255,255,255,0.06) !important;
             }
-            
-            section { 
-                padding-left: 14px !important; 
-                padding-right: 14px !important; 
-            }
-            section .container { 
-                padding-left: 0 !important; 
-                padding-right: 0 !important; 
-            }
+            section { padding-left: 14px !important; padding-right: 14px !important; }
+            section .container { padding-left: 0 !important; padding-right: 0 !important; }
 
             /* ===== FORMS ===== */
             input, select, textarea {
@@ -532,160 +423,53 @@
                 background-repeat: no-repeat !important;
                 background-size: 20px !important;
             }
-            label {
-                font-size: 0.85rem !important;
-                margin-bottom: 6px !important;
-            }
-            
-            #wa-contact-form button[type="submit"] {
-                border-radius: 9999px !important;
-                font-size: 1rem !important;
-            }
+            #wa-contact-form button[type="submit"] { border-radius: 9999px !important; }
 
-            /* ===== WHATSAPP FAB - BIGGER ===== */
-            .whatsapp-fab {
-                bottom: 105px !important;
-                right: 14px !important;
-                width: 60px !important;
-                height: 60px !important;
-                border-radius: 9999px !important;
-                box-shadow: 0 6px 24px rgba(37,211,102,0.5) !important;
-                font-size: 1.8rem !important;
-            }
-
-            /* ===== FOOTER ===== */
+            /* ===== FOOTER (REDUCED EXTRA SPACE) ===== */
             footer { 
-                padding-bottom: 130px !important; 
-                padding-top: 50px !important;
+                padding-bottom: 100px !important; 
+                padding-top: 40px !important;
             }
-            footer .glass-card {
-                border-radius: 24px !important;
-            }
+            footer .glass-card { border-radius: 24px !important; }
             footer h2 { font-size: 1.6rem !important; }
-            
-            /* Footer copyright - LESS SPACE */
             footer .border-t {
                 margin-top: 1.5rem !important;
                 padding-top: 1rem !important;
                 padding-bottom: 0.5rem !important;
             }
-            footer .border-t p {
-                font-size: 0.8rem !important;
-            }
+            footer .border-t p { font-size: 0.9rem !important; }
             
-            /* Footer grid - tighter */
-            footer .grid {
-                gap: 2rem !important;
-            }
-            footer .space-y-5 {
-                gap: 0.8rem !important;
-            }
-            footer .space-y-4 {
-                gap: 0.6rem !important;
-            }
-            
-            #faq .glass-card {
-                border-radius: 20px !important;
-            }
-            .faq-btn span {
-                font-size: 1rem !important;
-                line-height: 1.4 !important;
-            }
-            .faq-content div {
-                font-size: 0.93rem !important;
-            }
-            .faq-btn {
-                padding: 16px 20px !important;
-            }
-
-            #services .glass-card {
-                padding: 24px 20px !important;
-                border-radius: 24px !important;
-            }
-            #services h3 {
-                font-size: 1.25rem !important;
-            }
-            
-            #courses .glass-card {
-                padding: 24px 20px !important;
-            }
-            
+            /* ===== MISC MOBILE OVERRIDES ===== */
+            #faq .glass-card { border-radius: 20px !important; }
+            .faq-btn { padding: 16px 20px !important; }
+            #services .glass-card { padding: 24px 20px !important; }
+            #courses .glass-card { padding: 24px 20px !important; }
             #admission .absolute.-top-5 {
-                font-size: 0.72rem !important;
+                font-size: 0.7rem !important;
                 padding: 6px 14px !important;
                 right: 12px !important;
                 top: -10px !important;
                 border-radius: 9999px !important;
             }
-            
-            #special-offers .inline-block {
-                border-radius: 9999px !important;
-            }
-            
-            .glass-card a, .glass-card button {
-                border-radius: 9999px !important;
-            }
-            
-            #admission .glass-card > a {
-                border-radius: 9999px !important;
-            }
-            
-            .glass-card .absolute.top-0.right-0 {
-                border-radius: 0 24px 0 16px !important;
-            }
-            
-            footer a[href^="tel"], footer a[href*="wa.me"], footer a[href*="maps"] {
-                border-radius: 20px !important;
-            }
-            
-            footer .icon-box.w-12 {
-                border-radius: 16px !important;
-            }
-
-            /* ===== ADMISSION SECTION ===== */
-            #admission h3 {
-                font-size: 1.5rem !important;
-            }
-            #admission .space-y-6 span {
-                font-size: 1.05rem !important;
-            }
-            #admission .glass-card > a {
-                font-size: 1.05rem !important;
-            }
-
-            /* ===== SPECIAL OFFERS ===== */
-            #special-offers h4 {
-                font-size: 1.2rem !important;
-            }
-            #special-offers p {
-                font-size: 0.95rem !important;
-            }
-
-            /* ===== SERVICES PACKAGES ===== */
-            #services .text-4xl {
-                font-size: 2.2rem !important;
-            }
-            #services .text-lg {
-                font-size: 1rem !important;
-            }
-            #services ul li span {
-                font-size: 0.95rem !important;
-            }
+            #special-offers .inline-block { border-radius: 9999px !important; }
+            .glass-card a, .glass-card button { border-radius: 9999px !important; }
+            .glass-card .absolute.top-0.right-0 { border-radius: 0 24px 0 16px !important; }
+            footer a[href^="tel"], footer a[href*="wa.me"], footer a[href*="maps"] { border-radius: 20px !important; }
+            footer .icon-box.w-12 { border-radius: 16px !important; }
         }
 
-        /* --- Desktop: hide mobile logo bar --- */
+        /* ========================================= */
+        /* --- DESKTOP ENHANCEMENTS --- */
+        /* ========================================= */
         @media (min-width: 769px) {
             .mobile-bottom-nav { display: none !important; }
-            .mobile-logo-bar { display: none !important; }
+            .mobile-logo-hero { display: none !important; }
             
             .glass-card:hover {
                 transform: translateY(-12px) scale(1.02);
                 box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.25);
             }
-            
-            h1, h2, h3 {
-                letter-spacing: -0.03em;
-            }
+            h1, h2, h3 { letter-spacing: -0.03em; }
         }
 
         /* ========================================= */
@@ -715,7 +499,7 @@
             line-height: 1.2;
         }
         .service-price-tag .price-label {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #9ca3af;
             text-transform: uppercase;
             letter-spacing: 0.12em;
@@ -729,12 +513,7 @@
                 margin: 12px 0 16px 0;
                 border-radius: 14px;
             }
-            .service-price-tag .price-amount {
-                font-size: 1.35rem;
-            }
-            .service-price-tag .price-label {
-                font-size: 0.7rem;
-            }
+            .service-price-tag .price-amount { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -747,13 +526,6 @@
         <div class="loader-bar-container">
             <div class="loader-bar" id="loader-progress"></div>
         </div>
-    </div>
-
-    <!-- MOBILE CENTERED LOGO BAR (replaces header on mobile) -->
-    <div class="mobile-logo-bar" style="display: none;">
-        <a href="#home">
-            <img src="Logo.png" alt="Nexus Institute">
-        </a>
     </div>
 
     <!-- DESKTOP FLOATING PILL HEADER -->
@@ -778,49 +550,21 @@
                     <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20want%20to%20learn%20more%20about%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%20and%20claim%20the%20offer%21" target="_blank" class="hidden lg:flex pill-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg transition text-base header-chat-btn">
                         <i class="fab fa-whatsapp text-xl"></i> Chat Now
                     </a>
-                    <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
                 </div>
             </div>
         </header>
-
-        <div id="mobile-menu" class="hidden pointer-events-auto mt-2 mx-auto w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl" style="background: rgba(10,15,25,0.95); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1);">
-            <div class="flex flex-col p-3 gap-1">
-                <a href="#home" class="flex justify-start items-center gap-4 px-5 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base transition">
-                    <i class="fas fa-home w-5 text-center text-blue-400"></i> Home
-                </a>
-                <a href="#admission" class="flex justify-start items-center gap-4 px-5 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base transition">
-                    <i class="fas fa-clipboard-list w-5 text-center text-emerald-400"></i> Apply for Admission
-                </a>
-                <a href="#special-offers" class="flex justify-start items-center gap-4 px-5 py-3 text-orange-400 hover:bg-white/10 rounded-xl font-medium text-base transition">
-                    <i class="fas fa-fire w-5 text-center"></i> Special Offers
-                </a>
-                <a href="#courses" class="flex justify-start items-center gap-4 px-5 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base transition">
-                    <i class="fas fa-graduation-cap w-5 text-center text-cyan-400"></i> Courses
-                </a>
-                <a href="#services" class="flex justify-start items-center gap-4 px-5 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base transition">
-                    <i class="fas fa-briefcase w-5 text-center text-yellow-400"></i> All Services
-                </a>
-                <a href="#faq" class="flex justify-start items-center gap-4 px-5 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base transition">
-                    <i class="fas fa-question-circle w-5 text-center text-purple-400"></i> FAQ
-                </a>
-                <a href="#contact" class="flex justify-start items-center gap-4 px-5 py-3 text-white hover:bg-white/10 rounded-xl font-medium text-base transition">
-                    <i class="fas fa-headset w-5 text-center text-pink-400"></i> Contact Us
-                </a>
-                <div class="p-2 mt-2 border-t border-white/10">
-                    <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20just%20visited%20your%20futuristic%20website%20and%20I%20want%20to%20enroll%20in%20the%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%21%20Please%20guide%20me%20on%20admissions." target="_blank" class="flex justify-center items-center gap-2 w-full bg-green-500 text-white py-3 rounded-xl font-bold text-base shadow-lg">
-                        <i class="fab fa-whatsapp text-xl"></i> WhatsApp Us
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 
     <main class="flex-grow flex flex-col w-full">
 
-        <!-- HERO SECTION WITH GLOSSY GRID BACKGROUND -->
-        <section id="home" class="relative flex-grow flex items-center justify-center pt-32 pb-16 w-full min-h-[100dvh] glossy-grid-bg">
+        <!-- HERO SECTION WITH GRID BACKGROUND & MOBILE LOGO -->
+        <section id="home" class="relative flex-grow flex items-center justify-center pt-32 pb-16 w-full min-h-[100dvh]">
+            
+            <!-- Mobile Big Centered Logo -->
+            <div class="mobile-logo-hero absolute top-8 left-0 w-full flex justify-center z-20 pointer-events-none">
+                <img src="Logo.png" alt="Nexus Institute" class="h-20 object-contain drop-shadow-2xl pointer-events-auto">
+            </div>
+
             <div class="container max-w-5xl mx-auto px-5 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center w-full h-full">
                 <div class="reveal flex flex-col items-center w-full">
                     
@@ -1251,6 +995,7 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch text-center">
                     
+                    <!-- Visiting Card -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-id-card"></i></div>
@@ -1266,6 +1011,7 @@
                         </a>
                     </div>
 
+                    <!-- Marriage Kankotri -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-pink-500 to-rose-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-ring"></i></div>
@@ -1281,6 +1027,7 @@
                         </a>
                     </div>
 
+                    <!-- Birthday Card -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-birthday-cake"></i></div>
@@ -1296,6 +1043,7 @@
                         </a>
                     </div>
 
+                    <!-- Opening Ceremony -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-xl text-white shadow-lg mb-4"><i class="fas fa-ribbon"></i></div>
@@ -1642,6 +1390,7 @@
     </a>
 
     <script>
+        // PWA Service Worker Registration
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js').catch(err => console.error('Service Worker registration failed', err));
@@ -1650,17 +1399,23 @@
 
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // Fast Custom Smooth Scroll Script
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
+                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     e.preventDefault();
-                    const headerOffset = window.innerWidth <= 768 ? 70 : 90;
+                    const headerOffset = 90;
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
@@ -1678,6 +1433,7 @@
         window.addEventListener("scroll", reveal);
         reveal();
 
+        // Contact Form WhatsApp Logic
         document.getElementById('wa-contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('wa-name').value;
@@ -1704,14 +1460,18 @@ _Sent via Nexus Institute Official Website_`;
             window.open(waUrl, '_blank');
         });
 
+        // Loader Logic
         document.addEventListener("DOMContentLoaded", () => {
             const loaderBar = document.getElementById("loader-progress");
             const loaderScreen = document.getElementById("page-loader");
+            
             let width = 0;
             const interval = setInterval(() => {
                 width += Math.random() * 20; 
                 if(width > 100) width = 100;
+                
                 loaderBar.style.width = width + "%";
+
                 if(width === 100) {
                     clearInterval(interval);
                     setTimeout(() => {
@@ -1723,6 +1483,7 @@ _Sent via Nexus Institute Official Website_`;
             }, 150); 
         });
 
+        // 3D Glass Card Tracking (Desktop only)
         if (window.innerWidth > 768) {
             document.querySelectorAll('.glass-card').forEach(card => {
                 card.addEventListener('mousemove', e => {
@@ -1735,6 +1496,7 @@ _Sent via Nexus Institute Official Website_`;
             });
         }
 
+        // FAQ Accordion Logic
         const faqBtns = document.querySelectorAll('.faq-btn');
         faqBtns.forEach(btn => {
             btn.addEventListener('click', function() {
@@ -1767,6 +1529,7 @@ _Sent via Nexus Institute Official Website_`;
             });
         });
 
+        // Bottom Nav Active State on Scroll
         const navItems = document.querySelectorAll('.mobile-bottom-nav .nav-item');
         const sections = document.querySelectorAll('main section');
 
@@ -1787,6 +1550,7 @@ _Sent via Nexus Institute Official Website_`;
             });
         });
 
+        // STARDUST CURSOR EFFECT (Desktop only)
         if (window.innerWidth > 768) {
             const canvas = document.getElementById('interactive-canvas');
             const ctx = canvas.getContext('2d');
@@ -1805,9 +1569,11 @@ _Sent via Nexus Institute Official Website_`;
             window.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
+                
                 if(Math.random() > 0.4) {
                     particles.push({
-                        x: mouseX, y: mouseY,
+                        x: mouseX,
+                        y: mouseY,
                         vx: (Math.random() - 0.5) * 1.5,
                         vy: (Math.random() - 0.5) * 1.5,
                         size: Math.random() * 2 + 0.5,
@@ -1829,7 +1595,9 @@ _Sent via Nexus Institute Official Website_`;
                 ctx.globalCompositeOperation = 'screen';
                 for (let i = 0; i < particles.length; i++) {
                     let p = particles[i];
-                    p.x += p.vx; p.y += p.vy; p.life -= 0.01;
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.life -= 0.01;
                     if (p.life <= 0) { particles.splice(i, 1); i--; continue; }
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
