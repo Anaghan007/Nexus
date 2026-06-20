@@ -22,7 +22,7 @@
     <meta property="twitter:description" content="Transform your career with the best digital marketing classes near you. Includes 100% free internship and written placement guarantee.">
     <meta property="twitter:image" content="Logo.png">
 
-    <meta name="theme-color" content="#0b0f19">
+    <meta name="theme-color" content="#0a0a1a">
     <link rel="manifest" href="manifest.json">
     
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
@@ -64,9 +64,9 @@
                     fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
                     colors: {
                         brand: {
-                            bg: '#0b0f19',
-                            primary: '#3b82f6', 
-                            secondary: '#8b5cf6', 
+                            bg: '#0a0a1a',
+                            primary: '#6366f1', 
+                            secondary: '#a855f7', 
                             accent: '#06b6d4', 
                         }
                     }
@@ -128,7 +128,7 @@
     <style>
         /* --- Core & Reset --- */
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-        body { background-color: #0b0f19; color: #ffffff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        body { background-color: #0a0a1a; color: #ffffff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         
         ::-webkit-scrollbar { display: none; }
         html, body { -ms-overflow-style: none; scrollbar-width: none; }
@@ -136,7 +136,7 @@
 
         /* --- Loader --- */
         #page-loader {
-            position: fixed; inset: 0; background: #0b0f19; z-index: 99999;
+            position: fixed; inset: 0; background: #0a0a1a; z-index: 99999;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
         }
@@ -145,7 +145,7 @@
             border-radius: 4px; overflow: hidden; margin-top: 25px;
         }
         .loader-bar {
-            height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            height: 100%; width: 0%; background: linear-gradient(90deg, #6366f1, #06b6d4);
             transition: width 0.1s ease;
         }
 
@@ -155,21 +155,170 @@
             z-index: -1; pointer-events: none; opacity: 0.8;
         }
 
-        /* --- Custom Grid & Box Patterns for Sections --- */
-        .bg-grid-pattern {
+        /* ========================================= */
+        /* --- UNIQUE GRID BACKGROUNDS PER SECTION --- */
+        /* ========================================= */
+        
+        /* HERO: Animated Gradient Grid with Moving Lines */
+        .hero-grid-bg {
+            background-color: #0a0a1a;
+            background-image: 
+                linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px;
+            position: relative;
+        }
+        .hero-grid-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(90deg, transparent 0%, rgba(99, 102, 241, 0.03) 50%, transparent 100%),
+                linear-gradient(0deg, transparent 0%, rgba(168, 85, 247, 0.03) 50%, transparent 100%);
+            background-size: 100px 100px;
+            animation: heroGridMove 20s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes heroGridMove {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 100px 100px, -100px -100px; }
+        }
+
+        /* ADMISSION: Pulsing Dot Grid */
+        .admission-grid-bg {
+            background-color: #0a0a1a;
+            background-image: radial-gradient(circle, rgba(16, 185, 129, 0.15) 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+            position: relative;
+        }
+        .admission-grid-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(16, 185, 129, 0.25) 2px, transparent 2px);
+            background-size: 90px 90px;
+            animation: pulseDots 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+        @keyframes pulseDots {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        /* OFFERS: Diagonal Cross-Hatch Pattern */
+        .offers-grid-bg {
+            background-color: #0a0a1a;
+            background-image: 
+                linear-gradient(45deg, rgba(236, 72, 153, 0.06) 25%, transparent 25%, transparent 75%, rgba(236, 72, 153, 0.06) 75%),
+                linear-gradient(45deg, rgba(236, 72, 153, 0.06) 25%, transparent 25%, transparent 75%, rgba(236, 72, 153, 0.06) 75%);
             background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-position: 0 0, 20px 20px;
+            position: relative;
         }
-        .bg-dot-pattern {
-            background-size: 24px 24px;
-            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+        .offers-grid-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, transparent 50%, rgba(168, 85, 247, 0.05) 100%);
+            animation: offersShimmer 8s ease-in-out infinite;
+            pointer-events: none;
         }
-        .bg-checker-pattern {
-            background-image: linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.02) 75%, rgba(255,255,255,0.02)),
-                              linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.02) 75%, rgba(255,255,255,0.02));
+        @keyframes offersShimmer {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* COURSES: Honeycomb/Hexagonal Pattern */
+        .courses-grid-bg {
+            background-color: #0a0a1a;
+            background-image: 
+                linear-gradient(30deg, rgba(6, 182, 212, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(6, 182, 212, 0.05) 87.5%),
+                linear-gradient(150deg, rgba(6, 182, 212, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(6, 182, 212, 0.05) 87.5%),
+                linear-gradient(30deg, rgba(6, 182, 212, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(6, 182, 212, 0.05) 87.5%),
+                linear-gradient(150deg, rgba(6, 182, 212, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(6, 182, 212, 0.05) 87.5%),
+                linear-gradient(60deg, rgba(99, 102, 241, 0.04) 25%, transparent 25.5%, transparent 75%, rgba(99, 102, 241, 0.04) 75%),
+                linear-gradient(60deg, rgba(99, 102, 241, 0.04) 25%, transparent 25.5%, transparent 75%, rgba(99, 102, 241, 0.04) 75%);
+            background-size: 50px 87px;
+            background-position: 0 0, 0 0, 25px 43px, 25px 43px, 0 0, 25px 43px;
+            position: relative;
+        }
+        .courses-grid-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
+            animation: coursesGlow 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+        @keyframes coursesGlow {
+            0%, 100% { opacity: 0.5; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(20px); }
+        }
+
+        /* SERVICES: Animated Border Grid Boxes */
+        .services-grid-bg {
+            background-color: #0a0a1a;
+            background-image: 
+                linear-gradient(to right, rgba(251, 146, 60, 0.07) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(251, 146, 60, 0.07) 1px, transparent 1px);
             background-size: 60px 60px;
-            background-position: 0 0, 30px 30px;
+            position: relative;
+        }
+        .services-grid-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, rgba(251, 146, 60, 0.12) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(251, 146, 60, 0.12) 1px, transparent 1px);
+            background-size: 120px 120px;
+            animation: servicesBoxPulse 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+        @keyframes servicesBoxPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        /* FAQ: Vertical Stripe Pattern with Glow */
+        .faq-grid-bg {
+            background-color: #0a0a1a;
+            background-image: repeating-linear-gradient(
+                90deg,
+                rgba(139, 92, 246, 0.04) 0px,
+                rgba(139, 92, 246, 0.04) 1px,
+                transparent 1px,
+                transparent 40px
+            );
+            position: relative;
+        }
+        .faq-grid-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                rgba(139, 92, 246, 0.08) 0px,
+                rgba(139, 92, 246, 0.08) 2px,
+                transparent 2px,
+                transparent 80px
+            );
+            animation: faqStripeMove 10s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes faqStripeMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 80px 0; }
+        }
+
+        /* FOOTER: Subtle Wave Grid */
+        .footer-grid-bg {
+            background-color: #080816;
+            background-image: 
+                radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+                linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
         }
 
         /* --- Animations --- */
@@ -208,8 +357,8 @@
         .glass-card > * { position: relative; z-index: 1; }
         .glass-card:hover {
             transform: translateY(-8px) scale(1.01);
-            border-color: rgba(59, 130, 246, 0.3);
-            box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.2);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 40px -12px rgba(99, 102, 241, 0.2);
         }
 
         /* --- UNIVERSAL FLOATING HEADER --- */
@@ -230,7 +379,7 @@
         .nav-link:hover { color: #ffffff; }
         .nav-link::after {
             content: ''; position: absolute; width: 0; height: 2px;
-            bottom: -5px; left: 0; background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            bottom: -5px; left: 0; background: linear-gradient(90deg, #6366f1, #a855f7);
             transition: width 0.3s ease; border-radius: 2px;
         }
         .nav-link:hover::after { width: 100%; }
@@ -263,7 +412,7 @@
             font-size: 0.875rem !important; color: #e5e7eb !important; 
         }
         .gradient-text {
-            background: linear-gradient(90deg, #60a5fa, #c084fc, #22d3ee);
+            background: linear-gradient(90deg, #818cf8, #c084fc, #22d3ee);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
@@ -277,57 +426,68 @@
         @media (max-width: 768px) {
             body {
                 padding-bottom: 110px;
-                background: #05070d;
+                background: #080816;
             }
             
-            /* ===== HIDE HEADER, SHOW BIG CENTERED LOGO ===== */
+            /* HIDE HEADER, SHOW BIG CENTERED LOGO */
             .floating-header { display: none !important; }
             .mobile-logo-hero { display: flex !important; }
             
-            /* ===== HERO SECTION GRID BACKGROUND ===== */
+            /* HERO SECTION - Mobile Grid */
             #home {
                 background-image: 
-                    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-                background-size: 60px 60px;
-                background-color: #0b0f19;
-                padding-top: 120px !important;
+                    linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+                background-size: 50px 50px;
+                background-color: #0a0a1a;
+                padding-top: 100px !important;
             }
             #home::before {
                 content: "";
                 position: absolute;
                 inset: 0;
-                background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 40%, transparent 70%);
+                background: radial-gradient(circle at 50% 40%, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.08) 40%, transparent 70%);
                 z-index: 0;
                 pointer-events: none;
             }
-            #home h1 {
-                font-size: 10vw !important;
-                line-height: 1.15 !important;
-            }
             
-            /* IMPROVED HERO TYPOGRAPHY */
+            /* HERO CENTERING FIX - Equal spacing */
+            #home .reveal {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin-top: auto !important;
+                margin-bottom: auto !important;
+            }
+            #home h1 {
+                font-size: 9.5vw !important;
+                line-height: 1.15 !important;
+                margin-bottom: 1.2rem !important;
+            }
             #home p { 
                 font-size: 1.05rem !important; 
                 line-height: 1.65 !important;
-                padding: 0 8px; 
+                padding: 0 12px; 
+                margin-bottom: 1.5rem !important;
             }
             #home .inline-block {
-                font-size: 0.9rem !important;
+                font-size: 0.88rem !important;
                 padding: 8px 14px !important;
                 margin-top: 10px !important;
+                margin-bottom: 4px !important;
                 border-radius: 9999px !important;
             }
             
             /* DECREASED HERO BUTTON WIDTH */
             #home .pill-btn {
-                width: 60% !important;
+                width: 75% !important;
                 padding: 16px 24px !important;
                 font-size: 1rem !important;
-                margin-top: 24px !important;
+                margin-top: 1.5rem !important;
             }
 
-            /* ===== IMPROVED GLOBAL TYPOGRAPHY ===== */
+            /* IMPROVED GLOBAL TYPOGRAPHY */
             p, .text-standard, .glass-card p, .glass-card span, .glass-card li {
                 font-size: 1.02rem !important;
                 line-height: 1.65 !important;
@@ -338,11 +498,10 @@
             section h4 { font-size: 1.15rem !important; }
             label { font-size: 0.88rem !important; }
             
-            /* FAQ TYPOGRAPHY */
             .faq-btn span { font-size: 1.05rem !important; line-height: 1.4 !important; }
             .faq-content div { font-size: 1rem !important; line-height: 1.6 !important; }
 
-            /* ===== BOTTOM NAV (TALLER, BIGGER ICONS/TEXT) ===== */
+            /* BOTTOM NAV */
             .mobile-bottom-nav {
                 display: flex !important;
                 position: fixed;
@@ -356,7 +515,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 border-radius: 9999px; 
                 z-index: 1000;
-                padding: 12px 4px 14px 4px; /* Increased height */
+                padding: 12px 4px 14px 4px;
                 justify-content: space-around;
                 align-items: center;
                 box-shadow: 0 8px 32px rgba(0,0,0,0.3);
@@ -368,26 +527,26 @@
                 justify-content: center;
                 text-decoration: none;
                 color: rgba(255,255,255,0.5);
-                font-size: 10.5px; /* Increased text size */
+                font-size: 10.5px;
                 font-weight: 700;
                 gap: 2px;
-                padding: 12px 6px; /* Increased padding */
+                padding: 12px 6px;
                 border-radius: 9999px; 
                 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 flex: 1;
             }
             .nav-item i { 
-                font-size: 22px; /* Increased icon size */
+                font-size: 22px;
                 transition: all 0.3s;
             }
             .nav-item.active { color: #ffffff; }
             .nav-item.active i {
-                color: #60a5fa;
+                color: #818cf8;
                 transform: scale(1.15);
             }
             .nav-item:active { transform: scale(0.9); }
 
-            /* ===== INCREASED WHATSAPP FAB SIZE ===== */
+            /* WHATSAPP FAB */
             .whatsapp-fab {
                 bottom: 110px !important;
                 right: 16px !important;
@@ -397,7 +556,7 @@
                 box-shadow: 0 6px 20px rgba(37,211,102,0.5) !important;
             }
 
-            /* ===== CARDS & SECTIONS ===== */
+            /* CARDS & SECTIONS */
             .glass-card {
                 border-radius: 24px !important;
                 border: 1px solid rgba(255,255,255,0.06) !important;
@@ -405,7 +564,7 @@
             section { padding-left: 14px !important; padding-right: 14px !important; }
             section .container { padding-left: 0 !important; padding-right: 0 !important; }
 
-            /* ===== FORMS ===== */
+            /* FORMS */
             input, select, textarea {
                 font-size: 16px !important;
                 padding: 14px 18px !important;
@@ -415,7 +574,7 @@
             }
             input:focus, select:focus, textarea:focus {
                 background: rgba(255,255,255,0.06) !important;
-                border-color: rgba(59,130,246,0.5) !important;
+                border-color: rgba(99,102,241,0.5) !important;
             }
             select {
                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e") !important;
@@ -425,7 +584,7 @@
             }
             #wa-contact-form button[type="submit"] { border-radius: 9999px !important; }
 
-            /* ===== FOOTER (REDUCED EXTRA SPACE) ===== */
+            /* FOOTER */
             footer { 
                 padding-bottom: 100px !important; 
                 padding-top: 40px !important;
@@ -439,7 +598,7 @@
             }
             footer .border-t p { font-size: 0.9rem !important; }
             
-            /* ===== MISC MOBILE OVERRIDES ===== */
+            /* MISC */
             #faq .glass-card { border-radius: 20px !important; }
             .faq-btn { padding: 16px 20px !important; }
             #services .glass-card { padding: 24px 20px !important; }
@@ -467,7 +626,7 @@
             
             .glass-card:hover {
                 transform: translateY(-12px) scale(1.02);
-                box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.25);
+                box-shadow: 0 30px 60px -15px rgba(99, 102, 241, 0.25);
             }
             h1, h2, h3 { letter-spacing: -0.03em; }
         }
@@ -487,13 +646,13 @@
             backdrop-filter: blur(10px);
         }
         .service-price-tag:hover {
-            border-color: rgba(59, 130, 246, 0.2);
-            background: linear-gradient(135deg, rgba(59,130,246,0.06) 0%, rgba(139,92,246,0.04) 100%);
+            border-color: rgba(99, 102, 241, 0.2);
+            background: linear-gradient(135deg, rgba(99,102,241,0.06) 0%, rgba(168,85,247,0.04) 100%);
         }
         .service-price-tag .price-amount {
             font-size: 1.5rem;
             font-weight: 900;
-            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            background: linear-gradient(90deg, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.2;
@@ -539,7 +698,7 @@
                 <nav class="hidden md:flex gap-6 lg:gap-8 items-center w-max desktop-nav">
                     <a href="#home" class="nav-link"><i class="fas fa-home text-sm"></i> Home</a>
                     <a href="#admission" class="nav-link"><i class="fas fa-clipboard-list text-sm"></i> Apply</a>
-                    <a href="#special-offers" class="nav-link text-orange-400"><i class="fas fa-fire text-sm"></i> Offers</a>
+                    <a href="#special-offers" class="nav-link text-pink-400"><i class="fas fa-fire text-sm"></i> Offers</a>
                     <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap text-sm"></i> Courses</a>
                     <a href="#services" class="nav-link"><i class="fas fa-briefcase text-sm"></i> Services</a>
                     <a href="#faq" class="nav-link"><i class="fas fa-question-circle text-sm"></i> FAQ</a>
@@ -557,13 +716,17 @@
 
     <main class="flex-grow flex flex-col w-full">
 
-        <!-- HERO SECTION WITH GRID BACKGROUND & MOBILE LOGO -->
-        <section id="home" class="relative flex-grow flex items-center justify-center pt-32 pb-16 w-full min-h-[100dvh]">
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-grid-bg relative flex-grow flex items-center justify-center pt-32 pb-16 w-full min-h-[100dvh]">
             
             <!-- Mobile Big Centered Logo -->
-            <div class="mobile-logo-hero absolute top-14 left-0 w-full flex justify-center z-20 pointer-events-none">
+            <div class="mobile-logo-hero absolute top-8 left-0 w-full flex justify-center z-20 pointer-events-none">
                 <img src="Logo.png" alt="Nexus Institute" class="h-20 object-contain drop-shadow-2xl pointer-events-auto">
             </div>
+
+            <!-- Ambient Glow Orbs -->
+            <div class="absolute -top-40 left-10 w-[400px] h-[400px] bg-indigo-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+            <div class="absolute bottom-10 right-10 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="container max-w-5xl mx-auto px-5 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center w-full h-full">
                 <div class="reveal flex flex-col items-center w-full">
@@ -574,25 +737,24 @@
                     
                     <p class="mb-10 max-w-3xl mx-auto text-gray-200 text-lg sm:text-xl font-medium leading-relaxed text-balance" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
                         Become an industry-ready Marketing Expert. Master live campaigns, SEO, and content creation with our agency-level curriculum in Surat. <br class="hidden md:block">
-                        <span class="inline-block mt-4 text-white bg-blue-500/30 border border-blue-400/40 px-3 py-1.5 rounded-lg text-sm md:text-base mr-2 shadow-sm whitespace-nowrap"><i class="fas fa-gift text-blue-300"></i> Includes FREE AI Course (Worth ₹15k)</span> 
-                        <span class="inline-block mt-4 text-white bg-green-500/30 border border-green-400/40 px-3 py-1.5 rounded-lg text-sm md:text-base shadow-sm whitespace-nowrap"><i class="fas fa-file-signature text-green-300"></i> In-Writing 100% Job Guarantee</span>
+                        <span class="inline-block mt-4 text-white bg-indigo-500/30 border border-indigo-400/40 px-3 py-1.5 rounded-lg text-sm md:text-base mr-2 shadow-sm whitespace-nowrap"><i class="fas fa-gift text-indigo-300"></i> Includes FREE AI Course (Worth ₹15k)</span> 
+                        <span class="inline-block mt-4 text-white bg-emerald-500/30 border border-emerald-400/40 px-3 py-1.5 rounded-lg text-sm md:text-base shadow-sm whitespace-nowrap"><i class="fas fa-file-signature text-emerald-300"></i> In-Writing 100% Job Guarantee</span>
                     </p>
 
-                    <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20am%20ready%20to%20accelerate%20my%20career.%20Please%20let%20me%20know%20how%20to%20claim%20the%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%20offer%21" target="_blank" class="pill-btn w-fit mx-auto bg-gradient-to-r from-blue-500 to-purple-600 px-10 py-5 rounded-full font-bold text-white shadow-[0_10px_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_15px_50px_-10px_rgba(139,92,246,0.8)] transition-all transform hover:scale-105 text-center text-xl flex items-center justify-center gap-3">
+                    <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%9A%80%20I%20am%20ready%20to%20accelerate%20my%20career.%20Please%20let%20me%20know%20how%20to%20claim%20the%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A%20offer%21" target="_blank" class="pill-btn w-fit mx-auto bg-gradient-to-r from-indigo-500 to-purple-600 px-10 py-5 rounded-full font-bold text-white shadow-[0_10px_40px_-10px_rgba(99,102,241,0.6)] hover:shadow-[0_15px_50px_-10px_rgba(168,85,247,0.8)] transition-all transform hover:scale-105 text-center text-xl flex items-center justify-center gap-3">
                         <i class="fas fa-rocket text-2xl"></i> Claim FREE Internship
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="admission" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-grid-pattern opacity-40 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
+        <!-- ADMISSION SECTION -->
+        <section id="admission" class="admission-grid-bg relative py-12 md:py-16 overflow-hidden w-full">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-transparent to-[#0a0a1a] z-0 pointer-events-none"></div>
 
             <i class="fas fa-clipboard-list absolute top-[15%] left-[10%] text-emerald-400/20 text-8xl md:text-9xl animate-float-slow z-0 pointer-events-none"></i>
             <i class="fas fa-user-graduate absolute bottom-[10%] right-[12%] text-teal-400/20 text-7xl md:text-[10rem] animate-float-delayed z-0 pointer-events-none"></i>
-            <div class="absolute -left-20 top-20 w-[300px] h-[300px] bg-emerald-500/30 rounded-full blur-[100px] pointer-events-none z-0"></div>
+            <div class="absolute -left-20 top-20 w-[300px] h-[300px] bg-emerald-500/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
             
             <div class="container relative z-10 mx-auto px-5 lg:px-8 max-w-5xl">
                 <div class="text-center mb-12 reveal flex flex-col items-center">
@@ -650,14 +812,13 @@
             </div>
         </section>
 
-        <section id="special-offers" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-dot-pattern opacity-40 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
+        <!-- SPECIAL OFFERS SECTION -->
+        <section id="special-offers" class="offers-grid-bg relative py-12 md:py-16 overflow-hidden w-full">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-transparent to-[#0a0a1a] z-0 pointer-events-none"></div>
 
             <i class="fas fa-gift absolute top-[20%] right-[10%] text-pink-400/20 text-8xl md:text-[9rem] animate-float-slow z-0 pointer-events-none"></i>
             <i class="fas fa-percentage absolute bottom-[15%] left-[8%] text-purple-400/20 text-7xl md:text-8xl animate-float-delayed z-0 pointer-events-none"></i>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/15 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="container relative z-10 mx-auto px-5 lg:px-8">
                 <div class="text-center mb-16 reveal flex flex-col items-center">
@@ -722,21 +883,20 @@
             </div>
         </section>
 
-        <section id="courses" class="relative py-12 md:py-16 w-full overflow-hidden bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-grid-pattern opacity-40 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
+        <!-- COURSES SECTION -->
+        <section id="courses" class="courses-grid-bg relative py-12 md:py-16 w-full overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-transparent to-[#0a0a1a] z-0 pointer-events-none"></div>
 
-            <i class="fas fa-laptop-code absolute top-[15%] left-[5%] text-blue-400/20 text-8xl md:text-[9rem] animate-float-slow z-0 pointer-events-none"></i>
+            <i class="fas fa-laptop-code absolute top-[15%] left-[5%] text-cyan-400/20 text-8xl md:text-[9rem] animate-float-slow z-0 pointer-events-none"></i>
             <i class="fas fa-brain absolute top-[50%] left-[85%] text-indigo-400/20 text-6xl animate-float z-0 pointer-events-none" style="animation-delay: 1.5s;"></i>
-            <div class="absolute top-0 right-20 w-[300px] h-[300px] bg-blue-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+            <div class="absolute top-0 right-20 w-[300px] h-[300px] bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
             <div class="container relative z-10 mx-auto px-5 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal flex flex-col items-center">
                     <span class="text-cyan-300 font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2 drop-shadow-2xl">
                         <i class="fas fa-graduation-cap"></i> Complete Curriculum
                     </span>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight drop-shadow-2xl">What You Will <span class="text-blue-400">Learn</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight drop-shadow-2xl">What You Will <span class="text-cyan-400">Learn</span></h2>
                     <p class="text-gray-200 font-medium" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Equip yourself with the high-performance skillset demanded by real agencies and clients in 2026.</p>
                 </div>
 
@@ -761,7 +921,7 @@
                             </ul>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%A8%20I%20am%20interested%20in%20learning%20%2ACanva%20Design%20%26%20CapCut%20Video%20Editing%2A.%20Please%20send%20me%20the%20detailed%20syllabus%20for%20this%20module%21" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get Design Syllabus</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%A8%20I%20am%20interested%20in%20learning%20%2ACanva%20Design%20%26%20CapCut%20Video%20Editing%2A.%20Please%20send%20me%20the%20detailed%20syllabus%20for%20this%20module%21" target="_blank" class="pill-btn w-full bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-white py-3 font-bold block text-center transition">Get Design Syllabus</a>
                         </div>
                     </div>
 
@@ -788,7 +948,7 @@
                             </ul>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%93%88%20I%27m%20very%20interested%20in%20your%20%2ASocial%20Media%20Marketing%20Syllabus%2A.%20Please%20share%20details%21" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get SMM Blueprint</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%93%88%20I%27m%20very%20interested%20in%20your%20%2ASocial%20Media%20Marketing%20Syllabus%2A.%20Please%20share%20details%21" target="_blank" class="pill-btn w-full bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-white py-3 font-bold block text-center transition">Get SMM Blueprint</a>
                         </div>
                     </div>
 
@@ -832,7 +992,7 @@
                             </div>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%AF%20I%20am%20ready%20to%20learn%20how%20to%20run%20profitable%20%2AMeta%20%26%20Google%20Ads%2A.%20Could%20I%20receive%20the%20ad%20strategy%20curriculum%3F" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get Performance Blueprint</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%8E%AF%20I%20am%20ready%20to%20learn%20how%20to%20run%20profitable%20%2AMeta%20%26%20Google%20Ads%2A.%20Could%20I%20receive%20the%20ad%20strategy%20curriculum%3F" target="_blank" class="pill-btn w-full bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-white py-3 font-bold block text-center transition">Get Performance Blueprint</a>
                         </div>
                     </div>
 
@@ -859,13 +1019,13 @@
                             </ul>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%94%8D%20I%20am%20interested%20in%20learning%20%2AAdvanced%20SEO%20Strategies%2A.%20Please%20send%20me%20the%20detailed%20syllabus%21" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get SEO Blueprint</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%94%8D%20I%20am%20interested%20in%20learning%20%2AAdvanced%20SEO%20Strategies%2A.%20Please%20send%20me%20the%20detailed%20syllabus%21" target="_blank" class="pill-btn w-full bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-white py-3 font-bold block text-center transition">Get SEO Blueprint</a>
                         </div>
                     </div>
 
                     <div class="glass-card p-8 reveal flex flex-col h-full w-full md:col-span-2 max-w-3xl mx-auto justify-between items-center bg-black/50 backdrop-blur-xl">
                         <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-2xl text-white mb-6 shadow-lg">
+                            <div class="icon-box w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-400 text-2xl text-white mb-6 shadow-lg">
                                 <i class="fas fa-microchip"></i>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-3">Advanced AI Mastery</h3>
@@ -881,7 +1041,7 @@
                             </div>
                         </div>
                         <div class="pt-4 border-t border-white/10 w-full">
-                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%20want%20to%20master%20AI%20tools%20like%20%2AClaude%2C%20Gemini%2C%20and%20ChatGPT%2A.%20What%20kind%20of%20real%20projects%20will%20we%20do%20using%20these%3F" target="_blank" class="pill-btn w-full bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold block text-center transition">Get AI Module Details</a>
+                            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20%F0%9F%A4%96%20I%20want%20to%20master%20AI%20tools%20like%20%2AClaude%2C%20Gemini%2C%20and%20ChatGPT%2A.%20What%20kind%20of%20real%20projects%20will%20we%20do%20using%20these%3F" target="_blank" class="pill-btn w-full bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-white py-3 font-bold block text-center transition">Get AI Module Details</a>
                         </div>
                     </div>
 
@@ -889,18 +1049,17 @@
             </div>
         </section>
 
-        <section id="services" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-checker-pattern opacity-40 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services-grid-bg relative py-12 md:py-16 overflow-hidden w-full">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-transparent to-[#0a0a1a] z-0 pointer-events-none"></div>
 
-            <i class="fas fa-briefcase absolute top-[10%] left-[8%] text-yellow-400/20 text-8xl animate-float-slow z-0 pointer-events-none"></i>
+            <i class="fas fa-briefcase absolute top-[10%] left-[8%] text-orange-400/20 text-8xl animate-float-slow z-0 pointer-events-none"></i>
             <i class="fas fa-handshake absolute top-[45%] left-[90%] text-white/10 text-6xl animate-float z-0 pointer-events-none" style="animation-delay: 0.5s;"></i>
 
             <div class="container relative z-10 mx-auto px-5 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal flex flex-col items-center">
-                    <span class="text-yellow-400 font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2 drop-shadow-2xl">
-                        <i class="fas fa-briefcase text-yellow-400"></i> Professional Agency Services
+                    <span class="text-orange-400 font-bold tracking-widest text-sm uppercase mb-3 flex items-center justify-center gap-2 drop-shadow-2xl">
+                        <i class="fas fa-briefcase text-orange-400"></i> Professional Agency Services
                     </span>
                     <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight drop-shadow-2xl">Premium Solutions We <span class="text-orange-400">Provide</span></h2>
                     <p class="text-gray-200 font-medium" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Scale your personal brand or enterprise with elite, conversion-focused agency packages.</p>
@@ -908,33 +1067,33 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-20 items-stretch reveal">
                     
-                    <div class="glass-card p-6 md:p-8 flex flex-col relative border-t-4 border-blue-400 bg-black/60 backdrop-blur-md h-full transition hover:-translate-y-2">
+                    <div class="glass-card p-6 md:p-8 flex flex-col relative border-t-4 border-indigo-400 bg-black/60 backdrop-blur-md h-full transition hover:-translate-y-2">
                         <div class="text-center w-full mb-6 border-b border-white/10 pb-6">
                             <h3 class="text-2xl font-black text-white mb-2">Standard Package</h3>
-                            <div class="text-blue-400 font-bold text-4xl mt-2">10K<span class="text-lg text-gray-400 font-medium">/Month</span></div>
+                            <div class="text-indigo-400 font-bold text-4xl mt-2">10K<span class="text-lg text-gray-400 font-medium">/Month</span></div>
                         </div>
                         <ul class="space-y-4 mb-8 flex-grow text-left">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <i class="fas fa-check-circle text-indigo-400 mt-1"></i> 
                                 <span class="text-gray-200 font-medium">8 Posts</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <i class="fas fa-check-circle text-indigo-400 mt-1"></i> 
                                 <span class="text-gray-200 font-medium">2 Video Edits</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <i class="fas fa-check-circle text-indigo-400 mt-1"></i> 
                                 <span class="text-gray-200 font-medium">Meta Ads <strong>Or</strong> Google Ads<br><span class="text-xs text-gray-400 block mt-1">(Ad Campaign Budget Client nu rese)</span></span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-400 mt-1"></i> 
+                                <i class="fas fa-check-circle text-indigo-400 mt-1"></i> 
                                 <span class="text-gray-200 font-medium">Single Landing Page Website <strong class="text-green-400 bg-green-500/20 px-2 py-0.5 rounded-full text-xs ml-1">(Free)</strong></span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%93%88%20I%20am%20interested%20in%20your%20%2AStandard%20Package%2A%20for%2010K%2FMonth.%20Let%27s%20discuss%20further%21" target="_blank" class="pill-btn w-full text-center bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white py-3 font-bold transition">Inquire Standard</a>
+                        <a href="https://wa.me/917434053550?text=Hi%20Nexus%21%20%F0%9F%93%88%20I%20am%20interested%20in%20your%20%2AStandard%20Package%2A%20for%2010K%2FMonth.%20Let%27s%20discuss%20further%21" target="_blank" class="pill-btn w-full text-center bg-indigo-500/10 hover:bg-indigo-500 text-indigo-300 hover:text-white py-3 font-bold transition">Inquire Standard</a>
                     </div>
 
-                    <div class="glass-card p-6 md:p-8 flex flex-col relative border-t-4 border-orange-400 bg-black/60 backdrop-blur-md h-full transform lg:-translate-y-4 shadow-[0_15px_40px_-10px_rgba(246,153,59,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(246,153,59,0.4)] transition">
+                    <div class="glass-card p-6 md:p-8 flex flex-col relative border-t-4 border-orange-400 bg-black/60 backdrop-blur-md h-full transform lg:-translate-y-4 shadow-[0_15px_40px_-10px_rgba(251,146,60,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(251,146,60,0.4)] transition">
                         <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-2xl rounded-tr-3xl">POPULAR</div>
                         <div class="text-center w-full mb-6 border-b border-white/10 pb-6">
                             <h3 class="text-2xl font-black text-white mb-2">Growth Package</h3>
@@ -995,10 +1154,9 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch text-center">
                     
-                    <!-- Visiting Card -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
-                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-id-card"></i></div>
+                            <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-id-card"></i></div>
                             <h3 class="text-lg font-bold text-white mb-2">Design Visiting Card</h3>
                             <p class="text-gray-300 text-sm">Get high-impact business card designs. Interactive digital layouts available.</p>
                             <div class="service-price-tag">
@@ -1011,7 +1169,6 @@
                         </a>
                     </div>
 
-                    <!-- Marriage Kankotri -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-pink-500 to-rose-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-ring"></i></div>
@@ -1027,7 +1184,6 @@
                         </a>
                     </div>
 
-                    <!-- Birthday Card -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-400 text-xl text-white shadow-lg mb-4"><i class="fas fa-birthday-cake"></i></div>
@@ -1043,7 +1199,6 @@
                         </a>
                     </div>
 
-                    <!-- Opening Ceremony -->
                     <div class="glass-card p-6 reveal flex flex-col justify-between items-center h-full w-full bg-black/50 backdrop-blur-md">
                         <div class="w-full flex flex-col items-center">
                             <div class="icon-box w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-xl text-white shadow-lg mb-4"><i class="fas fa-ribbon"></i></div>
@@ -1063,21 +1218,20 @@
             </div>
         </section>
 
-        <section id="faq" class="relative py-12 md:py-16 overflow-hidden w-full bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-[#0b0f19]/50 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-dot-pattern opacity-40 z-0 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-transparent to-[#0b0f19] z-0 pointer-events-none"></div>
+        <!-- FAQ SECTION -->
+        <section id="faq" class="faq-grid-bg relative py-12 md:py-16 overflow-hidden w-full">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-transparent to-[#0a0a1a] z-0 pointer-events-none"></div>
 
             <i class="fas fa-question absolute top-[20%] right-[15%] text-indigo-400/20 text-8xl md:text-[10rem] animate-float z-0 pointer-events-none"></i>
             <i class="fas fa-comments absolute bottom-[10%] left-[10%] text-purple-400/20 text-7xl md:text-9xl animate-float-slow z-0 pointer-events-none"></i>
-            <div class="absolute top-0 right-10 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+            <div class="absolute top-0 right-10 w-[400px] h-[400px] bg-purple-500/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
             
             <div class="container relative z-10 mx-auto px-5 lg:px-8 max-w-4xl">
                 <div class="text-center mb-16 reveal flex flex-col items-center">
                     <span class="text-purple-300 font-bold tracking-widest text-sm uppercase mb-2 flex items-center justify-center gap-2 drop-shadow-2xl">
                         <i class="fas fa-question-circle animate-pulse"></i> Got Questions?
                     </span>
-                    <h2 class="text-4xl md:text-5xl font-black text-white mb-4 uppercase drop-shadow-2xl">Frequently Asked <span class="text-indigo-400">Questions</span></h2>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-4 uppercase drop-shadow-2xl">Frequently Asked <span class="text-purple-400">Questions</span></h2>
                     <p class="text-gray-200 font-medium" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Find out why Nexus is the top digital marketing institute near you in Surat.</p>
                 </div>
 
@@ -1228,14 +1382,15 @@
 
     </main>
 
-    <footer id="contact" class="mt-auto relative z-10 pt-16 pb-8 bg-[#0b0f19] w-full flex flex-col items-center">
+    <!-- FOOTER -->
+    <footer id="contact" class="footer-grid-bg mt-auto relative z-10 pt-16 pb-8 w-full flex flex-col items-center">
         <div class="container mx-auto px-5 lg:px-8 max-w-5xl">
             
             <div class="text-center mb-10">
-                <span class="text-blue-300 font-bold tracking-widest text-sm uppercase flex items-center justify-center gap-2 drop-shadow-md">
-                    <i class="fas fa-headset text-blue-300"></i> Get In Touch
+                <span class="text-indigo-300 font-bold tracking-widest text-sm uppercase flex items-center justify-center gap-2 drop-shadow-md">
+                    <i class="fas fa-headset text-indigo-300"></i> Get In Touch
                 </span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">Contact <span class="text-blue-400">Us</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">Contact <span class="text-indigo-400">Us</span></h2>
             </div>
 
             <div class="w-full max-w-3xl mx-auto mb-16">
@@ -1244,16 +1399,16 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
                                 <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-name">Full Name</label>
-                                <input type="text" id="wa-name" placeholder="John Doe" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                                <input type="text" id="wa-name" placeholder="John Doe" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition">
                             </div>
                             <div>
                                 <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-phone">Phone Number</label>
-                                <input type="tel" id="wa-phone" placeholder="+91 XXXXX XXXXX" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                                <input type="tel" id="wa-phone" placeholder="+91 XXXXX XXXXX" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition">
                             </div>
                         </div>
                         <div>
                             <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-service">Service / Course Interested In</label>
-                            <select id="wa-service" required class="w-full bg-[#151c2c] border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 appearance-none transition">
+                            <select id="wa-service" required class="w-full bg-[#12122a] border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 appearance-none transition">
                                 <option value="" disabled selected>Select an option...</option>
                                 <option value="Digital Marketing Master Class">Digital Marketing Course</option>
                                 <option value="Standard Package (10K)">Standard Package (10K)</option>
@@ -1264,9 +1419,9 @@
                         </div>
                         <div>
                             <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-message">Your Message</label>
-                            <textarea id="wa-message" placeholder="How can we help you?" required rows="3" class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition"></textarea>
+                            <textarea id="wa-message" placeholder="How can we help you?" required rows="3" class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition"></textarea>
                         </div>
-                        <button type="submit" class="pill-btn w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold py-3.5 hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.6)] transition transform hover:-translate-y-1">
+                        <button type="submit" class="pill-btn w-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-white font-bold py-3.5 hover:shadow-[0_10px_30px_-10px_rgba(99,102,241,0.6)] transition transform hover:-translate-y-1">
                             Send to WhatsApp <i class="fab fa-whatsapp ml-2 text-lg"></i>
                         </button>
                     </form>
@@ -1296,11 +1451,11 @@
                 <div class="flex flex-col items-center pt-2">
                     <div class="text-left w-max">
                         <ul class="space-y-4 flex flex-col items-start">
-                            <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-blue-400 text-sm"></i> Home</a></li>
+                            <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-indigo-400 text-sm"></i> Home</a></li>
                             <li><a href="#admission" class="text-orange-400 font-medium hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-orange-400 text-sm"></i> Apply Now</a></li>
-                            <li><a href="#courses" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-blue-400 text-sm"></i> Syllabus Outline</a></li>
-                            <li><a href="#services" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-blue-400 text-sm"></i> Agency Services</a></li>
-                            <li><a href="#faq" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-blue-400 text-sm"></i> FAQ</a></li>
+                            <li><a href="#courses" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-indigo-400 text-sm"></i> Syllabus Outline</a></li>
+                            <li><a href="#services" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-indigo-400 text-sm"></i> Agency Services</a></li>
+                            <li><a href="#faq" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-indigo-400 text-sm"></i> FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1309,7 +1464,7 @@
                     <div class="text-left w-max max-w-[280px]">
                         <div class="space-y-5 w-full flex flex-col items-start">
                             <a href="tel:+917434053550" onclick="return gtag_report_conversion('tel:+917434053550');" class="flex items-center gap-4 p-3 w-full rounded-2xl glass-card hover:bg-white/10 transition group justify-start bg-black/40">
-                                <div class="icon-box w-12 h-12 bg-blue-500/30 rounded-xl text-blue-300 group-hover:bg-blue-500 group-hover:text-white transition shrink-0">
+                                <div class="icon-box w-12 h-12 bg-indigo-500/30 rounded-xl text-indigo-300 group-hover:bg-indigo-500 group-hover:text-white transition shrink-0">
                                     <i class="fas fa-phone text-xl"></i>
                                 </div>
                                 <div class="text-left">
@@ -1390,7 +1545,6 @@
     </a>
 
     <script>
-        // PWA Service Worker Registration
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js').catch(err => console.error('Service Worker registration failed', err));
@@ -1399,23 +1553,17 @@
 
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Fast Custom Smooth Scroll Script
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     e.preventDefault();
                     const headerOffset = 90;
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                 }
             });
         });
@@ -1433,7 +1581,6 @@
         window.addEventListener("scroll", reveal);
         reveal();
 
-        // Contact Form WhatsApp Logic
         document.getElementById('wa-contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('wa-name').value;
@@ -1460,18 +1607,14 @@ _Sent via Nexus Institute Official Website_`;
             window.open(waUrl, '_blank');
         });
 
-        // Loader Logic
         document.addEventListener("DOMContentLoaded", () => {
             const loaderBar = document.getElementById("loader-progress");
             const loaderScreen = document.getElementById("page-loader");
-            
             let width = 0;
             const interval = setInterval(() => {
                 width += Math.random() * 20; 
                 if(width > 100) width = 100;
-                
                 loaderBar.style.width = width + "%";
-
                 if(width === 100) {
                     clearInterval(interval);
                     setTimeout(() => {
@@ -1483,7 +1626,6 @@ _Sent via Nexus Institute Official Website_`;
             }, 150); 
         });
 
-        // 3D Glass Card Tracking (Desktop only)
         if (window.innerWidth > 768) {
             document.querySelectorAll('.glass-card').forEach(card => {
                 card.addEventListener('mousemove', e => {
@@ -1496,7 +1638,6 @@ _Sent via Nexus Institute Official Website_`;
             });
         }
 
-        // FAQ Accordion Logic
         const faqBtns = document.querySelectorAll('.faq-btn');
         faqBtns.forEach(btn => {
             btn.addEventListener('click', function() {
@@ -1529,7 +1670,6 @@ _Sent via Nexus Institute Official Website_`;
             });
         });
 
-        // Bottom Nav Active State on Scroll
         const navItems = document.querySelectorAll('.mobile-bottom-nav .nav-item');
         const sections = document.querySelectorAll('main section');
 
@@ -1550,14 +1690,13 @@ _Sent via Nexus Institute Official Website_`;
             });
         });
 
-        // STARDUST CURSOR EFFECT (Desktop only)
         if (window.innerWidth > 768) {
             const canvas = document.getElementById('interactive-canvas');
             const ctx = canvas.getContext('2d');
             let particles = [];
             let mouseX = window.innerWidth / 2;
             let mouseY = window.innerHeight / 2;
-            let hue = 220; 
+            let hue = 240; 
 
             function resizeCanvas() {
                 canvas.width = window.innerWidth;
@@ -1569,11 +1708,9 @@ _Sent via Nexus Institute Official Website_`;
             window.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
-                
                 if(Math.random() > 0.4) {
                     particles.push({
-                        x: mouseX,
-                        y: mouseY,
+                        x: mouseX, y: mouseY,
                         vx: (Math.random() - 0.5) * 1.5,
                         vy: (Math.random() - 0.5) * 1.5,
                         size: Math.random() * 2 + 0.5,
@@ -1595,9 +1732,7 @@ _Sent via Nexus Institute Official Website_`;
                 ctx.globalCompositeOperation = 'screen';
                 for (let i = 0; i < particles.length; i++) {
                     let p = particles[i];
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    p.life -= 0.01;
+                    p.x += p.vx; p.y += p.vy; p.life -= 0.01;
                     if (p.life <= 0) { particles.splice(i, 1); i--; continue; }
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
