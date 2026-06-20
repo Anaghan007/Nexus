@@ -167,9 +167,31 @@
         }
 
         /* ========================================= */
+        /* --- LOGO VISIBILITY FIX --- */
+        /* ========================================= */
+        .logo-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3), 0 0 30px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .logo-wrapper:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 30px rgba(99, 102, 241, 0.5), 0 0 40px rgba(255, 255, 255, 0.15);
+        }
+        .logo-wrapper img {
+            display: block;
+            border-radius: 50%;
+        }
+
+        /* ========================================= */
         /* --- UNIQUE SECTION GLOWS (Replacing old grids) --- */
         /* ========================================= */
-        .hero-grid-bg, .admission-grid-bg, .offers-grid-bg, .courses-grid-bg, .services-grid-bg, .faq-grid-bg {
+        .hero-grid-bg, .admission-grid-bg, .offers-grid-bg, .courses-grid-bg, .services-grid-bg, .faq-grid-bg, .contact-grid-bg {
             background-color: transparent !important;
             background-image: none !important;
             position: relative;
@@ -225,6 +247,15 @@
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.12) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .contact-grid-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 50%, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.06) 40%, transparent 70%);
             pointer-events: none;
             z-index: 0;
         }
@@ -377,9 +408,13 @@
             /* HIDE BIG CENTERED LOGO */
             .mobile-logo-hero { display: none !important; }
             
-            /* Logo size in mobile header - INCREASED */
-            .floating-header img {
-                height: 50px !important;
+            /* Logo wrapper size in mobile header */
+            .logo-wrapper {
+                padding: 5px !important;
+            }
+            .floating-header .logo-wrapper img {
+                height: 42px !important;
+                width: 42px !important;
             }
             
             /* SHOW WHATSAPP BUTTON ON MOBILE - INCREASED */
@@ -396,8 +431,8 @@
             /* HERO SECTION - Perfect Centering between Header and Bottom Nav */
             #home {
                 background: transparent !important;
-                padding-top: 120px !important; /* Increased space for larger header */
-                padding-bottom: 110px !important; /* Space for bottom nav */
+                padding-top: 120px !important;
+                padding-bottom: 110px !important;
                 display: flex !important;
                 flex-direction: column !important;
                 align-items: center !important;
@@ -582,6 +617,11 @@
                 box-shadow: 0 30px 60px -15px rgba(99, 102, 241, 0.25);
             }
             h1, h2, h3 { letter-spacing: -0.03em; }
+            
+            .floating-header .logo-wrapper img {
+                height: 44px !important;
+                width: 44px !important;
+            }
         }
 
         /* ========================================= */
@@ -645,7 +685,9 @@
         <header class="floating-header pointer-events-auto mx-auto w-full max-w-6xl rounded-full">
             <div class="px-5 md:px-8 py-3 flex justify-between items-center">
                 <a href="#home" class="flex-shrink-0 flex items-center magnetic-btn">
-                    <img src="Logo.png" alt="Nexus Logo" class="h-10 object-contain">
+                    <div class="logo-wrapper">
+                        <img src="Logo.png" alt="Nexus Logo" class="h-10 w-10 object-contain">
+                    </div>
                 </a>
                 
                 <nav class="hidden md:flex gap-6 lg:gap-8 items-center w-max desktop-nav">
@@ -1333,59 +1375,77 @@
             </div>
         </section>
 
-    </main>
-
-    <!-- FOOTER -->
-    <footer id="contact" class="footer-grid-bg mt-auto relative z-10 pt-16 pb-8 w-full flex flex-col items-center">
-        <div class="container mx-auto px-5 lg:px-8 max-w-5xl">
+        <!-- ========================================= -->
+        <!-- CONTACT US SECTION (SEPARATE) -->
+        <!-- ========================================= -->
+        <section id="contact" class="contact-grid-bg relative py-12 md:py-16 overflow-hidden w-full">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-transparent to-[#0a0a1a] z-0 pointer-events-none opacity-50"></div>
             
-            <div class="text-center mb-10">
-                <span class="text-indigo-300 font-bold tracking-widest text-sm uppercase flex items-center justify-center gap-2 drop-shadow-md">
-                    <i class="fas fa-headset text-indigo-300"></i> Get In Touch
-                </span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">Contact <span class="text-indigo-400">Us</span></h2>
-            </div>
+            <div class="absolute top-10 left-10 w-[300px] h-[300px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+            <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
-            <div class="w-full max-w-3xl mx-auto mb-16">
-                <div class="glass-card p-6 md:p-8 border border-white/10 bg-black/50 shadow-2xl">
-                    <form id="wa-contact-form" class="space-y-5">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <div>
-                                <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-name">Full Name</label>
-                                <input type="text" id="wa-name" placeholder="John Doe" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition">
+            <div class="container relative z-10 mx-auto px-5 lg:px-8 max-w-5xl">
+                
+                <div class="text-center mb-10 reveal flex flex-col items-center">
+                    <span class="text-indigo-300 font-bold tracking-widest text-sm uppercase flex items-center justify-center gap-2 drop-shadow-md">
+                        <i class="fas fa-headset text-indigo-300"></i> Get In Touch
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white drop-shadow-2xl">Contact <span class="text-indigo-400">Us</span></h2>
+                    <p class="text-gray-200 mt-3 max-w-xl mx-auto font-medium" style="text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Have questions? Fill out the form below and we'll get back to you on WhatsApp instantly.</p>
+                </div>
+
+                <div class="w-full max-w-3xl mx-auto reveal">
+                    <div class="glass-card p-6 md:p-8 border border-white/10 bg-black/50 shadow-2xl">
+                        <form id="wa-contact-form" class="space-y-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-name">Full Name</label>
+                                    <input type="text" id="wa-name" placeholder="John Doe" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-phone">Phone Number</label>
+                                    <input type="tel" id="wa-phone" placeholder="+91 XXXXX XXXXX" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition">
+                                </div>
                             </div>
                             <div>
-                                <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-phone">Phone Number</label>
-                                <input type="tel" id="wa-phone" placeholder="+91 XXXXX XXXXX" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition">
+                                <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-service">Service / Course Interested In</label>
+                                <select id="wa-service" required class="w-full bg-[#12122a] border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 appearance-none transition">
+                                    <option value="" disabled selected>Select an option...</option>
+                                    <option value="Digital Marketing Master Class">Digital Marketing Course</option>
+                                    <option value="Standard Package (10K)">Standard Package (10K)</option>
+                                    <option value="Growth Package (20K)">Growth Package (20K)</option>
+                                    <option value="Pro Package (30K)">Pro Package (30K)</option>
+                                    <option value="Other Design/Editing Services">Other Design/Editing Services</option>
+                                </select>
                             </div>
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-service">Service / Course Interested In</label>
-                            <select id="wa-service" required class="w-full bg-[#12122a] border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 appearance-none transition">
-                                <option value="" disabled selected>Select an option...</option>
-                                <option value="Digital Marketing Master Class">Digital Marketing Course</option>
-                                <option value="Standard Package (10K)">Standard Package (10K)</option>
-                                <option value="Growth Package (20K)">Growth Package (20K)</option>
-                                <option value="Pro Package (30K)">Pro Package (30K)</option>
-                                <option value="Other Design/Editing Services">Other Design/Editing Services</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-message">Your Message</label>
-                            <textarea id="wa-message" placeholder="How can we help you?" required rows="3" class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition"></textarea>
-                        </div>
-                        <button type="submit" class="pill-btn w-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-white font-bold py-3.5 hover:shadow-[0_10px_30px_-10px_rgba(99,102,241,0.6)] transition transform hover:-translate-y-1">
-                            Send to WhatsApp <i class="fab fa-whatsapp ml-2 text-lg"></i>
-                        </button>
-                    </form>
+                            <div>
+                                <label class="block text-gray-300 text-sm font-bold mb-2" for="wa-message">Your Message</label>
+                                <textarea id="wa-message" placeholder="How can we help you?" required rows="3" class="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition"></textarea>
+                            </div>
+                            <button type="submit" class="pill-btn w-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-white font-bold py-3.5 hover:shadow-[0_10px_30px_-10px_rgba(99,102,241,0.6)] transition transform hover:-translate-y-1">
+                                Send to WhatsApp <i class="fab fa-whatsapp ml-2 text-lg"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
+        </section>
 
+    </main>
+
+    <!-- ========================================= -->
+    <!-- FOOTER (SEPARATE FROM CONTACT) -->
+    <!-- ========================================= -->
+    <footer class="footer-grid-bg mt-auto relative z-10 pt-16 pb-8 w-full flex flex-col items-center">
+        <div class="container mx-auto px-5 lg:px-8 max-w-5xl">
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 text-center">
                 
                 <div class="flex flex-col items-center">
                     <a href="#home" class="block mb-6">
-                        <img src="Logo.png" alt="Nexus Logo" class="h-14 object-contain">
+                        <div class="logo-wrapper">
+                            <img src="Logo.png" alt="Nexus Logo" class="h-12 w-12 object-contain">
+                        </div>
                     </a>
                     <p class="mb-6 text-gray-300 max-w-xs text-center leading-relaxed">
                         Nexus Institute & Marketing provides elite practical training in Digital Marketing. Join the Top Digital Marketing Institute in Surat today.
@@ -1402,6 +1462,7 @@
                 </div>
 
                 <div class="flex flex-col items-center pt-2">
+                    <h3 class="text-white font-bold text-lg mb-5">Quick Links</h3>
                     <div class="text-left w-max">
                         <ul class="space-y-4 flex flex-col items-start">
                             <li><a href="#home" class="text-gray-300 hover:text-white transition flex items-center justify-center gap-2 text-base"><i class="fas fa-chevron-right text-indigo-400 text-sm"></i> Home</a></li>
@@ -1414,6 +1475,7 @@
                 </div>
 
                 <div class="flex flex-col items-center pt-2">
+                    <h3 class="text-white font-bold text-lg mb-5">Reach Us</h3>
                     <div class="text-left w-max max-w-[280px]">
                         <div class="space-y-5 w-full flex flex-col items-start">
                             <a href="tel:+917434053550" onclick="return gtag_report_conversion('tel:+917434053550');" class="flex items-center gap-4 p-3 w-full rounded-2xl glass-card hover:bg-white/10 transition group justify-start bg-black/40">
