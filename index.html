@@ -622,6 +622,53 @@
             margin-top: 2px
         }
 
+        /* Desktop Header Wrapper */
+        .desktop-header-wrapper {
+            display: block;
+        }
+
+        /* Mobile Top Bar (Header Replacement) */
+        .mobile-top-wrapper {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            max-width: calc(100vw - 20px);
+            z-index: 1000;
+        }
+
+        .mobile-top-bar {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(20px) saturate(150%);
+            -webkit-backdrop-filter: blur(20px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.4);
+            transition: all .3s;
+            border-radius: 9999px;
+            width: 100%;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-chat-btn-mobile {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+            height: 44px;
+            padding: 0 16px;
+            font-size: 0.9rem;
+        }
+
+        /* Desktop Nav Adjustments for 14-inch Laptops */
+        .desktop-nav {
+            gap: 2rem !important;
+            flex-wrap: nowrap !important;
+        }
+
         @media(max-width:768px) {
             html {
                 font-size: 17px
@@ -631,49 +678,36 @@
                 padding-bottom: calc(var(--bottom-nav-height) + 20px)
             }
 
-            .fixed.top-4 {
-                top: 24px !important;
-                left: 12px !important;
-                right: 12px !important;
-                max-width: calc(100vw - 24px) !important
+            .desktop-header-wrapper {
+                display: none !important;
             }
 
-            .floating-header {
-                max-width: 100% !important
+            .mobile-top-wrapper {
+                display: block !important;
             }
 
-            .floating-header>div {
-                padding: 10px 14px !important;
-                gap: 10px !important
+            .mobile-top-bar {
+                padding: 6px 12px !important;
             }
 
-            .desktop-nav {
-                display: none !important
+            .header-chat-btn-mobile {
+                padding: 0 12px !important;
+                height: 40px !important;
+                font-size: 0.85rem !important;
             }
 
-            .mobile-logo-hero {
-                display: none !important
+            .mobile-top-wrapper .logo-wrapper {
+                height: 40px !important;
+                min-width: 40px !important;
+                padding: 6px 8px !important;
             }
 
-            .logo-wrapper {
-                padding: 10px 14px !important;
-                height: 56px !important;
-                min-width: 56px !important
-            }
-
-            .logo-wrapper img {
-                height: 38px !important
-            }
-
-            .header-chat-btn {
-                display: flex !important;
-                padding: 14px 20px !important;
-                height: 56px !important;
-                font-size: 1.05rem !important
+            .mobile-top-wrapper .logo-wrapper img {
+                height: 24px !important;
             }
 
             #home {
-                padding-top: calc(var(--header-height) + 50px) !important;
+                padding-top: calc(80px + 30px) !important;
                 padding-bottom: calc(var(--bottom-nav-height) + 20px) !important;
                 min-height: 100dvh !important
             }
@@ -968,24 +1002,6 @@
                 font-size: 16px
             }
 
-            .floating-header>div {
-                padding: 8px 10px !important
-            }
-
-            .logo-wrapper {
-                height: 48px !important;
-                min-width: 48px !important
-            }
-
-            .logo-wrapper img {
-                height: 32px !important
-            }
-
-            .header-chat-btn {
-                padding: 12px 14px !important;
-                height: 48px !important
-            }
-
             #home h1 {
                 font-size: clamp(1.8rem, 8vw, 2.5rem) !important
             }
@@ -1003,20 +1019,7 @@
 
         @media(min-width:769px) and (max-width:1024px) {
             .floating-header {
-                max-width: 95% !important
-            }
-
-            .desktop-nav {
-                gap: 1.5rem !important
-            }
-
-            .nav-link {
-                font-size: 0.95rem !important
-            }
-
-            .header-chat-btn {
-                padding: 10px 16px !important;
-                font-size: 0.9rem !important
+                max-width: 90% !important
             }
 
             #home h1 {
@@ -1070,19 +1073,6 @@
             .container {
                 max-width: 1600px !important
             }
-
-            .desktop-nav {
-                gap: 3rem !important
-            }
-
-            .nav-link {
-                font-size: 1.2rem !important
-            }
-
-            .header-chat-btn {
-                font-size: 1.3rem !important;
-                padding: 12px 24px !important
-            }
         }
 
         @media(min-width:769px) {
@@ -1090,7 +1080,7 @@
                 display: none !important
             }
 
-            .mobile-logo-hero {
+            .mobile-top-wrapper {
                 display: none !important
             }
 
@@ -1296,34 +1286,46 @@
             <div class="loader-bar" id="loader-progress"></div>
         </div>
     </div>
-    <div class="fixed top-4 left-0 w-full z-50 px-4 pointer-events-none">
+
+    <!-- Mobile Top Bar (Replaces Header on Mobile) -->
+    <div class="mobile-top-wrapper">
+        <header class="mobile-top-bar">
+            <a href="#home" class="flex-shrink-0 flex items-center">
+                <div class="logo-wrapper"><img src="Logo.png" alt="Nexus Institute Logo" fetchpriority="high"></div>
+            </a>
+            <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20learn%20more%20about%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A!"
+                target="_blank" rel="noopener noreferrer"
+                class="pill-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full font-bold header-chat-btn-mobile">
+                <i class="fab fa-whatsapp text-lg"></i> Chat Now
+            </a>
+        </header>
+    </div>
+
+    <!-- Desktop Header Wrapper -->
+    <div class="fixed top-4 left-0 w-full z-50 px-4 pointer-events-none desktop-header-wrapper">
         <header class="floating-header pointer-events-auto mx-auto w-full max-w-6xl rounded-full">
-            <div
-                class="px-4 sm:px-5 md:px-6 lg:px-8 py-3 flex justify-between items-center gap-3 md:gap-5 lg:gap-6 flex-nowrap">
+            <div class="px-4 sm:px-5 md:px-6 lg:px-8 py-3 flex justify-between items-center gap-4 flex-nowrap">
                 <a href="#home" class="flex-shrink-0 flex items-center">
                     <div class="logo-wrapper"><img src="Logo.png" alt="Nexus Institute Logo" fetchpriority="high"></div>
                 </a>
-                <nav class="hidden md:flex gap-4 md:gap-5 lg:gap-6 xl:gap-8 items-center w-max desktop-nav flex-nowrap">
-                    <a href="#home" class="nav-link whitespace-nowrap"><i class="fas fa-home text-sm"></i> Home</a>
-                    <a href="#courses" class="nav-link whitespace-nowrap"><i class="fas fa-graduation-cap text-sm"></i>
-                        Courses</a>
-                    <a href="#services" class="nav-link whitespace-nowrap"><i class="fas fa-briefcase text-sm"></i>
-                        Services</a>
-                    <a href="#admission"
-                        class="nav-link whitespace-nowrap"><i class="fas fa-clipboard-list text-sm"></i> Apply</a>
-                    <a href="#contact" class="nav-link whitespace-nowrap"><i class="fas fa-headset text-sm"></i>
-                        Contact</a>
+                <nav class="hidden md:flex items-center w-max desktop-nav flex-nowrap">
+                    <a href="#home" class="nav-link"><i class="fas fa-home text-sm"></i> Home</a>
+                    <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap text-sm"></i> Courses</a>
+                    <a href="#services" class="nav-link"><i class="fas fa-briefcase text-sm"></i> Services</a>
+                    <a href="#admission" class="nav-link"><i class="fas fa-clipboard-list text-sm"></i> Apply</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-headset text-sm"></i> Contact</a>
                 </nav>
                 <div class="flex items-center gap-4 flex-shrink-0">
                     <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20learn%20more%20about%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A!"
                         target="_blank" rel="noopener noreferrer"
-                        class="hidden lg:flex pill-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold text-base header-chat-btn whitespace-nowrap">
+                        class="hidden lg:flex pill-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold text-base header-chat-btn">
                         <i class="fab fa-whatsapp text-xl"></i> Chat Now
                     </a>
                 </div>
             </div>
         </header>
     </div>
+
     <main id="main-content" class="flex-grow flex flex-col w-full">
         <section id="home"
             class="hero-grid-bg relative flex-grow flex items-center justify-center pt-32 pb-16 w-full min-h-[100dvh]">
@@ -2404,6 +2406,8 @@
             </p>
         </div>
     </footer>
+
+    <!-- Updated Mobile Bottom Nav -->
     <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
         <a href="#home" class="nav-item active" aria-current="page"><i class="fas fa-home"></i><span>Home</span></a>
         <a href="#courses" class="nav-item"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
@@ -2411,6 +2415,7 @@
         <a href="#admission" class="nav-item"><i class="fas fa-clipboard-list"></i><span>Apply</span></a>
         <a href="#contact" class="nav-item"><i class="fas fa-headset"></i><span>Contact</span></a>
     </nav>
+
     <script>
         if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});}
 document.getElementById('year').textContent=new Date().getFullYear();
