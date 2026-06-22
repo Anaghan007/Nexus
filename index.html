@@ -828,7 +828,7 @@
             }
 
             body {
-                padding-bottom: calc(var(--bottom-nav-height) + 20px);
+                padding-bottom: 135px !important; /* Increased padding to prevent overlap with taller bottom menu */
             }
 
             /* Mobile Bottom Nav Bar Sync */
@@ -839,7 +839,7 @@
                 left: 12px;
                 right: 12px;
                 width: calc(100vw - 24px);
-                height: 64px !important;
+                height: 105px !important; /* Increased Height */
                 background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
@@ -856,18 +856,20 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 text-decoration: none;
                 color: rgba(255, 255, 255, 0.5);
-                font-size: 11px;
+                font-size: 14px; /* Slightly larger text */
                 font-weight: 700;
-                gap: 2px;
+                gap: 8px; /* Slightly larger gap */
                 padding: 8px 4px;
                 border-radius: 9999px;
                 flex: 1;
+                height: 100%;
             }
 
             .nav-item i {
-                font-size: 22px;
+                font-size: 32px; /* Increased icon size */
             }
 
             .nav-item.active {
@@ -891,9 +893,9 @@
 
             .floating-header {
                 max-width: 100% !important;
-                height: 64px !important;
+                height: 105px !important; /* Increased Height */
                 border-radius: 9999px !important;
-                padding: 0 12px !important;
+                padding: 0 16px !important;
                 display: flex !important;
                 align-items: center !important;
                 background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
@@ -915,20 +917,25 @@
 
             /* Logo & Button inner sizing for Mobile Sync */
             .logo-wrapper {
-                padding: 4px 8px !important;
-                height: 44px !important;
-                min-width: 44px !important;
+                padding: 8px 12px !important;
+                height: 75px !important; /* Increased Height */
+                min-width: 75px !important; /* Increased Width */
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
             }
 
             .logo-wrapper img {
-                height: 32px !important;
+                height: 55px !important; /* Increased Logo size */
             }
 
             .header-chat-btn {
                 display: flex !important;
-                padding: 0 16px !important;
-                height: 44px !important;
-                font-size: 0.95rem !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 28px !important;
+                height: 65px !important; /* Increased Chat Button Height */
+                font-size: 1.25rem !important; /* Increased Text Size */
                 white-space: nowrap !important;
                 margin: 0 !important;
                 border-radius: 9999px !important;
@@ -936,8 +943,8 @@
 
             /* Page Resets for Mobile */
             #home {
-                padding-top: calc(var(--header-height) + 40px) !important;
-                padding-bottom: calc(var(--bottom-nav-height) + 20px) !important;
+                padding-top: 155px !important; /* Adjusted for taller header */
+                padding-bottom: 135px !important; /* Adjusted for taller footer */
                 min-height: 100dvh !important;
             }
 
@@ -1020,20 +1027,32 @@
                 font-size: 15px;
             }
 
+            .floating-header {
+                height: 95px !important; /* Slightly smaller for very small screens */
+            }
+
             .logo-wrapper {
-                height: 40px !important;
-                min-width: 40px !important;
-                padding: 4px 6px !important;
+                height: 65px !important;
+                min-width: 65px !important;
+                padding: 6px 10px !important;
             }
 
             .logo-wrapper img {
-                height: 26px !important;
+                height: 48px !important;
             }
 
             .header-chat-btn {
-                padding: 0 12px !important;
-                height: 40px !important;
-                font-size: 0.85rem !important;
+                padding: 0 20px !important;
+                height: 58px !important;
+                font-size: 1.15rem !important;
+            }
+
+            .mobile-bottom-nav {
+                height: 95px !important;
+            }
+
+            .nav-item i {
+                font-size: 28px !important; 
             }
         }
 
@@ -1075,7 +1094,6 @@
         }
 
         /* Small Desktop & 14-inch Laptops (1025px to 1280px) */
-        /* FIX: Adjusted max-width and internal spacing to stop button overflow */
         @media(min-width:1025px) and (max-width:1280px) {
             .floating-header {
                 max-width: 95% !important;
@@ -1190,9 +1208,9 @@
                     <h1
                         class="text-[7vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 leading-[1.2] tracking-tight text-white w-full drop-shadow-lg flex flex-col items-center gap-2">
                         <span>Up to <span class="gradient-text"> ₹4,999/- </span> OFF</span>
-                        +<span class="text-white whitespace-nowrap">FREE  <span class="gradient-text whitespace-nowrap md:hidden">Hosting<br>+<br> Domain</span><span class="gradient-text whitespace-nowrap hidden md:inline">Hosting & Domain</span>
+                        +<span class="text-white whitespace-nowrap">FREE <span class="gradient-text whitespace-nowrap md:hidden">Hosting<br>+<br> Domain</span><span class="gradient-text whitespace-nowrap hidden md:inline">Hosting & Domain</span>
                         (1 Year)</span>
-                        +<span class="text-white whitespace-nowrap">FREE  <span class="gradient-text whitespace-nowrap">Internship</span></span>
+                        +<span class="text-white whitespace-nowrap">FREE <span class="gradient-text whitespace-nowrap">Internship</span></span>
                     </h1>
                     <p class="mb-10 max-w-3xl mx-auto text-gray-200 text-lg sm:text-xl font-medium leading-relaxed"
                         style="text-shadow:0 4px 10px rgba(0,0,0,0.8)">
@@ -1750,7 +1768,7 @@
                 </div>
 
                 <div
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch text-center">
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch text-center">
                     <div class="glass-card p-6 reveal bg-black/50">
                         <div class="service-card-inner">
                             <div class="service-card-body">
