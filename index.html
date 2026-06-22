@@ -632,10 +632,10 @@
             }
 
             .fixed.top-4 {
-                top: calc(20px + env(safe-area-inset-top)) !important;
-                left: 10px !important;
-                right: 10px !important;
-                max-width: calc(100vw - 20px) !important;
+                top: 24px !important;
+                left: 12px !important;
+                right: 12px !important;
+                max-width: calc(100vw - 24px) !important
             }
 
             .floating-header {
@@ -673,7 +673,7 @@
             }
 
             #home {
-                padding-top: calc(var(--header-height) + 30px) !important;
+                padding-top: calc(var(--header-height) + 50px) !important;
                 padding-bottom: calc(var(--bottom-nav-height) + 20px) !important;
                 min-height: 100dvh !important
             }
@@ -1003,7 +1003,20 @@
 
         @media(min-width:769px) and (max-width:1024px) {
             .floating-header {
-                max-width: 90% !important
+                max-width: 95% !important
+            }
+
+            .desktop-nav {
+                gap: 1.5rem !important
+            }
+
+            .nav-link {
+                font-size: 0.95rem !important
+            }
+
+            .header-chat-btn {
+                padding: 10px 16px !important;
+                font-size: 0.9rem !important
             }
 
             #home h1 {
@@ -1056,6 +1069,19 @@
 
             .container {
                 max-width: 1600px !important
+            }
+
+            .desktop-nav {
+                gap: 3rem !important
+            }
+
+            .nav-link {
+                font-size: 1.2rem !important
+            }
+
+            .header-chat-btn {
+                font-size: 1.3rem !important;
+                padding: 12px 24px !important
             }
         }
 
@@ -1271,27 +1297,27 @@
         </div>
     </div>
     <div class="fixed top-4 left-0 w-full z-50 px-4 pointer-events-none">
-        <header class="floating-header pointer-events-auto mx-auto w-full max-w-6xl rounded-full overflow-hidden">
-            <div class="px-4 sm:px-5 md:px-6 lg:px-8 py-3 flex justify-between items-center gap-3 md:gap-5 lg:gap-6">
+        <header class="floating-header pointer-events-auto mx-auto w-full max-w-6xl rounded-full">
+            <div
+                class="px-4 sm:px-5 md:px-6 lg:px-8 py-3 flex justify-between items-center gap-3 md:gap-5 lg:gap-6 flex-nowrap">
                 <a href="#home" class="flex-shrink-0 flex items-center">
                     <div class="logo-wrapper"><img src="Logo.png" alt="Nexus Institute Logo" fetchpriority="high"></div>
                 </a>
-                <nav
-                    class="hidden md:flex gap-2 md:gap-3 lg:gap-4 xl:gap-5 items-center flex-1 justify-center min-w-0 desktop-nav">
-                    <a href="#home" class="nav-link"><i class="fas fa-home text-sm"></i> Home</a>
-                    <a href="#what-is-dm" class="nav-link"><i class="fas fa-info-circle text-sm"></i> About</a>
-                    <a href="#courses" class="nav-link"><i class="fas fa-graduation-cap text-sm"></i> Courses</a>
-                    <a href="#special-offers" class="nav-link text-pink-400"><i class="fas fa-fire text-sm"></i>
-                        Offers</a>
-                    <a href="#services" class="nav-link"><i class="fas fa-briefcase text-sm"></i> Services</a>
-                    <a href="#admission" class="nav-link"><i class="fas fa-clipboard-list text-sm"></i> Apply</a>
-                    <a href="#faq" class="nav-link"><i class="fas fa-question-circle text-sm"></i> FAQ</a>
-                    <a href="#contact" class="nav-link"><i class="fas fa-headset text-sm"></i> Contact</a>
+                <nav class="hidden md:flex gap-4 md:gap-5 lg:gap-6 xl:gap-8 items-center w-max desktop-nav flex-nowrap">
+                    <a href="#home" class="nav-link whitespace-nowrap"><i class="fas fa-home text-sm"></i> Home</a>
+                    <a href="#courses" class="nav-link whitespace-nowrap"><i class="fas fa-graduation-cap text-sm"></i>
+                        Courses</a>
+                    <a href="#services" class="nav-link whitespace-nowrap"><i class="fas fa-briefcase text-sm"></i>
+                        Services</a>
+                    <a href="#admission"
+                        class="nav-link whitespace-nowrap"><i class="fas fa-clipboard-list text-sm"></i> Apply</a>
+                    <a href="#contact" class="nav-link whitespace-nowrap"><i class="fas fa-headset text-sm"></i>
+                        Contact</a>
                 </nav>
                 <div class="flex items-center gap-4 flex-shrink-0">
                     <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20learn%20more%20about%20your%20%2A4%20Month%20Master%20Class%20with%20100%25%20FREE%20Internship%2A!"
                         target="_blank" rel="noopener noreferrer"
-                        class="hidden lg:flex pill-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 xl:px-6 py-2.5 rounded-full font-bold text-sm xl:text-base header-chat-btn whitespace-nowrap flex-shrink-0">
+                        class="hidden lg:flex pill-btn items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-bold text-base header-chat-btn whitespace-nowrap">
                         <i class="fab fa-whatsapp text-xl"></i> Chat Now
                     </a>
                 </div>
@@ -2380,11 +2406,10 @@
     </footer>
     <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
         <a href="#home" class="nav-item active" aria-current="page"><i class="fas fa-home"></i><span>Home</span></a>
-        <a href="#what-is-dm" class="nav-item"><i class="fas fa-info-circle"></i><span>About</span></a>
         <a href="#courses" class="nav-item"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
-        <a href="#special-offers" class="nav-item"><i class="fas fa-fire"></i><span>Offers</span></a>
         <a href="#services" class="nav-item"><i class="fas fa-briefcase"></i><span>Services</span></a>
         <a href="#admission" class="nav-item"><i class="fas fa-clipboard-list"></i><span>Apply</span></a>
+        <a href="#contact" class="nav-item"><i class="fas fa-headset"></i><span>Contact</span></a>
     </nav>
     <script>
         if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});}
