@@ -243,7 +243,7 @@
       font-weight: 700;
       border-radius: 9999px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      gap: 10px;
+      gap: 8px;
       cursor: pointer;
       text-decoration: none;
       border: none;
@@ -443,10 +443,6 @@
       .desktop-nav {
         display: none !important;
       }
-
-      .header-cta {
-        display: none !important;
-      }
     }
   </style>
 </head>
@@ -473,25 +469,30 @@
 
   <!-- Glass Header -->
   <header class="fixed top-0 left-0 w-full z-50 glass-header">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[75px] flex justify-between items-center w-full">
-      <a href="#home" class="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity"
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 h-[75px] flex justify-between items-center w-full">
+      <a href="#home" class="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity mr-2"
         aria-label="Nexus Institute Home">
-        <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" width="140" style="height:36px; width:auto; object-fit:contain;">
+        <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" class="h-6 sm:h-8 md:h-9 w-auto object-contain" style="max-width: 120px;">
       </a>
 
-      <nav class="hidden md:flex gap-8 items-center desktop-nav font-medium text-[0.95rem] text-slate-600"
+      <nav
+        class="hidden md:flex gap-8 items-center desktop-nav font-medium text-[0.95rem] text-slate-600 justify-center flex-grow"
         aria-label="Main Navigation">
         <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
         <a href="#courses" class="hover:text-indigo-600 transition-colors">Courses</a>
         <a href="#services" class="hover:text-indigo-600 transition-colors">Services</a>
         <a href="#admission" class="hover:text-indigo-600 transition-colors">Apply</a>
-        <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-4 flex-shrink-0 header-cta">
+      <div class="flex items-center gap-2 md:gap-3 flex-shrink-0">
+        <a href="#contact"
+          class="btn-modern btn-secondary px-4 py-2 md:px-5 md:py-2.5 text-xs md:text-sm font-bold whitespace-nowrap">
+          Contact Us
+        </a>
         <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20learn%20more%20about%20your%20courses."
-          target="_blank" rel="noopener noreferrer" class="btn-modern btn-primary px-6 py-2.5 text-sm">
-          <i class="fab fa-whatsapp text-lg"></i> Chat Now
+          target="_blank" rel="noopener noreferrer"
+          class="btn-modern btn-primary px-4 py-2 md:px-5 md:py-2.5 text-xs md:text-sm font-bold whitespace-nowrap">
+          <i class="fab fa-whatsapp text-sm md:text-lg"></i> Chat Now
         </a>
       </div>
     </div>
@@ -499,7 +500,7 @@
 
   <main id="main-content" class="flex-grow flex flex-col w-full pt-[75px]">
 
-    <!-- Centered Hero Section (Marquee Removed) -->
+    <!-- Centered Hero Section -->
     <section id="home" class="relative flex flex-col items-center justify-center min-h-[calc(100vh-75px)] w-full py-12"
       aria-label="Hero Section">
       <div
@@ -761,9 +762,7 @@
 
         <!-- ROW 2: Course 3 Horizontal spanning -->
         <div class="max-w-5xl mx-auto mb-12">
-          <!-- Added ring/border for emphasis instead of shadow box -->
           <div class="bento-card bg-white relative overflow-hidden ring-1 ring-amber-200">
-            <!-- Abstract bg decoration -->
             <div class="absolute top-0 right-0 w-64 h-64 bg-amber-50 rounded-full blur-3xl -z-10 opacity-60"></div>
 
             <div class="p-6 md:p-8 lg:p-10 flex flex-col lg:flex-row gap-8">
@@ -1175,7 +1174,7 @@
             </a>
             <a href="https://maps.google.com/?q=717+Millennium+Business+Hub,+Sarthana+Jakatnaka,+Surat" target="_blank"
               rel="noopener noreferrer"
-              class="flex items-start gap-3 p-4 mt-2 group rounded-2xl bg-slate-50/50 backdrop-blur-md border border-slate-200 shadow-sm hover:bg-slate-100/80 hover:shadow-md transition-all">
+              class="flex items-start gap-3 p-4 mt-2 group rounded-2xl bg-white/60 backdrop-blur-md border border-slate-200 shadow-sm hover:bg-slate-50 hover:shadow-md transition-all">
               <i class="fas fa-map-marker-alt text-indigo-400 mt-1"></i>
               <span class="font-medium text-xs text-slate-600 group-hover:text-indigo-700 transition-colors leading-relaxed">717, Millennium Business Hub, Opp. Dipkamal Mall, Sarthana Jakatnaka, Surat</span>
             </a>
