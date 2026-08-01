@@ -198,6 +198,17 @@
       }
     }
 
+    /* Header Specific Horizontal Scroll for Mobile */
+    .header-scroll {
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .header-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
     /* Modern Bento/Apple-like Cards */
     .bento-card {
       background: rgba(255, 255, 255, 0.85);
@@ -235,7 +246,7 @@
       background-image: linear-gradient(135deg, #f59e0b, #f97316);
     }
 
-    /* Modern Buttons (Identical sizing enforced via padding/text sizes) */
+    /* Modern Buttons */
     .btn-modern {
       display: inline-flex;
       align-items: center;
@@ -243,11 +254,10 @@
       font-weight: 700;
       border-radius: 9999px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      gap: 6px;
+      gap: 8px;
       cursor: pointer;
       text-decoration: none;
       border: none;
-      white-space: nowrap;
     }
 
     .btn-primary {
@@ -385,7 +395,7 @@
       line-height: 1.6;
     }
 
-    /* Mobile Bottom Nav */
+    /* Mobile Adjustments */
     .mobile-bottom-nav {
       display: none;
     }
@@ -468,48 +478,50 @@
     </div>
   </div>
 
-  <!-- Glass Header -->
+  <!-- Glass Header with Centered Menu & End CTAs -->
   <header class="fixed top-0 left-0 w-full z-50 glass-header">
     <div
-      class="max-w-[1400px] mx-auto px-4 md:px-5 lg:px-8 h-[75px] flex justify-between items-center w-full gap-2 overflow-x-visible no-scrollbar">
+      class="max-w-[1400px] mx-auto px-4 lg:px-8 h-[80px] flex justify-between items-center w-full relative header-scroll">
 
-      <a href="#home" class="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity"
-        aria-label="Nexus Institute Home">
-        <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" style="height:44px; width:auto; object-fit:contain;">
-      </a>
+      <!-- Left: Logo (Positioned at start, increased size) -->
+      <div class="flex-shrink-0 flex items-center justify-start z-10 w-auto">
+        <a href="#home" class="hover:opacity-80 transition-opacity" aria-label="Nexus Institute Home">
+          <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" style="height:44px; width:auto; object-fit:contain;">
+        </a>
+      </div>
 
-      <nav class="hidden md:flex gap-8 items-center desktop-nav font-medium text-[0.95rem] text-slate-600"
+      <!-- Center: Navigation (Desktop Only, Absolute Centered) -->
+      <nav
+        class="hidden md:flex gap-8 items-center desktop-nav font-medium text-[0.95rem] text-slate-600 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
         aria-label="Main Navigation">
         <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
         <a href="#courses" class="hover:text-indigo-600 transition-colors">Courses</a>
         <a href="#services" class="hover:text-indigo-600 transition-colors">Services</a>
         <a href="#admission" class="hover:text-indigo-600 transition-colors">Apply</a>
-        <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-2 flex-shrink-0">
-        <a href="#contact" class="btn-modern btn-secondary px-4 py-2.5 sm:px-5 text-[13px] sm:text-[14px]">
-          Contact Us
-        </a>
+      <!-- Right: CTAs (Visible in all views, maintaining full size) -->
+      <div class="flex items-center gap-3 flex-shrink-0 justify-end z-10 w-auto pl-4">
+        <a href="#contact" class="btn-modern btn-secondary px-4 py-2.5 text-sm whitespace-nowrap">Contact Us</a>
         <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20learn%20more%20about%20your%20courses."
           target="_blank" rel="noopener noreferrer"
-          class="btn-modern btn-primary px-4 py-2.5 sm:px-5 text-[13px] sm:text-[14px]">
-          <i class="fab fa-whatsapp text-base"></i> Chat Now
+          class="btn-modern btn-primary px-4 py-2.5 text-sm whitespace-nowrap">
+          <i class="fab fa-whatsapp text-lg"></i> Chat Now
         </a>
       </div>
 
     </div>
   </header>
 
-  <main id="main-content" class="flex-grow flex flex-col w-full pt-[75px]">
+  <main id="main-content" class="flex-grow flex flex-col w-full pt-[80px]">
 
-    <!-- Centered Hero Section (Marquee Removed) -->
-    <section id="home" class="relative flex flex-col items-center justify-center min-h-[calc(100vh-75px)] w-full py-12"
+    <!-- Hero Section (Centered context, ad line removed) -->
+    <section id="home" class="relative flex flex-col items-center justify-center min-h-[calc(100vh-80px)] w-full py-12"
       aria-label="Hero Section">
       <div
         class="container max-w-5xl mx-auto px-5 lg:px-8 flex flex-col items-center justify-center text-center w-full my-auto">
 
-        <span class="pill-badge mb-6 text-indigo-600 bg-indigo-50 border-indigo-100">
+        <span class="pill-badge mb-6 text-indigo-600 bg-indigo-50 border-indigo-100 shadow-sm">
                     <i class="fas fa-rocket"></i> 2026 Batch Now Open
                 </span>
 
@@ -1032,7 +1044,7 @@
       </div>
     </section>
 
-    <!-- Admission -->
+    <!-- Admission with Enhanced Price & Duration -->
     <section id="admission" class="relative py-20 lg:py-24">
       <div class="container mx-auto px-5 lg:px-8 max-w-4xl relative z-10">
         <div class="bento-card p-8 md:p-12 text-center max-w-3xl mx-auto bg-white border border-slate-200">
@@ -1042,24 +1054,18 @@
           <p class="text-slate-600 font-medium mb-8">Apply now.
             <strong class="text-rose-500">Discounted prices valid for first 20 students only!</strong></p>
 
-          <div class="bg-slate-50 rounded-3xl p-6 md:p-8 mb-8 text-left border border-slate-100">
-            <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md uppercase tracking-wide border border-rose-100 mb-4 inline-block">First 20 Students Offer</span>
-            <h3 class="text-2xl font-bold font-display text-slate-900 mb-5">Digital Marketing + AI</h3>
+          <div
+            class="bg-slate-50/80 backdrop-blur-md rounded-3xl p-6 md:p-8 mb-8 text-left border border-slate-100 shadow-inner">
+            <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md uppercase tracking-wide border border-rose-100 mb-4 inline-block shadow-sm">First 20 Students Offer</span>
+            <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">Digital Marketing + AI</h3>
 
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div
-                class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center text-center sm:text-left sm:items-start items-center">
-                <span class="text-[11px] sm:text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Duration</span>
-                <span class="text-sm sm:text-base font-bold text-slate-800"><i class="far fa-clock text-amber-500 mr-1.5"></i> 5 Months Total</span>
-              </div>
-              <div
-                class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center text-center sm:text-left sm:items-start items-center">
-                <span class="text-[11px] sm:text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Offer Price</span>
-                <span class="text-sm sm:text-base font-bold text-slate-800"><i class="fas fa-tag text-emerald-500 mr-1.5"></i> ₹45,000 <span class="text-xs text-slate-400 line-through ml-1">₹50k</span></span>
-              </div>
+            <!-- Added Course Price and Duration Box -->
+            <div class="flex flex-wrap items-center gap-3 mb-6">
+              <span class="font-semibold flex items-center gap-2 text-indigo-700 bg-indigo-100/60 px-4 py-2 rounded-xl border border-indigo-200 text-sm shadow-sm"><i class="fas fa-clock"></i> Duration: 5 Months (4+1)</span>
+              <span class="font-bold flex items-center gap-2 text-emerald-700 bg-emerald-100/60 px-4 py-2 rounded-xl border border-emerald-200 text-sm shadow-sm"><i class="fas fa-tag"></i> Price: ₹45,000 <span class="line-through text-emerald-600/50 text-xs ml-1 font-semibold">₹50,000</span></span>
             </div>
 
-            <div class="space-y-3 font-medium text-slate-700">
+            <div class="space-y-3 font-medium text-slate-700 mt-2">
               <div class="flex items-center gap-3">
                 <i class="fas fa-check-circle text-teal-500"></i><span>100% Written Placement Guarantee</span></div>
               <div class="flex items-center gap-3">
@@ -1144,7 +1150,7 @@
 
         <div class="flex flex-col items-center md:items-start">
           <a href="#home" class="block mb-6 hover:opacity-80 transition-opacity">
-            <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" width="140" style="height:42px;width:auto;" loading="lazy">
+            <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" width="160" style="height:48px;width:auto;" loading="lazy">
           </a>
           <p class="mb-6 font-medium text-slate-500 max-w-xs leading-relaxed text-sm">Nexus Institute & Marketing
             provides elite practical training in Digital Marketing. Top Institute in Sarthana, Varachha, Surat.</p>
@@ -1183,10 +1189,11 @@
                 <i class="fa-brands fa-whatsapp text-lg"></i></div>
               <span class="font-bold text-sm">+91 74340 53550</span>
             </a>
+            <!-- Footer Address with strong Glass Effect -->
             <a href="https://maps.google.com/?q=717+Millennium+Business+Hub,+Sarthana+Jakatnaka,+Surat" target="_blank"
               rel="noopener noreferrer"
-              class="flex items-start gap-3 p-4 mt-2 group rounded-2xl bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:bg-white/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">
-              <i class="fas fa-map-marker-alt text-indigo-400 mt-0.5"></i>
+              class="flex items-start gap-3 p-4 mt-2 group rounded-2xl bg-white/40 backdrop-blur-xl border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:bg-white/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">
+              <i class="fas fa-map-marker-alt text-indigo-500 mt-0.5"></i>
               <span class="font-medium text-xs text-slate-600 group-hover:text-indigo-700 transition-colors leading-relaxed">717, Millennium Business Hub, Opp. Dipkamal Mall, Sarthana Jakatnaka, Surat</span>
             </a>
           </div>
@@ -1198,7 +1205,7 @@
         class="border-t border-slate-200 pt-8 mt-12 text-center w-full flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="font-medium text-slate-400 text-sm">© <span id="year"></span> Nexus Institute & Marketing. All Rights
           Reserved.</p>
-        <span class="text-xs font-semibold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">2026 Batch Ready</span>
+        <span class="text-xs font-semibold text-slate-400 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">2026 Batch Ready</span>
       </div>
     </div>
   </footer>
