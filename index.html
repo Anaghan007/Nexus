@@ -515,43 +515,45 @@
 
   <main id="main-content" class="flex-grow flex flex-col w-full pt-[80px]">
 
-    <!-- Hero Section (Centered context, ad line removed) -->
-    <section id="home" class="relative flex flex-col items-center justify-center min-h-[calc(100vh-80px)] w-full py-12"
+    <!-- Centered Hero Section (Marquee Removed, Mobile padding adjusted) -->
+    <section id="home"
+      class="relative flex flex-col items-center justify-center min-h-[calc(100dvh-155px)] md:min-h-[calc(100vh-80px)] w-full py-6 md:py-12"
       aria-label="Hero Section">
       <div
-        class="container max-w-5xl mx-auto px-5 lg:px-8 flex flex-col items-center justify-center text-center w-full my-auto">
+        class="container max-w-5xl mx-auto px-4 lg:px-8 flex flex-col items-center justify-center text-center w-full my-auto">
 
-        <span class="pill-badge mb-6 text-indigo-600 bg-indigo-50 border-indigo-100 shadow-sm">
+        <span class="pill-badge mb-4 md:mb-6 text-indigo-600 bg-indigo-50 border-indigo-100 shadow-sm text-xs md:text-sm">
                     <i class="fas fa-rocket"></i> 2026 Batch Now Open
                 </span>
 
         <h1
-          class="text-[9vw] sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight text-slate-900 w-full font-display flex flex-col items-center gap-3">
+          class="text-[8.5vw] sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 leading-[1.15] tracking-tight text-slate-900 w-full font-display flex flex-col items-center gap-2 md:gap-3">
           <span class="text-gradient grad-primary">Flat 10% OFF</span>
-          <span class="text-lg md:text-xl font-semibold text-slate-500 bg-white/60 px-5 py-2 rounded-full border border-slate-200 backdrop-blur-md shadow-sm -mt-2">(For First 20 Students Only)</span>
-          <span class="text-2xl md:text-3xl text-slate-300 font-light">+</span>
+          <span class="text-xs min-[400px]:text-sm md:text-xl font-semibold text-slate-500 bg-white/60 px-4 md:px-5 py-1.5 md:py-2 rounded-full border border-slate-200 backdrop-blur-md shadow-sm -mt-1 md:-mt-2">(For First 20 Students Only)</span>
+          <span class="text-xl md:text-3xl text-slate-300 font-light">+</span>
           <span class="text-slate-800">4 Day <span class="text-gradient grad-secondary">FREE</span> Demo Classes</span>
-          <span class="text-2xl md:text-3xl text-slate-300 font-light">+</span>
+          <span class="text-xl md:text-3xl text-slate-300 font-light">+</span>
           <span class="text-slate-800">FREE <span class="text-gradient grad-accent">Internship</span></span>
         </h1>
 
-        <div class="flex flex-wrap justify-center gap-3 mb-8">
-          <span class="pill-badge text-rose-600 bg-rose-50 border-rose-100"><i class="fas fa-gift"></i> Includes FREE AI Course (Worth ₹15k)</span>
-          <span class="pill-badge text-teal-600 bg-teal-50 border-teal-100"><i class="fas fa-file-signature"></i> In-Writing 100% Job Guarantee</span>
+        <div class="flex flex-row flex-wrap justify-center gap-2 md:gap-3 mb-5 md:mb-8 w-full">
+          <span class="pill-badge text-[10px] min-[400px]:text-xs md:text-sm text-rose-600 bg-rose-50 border-rose-100"><i class="fas fa-gift"></i> Includes FREE AI Course</span>
+          <span class="pill-badge text-[10px] min-[400px]:text-xs md:text-sm text-teal-600 bg-teal-50 border-teal-100"><i class="fas fa-file-signature"></i> 100% Job Guarantee</span>
         </div>
 
-        <p class="mb-10 max-w-2xl mx-auto text-slate-600 text-lg sm:text-xl font-medium leading-relaxed">Join Surat's
-          most practical digital marketing institute. Agency-style training with real projects in a premium environment.
-        </p>
+        <p class="mb-6 md:mb-10 max-w-2xl mx-auto text-slate-600 text-sm md:text-xl font-medium leading-relaxed px-2">
+          Join Surat's most practical digital marketing institute. Agency-style training with real projects in a premium
+          environment.</p>
 
-        <div class="flex flex-wrap gap-4 justify-center w-full sm:w-auto">
+        <!-- Side by side buttons on mobile -->
+        <div class="flex flex-row gap-2 md:gap-4 justify-center w-full sm:w-auto px-1">
           <a href="#courses"
-            class="btn-modern btn-primary px-8 py-4 text-lg w-full sm:w-auto"><i class="fas fa-arrow-down"></i> Explore
-            Courses</a>
+            class="btn-modern btn-primary px-2 min-[400px]:px-4 py-3 md:px-8 md:py-4 text-xs min-[400px]:text-sm md:text-lg flex-1 sm:flex-none whitespace-nowrap"><i class="fas fa-arrow-down"></i>
+            Explore Courses</a>
           <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20claim%20the%2010%25%20OFF%20and%20FREE%20Demo%20Classes."
             target="_blank" rel="noopener noreferrer"
-            class="btn-modern btn-secondary px-8 py-4 text-lg w-full sm:w-auto"><i class="fab fa-whatsapp text-green-500"></i>
-            Claim Offer Now</a>
+            class="btn-modern btn-secondary px-2 min-[400px]:px-4 py-3 md:px-8 md:py-4 text-xs min-[400px]:text-sm md:text-lg flex-1 sm:flex-none whitespace-nowrap"><i class="fab fa-whatsapp text-green-500 text-base md:text-lg"></i>
+            Claim Offer</a>
         </div>
       </div>
     </section>
