@@ -81,7 +81,7 @@
                         }
                     },
                 }
-          }
+            }
     }
   </script>
 
@@ -198,17 +198,6 @@
       }
     }
 
-    /* Header Specific Horizontal Scroll for Mobile */
-    .header-scroll {
-      overflow-x: auto;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .header-scroll::-webkit-scrollbar {
-      display: none;
-    }
-
     /* Modern Bento/Apple-like Cards */
     .bento-card {
       background: rgba(255, 255, 255, 0.85);
@@ -254,7 +243,7 @@
       font-weight: 700;
       border-radius: 9999px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      gap: 8px;
+      gap: 6px;
       cursor: pointer;
       text-decoration: none;
       border: none;
@@ -337,10 +326,10 @@
 
     /* Modern Header */
     .glass-header {
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.9);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
     }
 
@@ -478,21 +467,20 @@
     </div>
   </div>
 
-  <!-- Glass Header with Centered Menu & End CTAs -->
+  <!-- Fixed Glass Header -->
   <header class="fixed top-0 left-0 w-full z-50 glass-header">
-    <div
-      class="max-w-[1400px] mx-auto px-4 lg:px-8 h-[80px] flex justify-between items-center w-full relative header-scroll">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-[76px] flex justify-between items-center w-full">
 
-      <!-- Left: Logo (Positioned at start, increased size) -->
-      <div class="flex-shrink-0 flex items-center justify-start z-10 w-auto">
+      <!-- Left: Logo -->
+      <div class="flex items-center flex-shrink-0">
         <a href="#home" class="hover:opacity-80 transition-opacity" aria-label="Nexus Institute Home">
-          <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" style="height:44px; width:auto; object-fit:contain;">
+          <img src="https://nexusinstitute.in/Logo.png" alt="Nexus Institute" class="h-9 sm:h-11 w-auto object-contain">
         </a>
       </div>
 
-      <!-- Center: Navigation (Desktop Only, Absolute Centered) -->
+      <!-- Center: Navigation (Desktop Only) -->
       <nav
-        class="hidden md:flex gap-8 items-center desktop-nav font-medium text-[0.95rem] text-slate-600 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+        class="hidden md:flex gap-6 lg:gap-8 items-center font-medium text-[0.95rem] text-slate-600 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
         aria-label="Main Navigation">
         <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
         <a href="#courses" class="hover:text-indigo-600 transition-colors">Courses</a>
@@ -500,24 +488,26 @@
         <a href="#admission" class="hover:text-indigo-600 transition-colors">Apply</a>
       </nav>
 
-      <!-- Right: CTAs (Visible in all views, maintaining full size) -->
-      <div class="flex items-center gap-3 flex-shrink-0 justify-end z-10 w-auto pl-4">
-        <a href="#contact" class="btn-modern btn-secondary px-4 py-2.5 text-sm whitespace-nowrap">Contact Us</a>
+      <!-- Right: Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <a href="#contact"
+          class="btn-modern btn-secondary px-3 sm:px-4 py-2 text-xs sm:text-sm whitespace-nowrap">Contact</a>
         <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20learn%20more%20about%20your%20courses."
           target="_blank" rel="noopener noreferrer"
-          class="btn-modern btn-primary px-4 py-2.5 text-sm whitespace-nowrap">
-          <i class="fab fa-whatsapp text-lg"></i> Chat Now
+          class="btn-modern btn-primary px-3 sm:px-4 py-2 text-xs sm:text-sm whitespace-nowrap">
+          <i class="fab fa-whatsapp text-base"></i>
+          <span class="hidden sm:inline">Chat Now</span><span class="sm:hidden">Chat</span>
         </a>
       </div>
 
     </div>
   </header>
 
-  <main id="main-content" class="flex-grow flex flex-col w-full pt-[80px]">
+  <main id="main-content" class="flex-grow flex flex-col w-full pt-[76px]">
 
-    <!-- Centered Hero Section (Marquee Removed, Mobile padding adjusted) -->
+    <!-- Centered Hero Section -->
     <section id="home"
-      class="relative flex flex-col items-center justify-center min-h-[calc(100dvh-155px)] md:min-h-[calc(100vh-80px)] w-full py-6 md:py-12"
+      class="relative flex flex-col items-center justify-center min-h-[calc(100dvh-155px)] md:min-h-[calc(100vh-76px)] w-full py-6 md:py-12"
       aria-label="Hero Section">
       <div
         class="container max-w-5xl mx-auto px-4 lg:px-8 flex flex-col items-center justify-center text-center w-full my-auto">
@@ -527,7 +517,7 @@
           </span>
 
         <h1
-          class="text-[8.5vw] sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 leading-[1.15] tracking-tight text-slate-900 w-full font-display flex flex-col items-center gap-2 md:gap-3">
+          class="text-[7.5vw] sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 leading-[1.15] tracking-tight text-slate-900 w-full font-display flex flex-col items-center gap-2 md:gap-3">
           <span class="text-gradient grad-primary">Flat 10% OFF</span>
           <span class="text-xs min-[400px]:text-sm md:text-xl font-semibold text-slate-500 bg-white/60 px-4 md:px-5 py-1.5 md:py-2 rounded-full border border-slate-200 backdrop-blur-md shadow-sm -mt-1 md:-mt-2">(For First 20 Students Only)</span>
           <span class="text-xl md:text-3xl text-slate-300 font-light">+</span>
@@ -548,17 +538,17 @@
         <!-- Side by side buttons on mobile -->
         <div class="flex flex-row gap-2 md:gap-4 justify-center w-full sm:w-auto px-1">
           <a href="#courses"
-            class="btn-modern btn-primary px-2 min-[400px]:px-4 py-3 md:px-8 md:py-4 text-xs min-[400px]:text-sm md:text-lg flex-1 sm:flex-none whitespace-nowrap"><i class="fas fa-arrow-down"></i>
+            class="btn-modern btn-primary px-3 min-[400px]:px-4 py-3 md:px-8 md:py-4 text-xs min-[400px]:text-sm md:text-lg flex-1 sm:flex-none whitespace-nowrap"><i class="fas fa-arrow-down"></i>
             Explore Courses</a>
           <a href="https://wa.me/917434053550?text=Hey%20Nexus%21%20I%20want%20to%20claim%20the%2010%25%20OFF%20and%20FREE%20Demo%20Classes."
             target="_blank" rel="noopener noreferrer"
-            class="btn-modern btn-secondary px-2 min-[400px]:px-4 py-3 md:px-8 md:py-4 text-xs min-[400px]:text-sm md:text-lg flex-1 sm:flex-none whitespace-nowrap"><i class="fab fa-whatsapp text-green-500 text-base md:text-lg"></i>
+            class="btn-modern btn-secondary px-3 min-[400px]:px-4 py-3 md:px-8 md:py-4 text-xs min-[400px]:text-sm md:text-lg flex-1 sm:flex-none whitespace-nowrap"><i class="fab fa-whatsapp text-green-500 text-base md:text-lg"></i>
             Claim Offer</a>
         </div>
       </div>
     </section>
 
-    <!-- Founders Showcase Section (Reference Style) -->
+    <!-- Founders Showcase Section -->
     <section id="founders" class="relative py-20 lg:py-24 bg-gradient-to-b from-slate-50 to-indigo-50/30">
       <div class="container mx-auto px-5 lg:px-8 max-w-7xl">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -586,7 +576,7 @@
             </div>
           </div>
 
-          <!-- Right Switchable Photo Frame (Reference Matched) -->
+          <!-- Right Switchable Photo Frame -->
           <div class="lg:col-span-6 flex justify-center relative">
             <div class="relative w-full max-w-[500px]">
 
@@ -614,14 +604,14 @@
                   <div
                     class="founder-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 flex items-end justify-center"
                     data-index="0">
-                    <img src="Smit.png" alt="Anaghan Smit" class="w-full h-full object-cover object-top">
+                    <img src="smit.png" alt="Anaghan Smit" class="w-full h-full object-cover object-top">
                   </div>
 
                   <!-- Founder 2 Image -->
                   <div
                     class="founder-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 flex items-end justify-center"
                     data-index="1">
-                    <img src="Krushang.png" alt="Krushang Gondaliya" class="w-full h-full object-cover object-top">
+                    <img src="krushang.png" alt="Krushang Gondaliya" class="w-full h-full object-cover object-top">
                   </div>
 
                   <!-- Table Surface Overlay Effect -->
@@ -637,7 +627,7 @@
                     id="founder-name-label">
                     Anaghan Smit</h3>
 
-                  <!-- Mobile Redesigned Big Badge (Centered between Name and Dots) -->
+                  <!-- Mobile Redesigned Big Badge -->
                   <div class="flex lg:hidden justify-center my-4 px-2">
                     <div
                       class="bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-lg rounded-2xl p-4 flex items-center gap-4 w-full max-w-xs text-left">
@@ -1058,7 +1048,6 @@
           </h2>
         </div>
 
-        <!-- Updated Grid: 2 columns, centered (max-w-4xl) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mb-20 items-stretch">
 
           <!-- Standard -->
@@ -1171,7 +1160,7 @@
       </div>
     </section>
 
-    <!-- Admission with Enhanced Price & Duration -->
+    <!-- Admission -->
     <section id="admission" class="relative py-20 lg:py-24">
       <div class="container mx-auto px-5 lg:px-8 max-w-4xl relative z-10">
         <div class="bento-card p-8 md:p-12 text-center max-w-3xl mx-auto bg-white border border-slate-200">
@@ -1188,7 +1177,6 @@
             <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md uppercase tracking-wide border border-rose-100 mb-4 inline-block shadow-sm">First 20 Students Offer</span>
             <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">Digital Marketing + AI</h3>
 
-            <!-- Added Course Price and Duration Box -->
             <div class="flex flex-wrap items-center gap-3 mb-6">
               <span class="font-semibold flex items-center gap-2 text-indigo-700 bg-indigo-100/60 px-4 py-2 rounded-xl border border-indigo-200 text-sm shadow-sm"><i class="fas fa-clock"></i> Duration: 5 Months (4+1)</span>
               <span class="font-bold flex items-center gap-2 text-emerald-700 bg-emerald-100/60 px-4 py-2 rounded-xl border border-emerald-200 text-sm shadow-sm"><i class="fas fa-tag"></i> Price: ₹45,000 <span class="line-through text-emerald-600/50 text-xs ml-1 font-semibold">₹50,000</span></span>
@@ -1325,7 +1313,7 @@
               </div>
               <span class="font-bold text-sm">+91 74340 53550</span>
             </a>
-            <!-- Footer Address with strong Glass Effect -->
+            <!-- Footer Address -->
             <a href="https://maps.google.com/?q=717+Millennium+Business+Hub,+Sarthana+Jakatnaka,+Surat" target="_blank"
               rel="noopener noreferrer"
               class="flex items-start gap-3 p-4 mt-2 group rounded-2xl bg-white/40 backdrop-blur-xl border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:bg-white/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">
@@ -1499,7 +1487,7 @@
                         i.classList.remove('active'); 
                         i.removeAttribute('aria-current'); 
                         if (i.getAttribute('href') === '#' + current) { i.classList.add('active'); i.setAttribute('aria-current', 'page'); } 
-                      }
+                    }
                 });
                 navTicking = false;
             });
